@@ -1,0 +1,17 @@
+﻿@using DataLayer.Contract;
+@using System.Reflection;
+@using UILayer.Miscellaneous;
+@using DataLayer.EF
+@model ModelPartial
+
+@Html.Label(Model.langugeValue)
+<input id='@(Model.PropertyName)' name='@(Model.PropertyName)' value='@(Model.value)' />
+
+
+<script type="text/javascript">
+
+    $('#EditorRowForm #@Model.PropertyName)').click(function () { $('#EditorRowForm #@Model.PropertyName)').focus(); });
+    $('#EditorRowForm #@Model.PropertyName)').calendarsPicker({ calendar: $.calendars.instance('@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeName"))'
+    , '@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeCode"))'), dateFormat: 'yyyy/mm/dd' });
+
+</script>

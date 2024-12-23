@@ -1,0 +1,25 @@
+﻿@using DataLayer.Contract
+@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@model ErrorContract
+
+
+@{
+    // Layout = null;
+
+    <h2>@Model.Type </h2>
+    <link href=" @Url.Content("~/Content/style/whole.css")" rel="stylesheet" type="text/css" />
+
+    <div id="Errdiv">
+        <span id="ErrSp">@(Model.Message)  </span>
+    </div>
+}

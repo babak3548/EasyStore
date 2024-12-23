@@ -1,0 +1,181 @@
+﻿@using DataLayer.EF
+@using DataLayer
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+@using Microsoft.AspNetCore.Html
+
+@model ModelViewWithActionName<Product>
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+
+}
+
+@{
+
+    List<SelectListItem> catSecond = (List<SelectListItem>)ViewData["listSelectListItem"];
+    var title = new HtmlString("به عنوان مثال\n پارچه: ایتالیایی \n جنس: ابریشم \n رنگ: آبی، قرمز ،زرد \n دوخت: ترکیه ");
+
+    UploadFileModel UFM1 = new UploadFileModel()
+    {
+        InputPropName = "Input" + "Image",
+        langugeValue = "عکس اول",
+        propName = "Image",
+        UploadActionName = "UploadImage",
+        Value = Model.Entity.Image,
+        OnburMethod = JavaScript.StringValidation("Image", 1, 250)
+    };
+    UploadFileModel UFM2 = new UploadFileModel()
+    {
+        InputPropName = "Input" + "Image1",
+        langugeValue = "عکس دوم",
+        propName = "Image1",
+        UploadActionName = "UploadImage",
+        Value = Model.Entity.Image1
+    };
+    UploadFileModel UFM3 = new UploadFileModel()
+    {
+        InputPropName = "Input" + "Image2",
+        langugeValue = "عکس سوم",
+        propName = "Image2",
+        UploadActionName = "UploadImage",
+        Value = Model.Entity.Image2
+    };
+
+    string message = "";
+    if (ViewData["message"] != null) { message = ViewData["message"].ToString(); }
+}
+
+@{
+    <br />
+    <div class="csrtl">
+        @message
+        <span>ورود داده برای فیلد های غیرستاره دار اختیاری می باشد.</span><br />
+        <span>کاربر گرامی از درج مطالب و عکس مخالف قوانین کشور خوداری نمایید </span>
+        <br />
+        <a target="_blank" href="@(AppSetting.DomainName)/ShowContent/AEntity/36">راهنمایی بیشتر </a>
+    </div>
+
+    using (Html.BeginForm(Model.ActionName, "Product", null, FormMethod.Post, false, new { id = "EditorRowForm" }))
+    {
+        <table class="tb">
+            @Html.Hidden("Id", Model.Entity.Id)
+            <tr class="tr1">
+                <td class="td1">نام کالا*:</td>
+                <td class="td2">@Html.TextBox("Name", Model.Entity.Name, new { @id = "Name", @onblur = JavaScript.StringValidation("Name", 1, 50) })</td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">گروه کالا *:</td>
+                <td class="td2">
+                    @(Html.DropDownList("FK_Category", catSecond, "لطفا یکی از گزینه های زیر را انتخاب نمایید", new { @id = "FK_Category", @onblur = JavaScript.drdValidation("FK_Category") }))
+                </td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">عکس اول*:</td>
+                <td class="td2">
+                    @Html.Partial(PartialType.UploadFile.ToString(), UFM1)
+                </td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">توضیحات و مشخصات کالا*:</td>
+                <td class="td2">@Html.TextArea("Discription", Model.Entity.Discription, new { @id = "Discription", @title = title, @onblur = JavaScript.StringValidation("Discription", 1, 2500) })</td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">توانایی تامین*:</td>
+                <td class="td2">@Html.TextBox("available", Model.Entity.Available, new { @id = "available", @onblur = JavaScript.ValidationNumberWithMinMax("available", 1, int.MaxValue) })</td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">درصد بازاریابی:</td>
+                <td class="td2">
+                    @Html.TextBox("PersentMarkater", Model.Entity.PersentMarkater, new { @id = "PersentMarkater", @title = "مثال 2.5 ", @onblur = JavaScript.ValidationNumberWithMinMax("PersentMarkater", ConstSetting.MinParentMarketing, ConstSetting.MaxParentMarketing) })
+                    <span>برای تشویق بازاریاب ها می توانید درصدی از مبلغ فروش را به آنها اختصاص دهید</span>
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">@UIUtility.ResourceManager.GetString("unitBuyProduct")*:</td>
+                <td class="td2">
+                    @Html.TextBox("UnitBuy", Model.Entity.UnitBuy, new { @id = "UnitBuy", @onblur = JavaScript.StringValidation("UnitBuy", 1, 20) })
+                    مثال یک عدد، یک ست،یک کارتن، گرم
+                </td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">@UIUtility.ResourceManager.GetString("wheightUnit")*:</td>
+                <td class="td2">@Html.TextBox("wightUnitBuyWithKG", Model.Entity.WightUnitBuyWithKg, new { @id = "wightUnitBuyWithKG", @onblur = JavaScript.ValidationNumberWithMinMax("wightUnitBuyWithKG", 0.000001, int.MaxValue) })</td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">@UIUtility.ResourceManager.GetString("Price") *:</td>
+                <td class="td2">@Html.TextBox("Price", Model.Entity.Price, new { @id = "Price", @onblur = JavaScript.ValidationNumberWithMinMax("Price", 1, int.MaxValue), @class = "dig" })</td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">@UIUtility.ResourceManager.GetString("wholsealePrice"):</td>
+                <td class="td2">
+                    @Html.TextBox("CountPrice", Model.Entity.CountPrice, new { @id = "CountPrice", @onblur = JavaScript.ValidationNumber("CountPrice"), @class = "dig" })
+                    <span>در صورتی که فروش عمده انجام نمی دهید این فیلد را پر ننمایید</span>
+                </td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">حداقل تعداد فروش عمده:</td>
+                <td class="td2">
+                    @Html.TextBox("MinCountForPrice", Model.Entity.MinCountForPrice, new { @id = "MinCountForPrice", @onblur = JavaScript.ValidationNumber("MinCountForPrice") })
+                    <span>در صورتی که فروش عمده انجام نمی دهید این فیلد را پر ننمایید</span>
+                </td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">نام برند:</td>
+                <td class="td2">@Html.TextBox("Brand", Model.Entity.Brand, new { @id = "Brand", @onblur = JavaScript.StringValidation("Brand", 0, 50) })</td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">عکس دوم:</td>
+                <td class="td2">
+                    @Html.Partial(PartialType.UploadFile.ToString(), UFM2)
+                    <span>از ورود عکس های تکراری خوداری فرمایید</span>
+                </td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">عکس سوم:</td>
+                <td class="td2">
+                    @Html.Partial(PartialType.UploadFile.ToString(), UFM3)
+                    <span>از ورود عکس های تکراری خوداری فرمایید</span>
+                </td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">ساخت کشور:</td>
+                <td class="td2">@Html.TextBox("MadeInCountry", Model.Entity.MadeInCountry, new { @id = "MadeInCountry", @onblur = JavaScript.StringValidation("MadeInCountry", 0, 50) })</td>
+            </tr>
+
+
+            <tr class="tr2">
+                <td class="td1">تعداد روز قابل برگشت:</td>
+                <td class="td2">@Html.TextBox("AcceptReturnDay", Model.Entity.AcceptReturnDay, new { @id = "AcceptReturnDay", @onblur = JavaScript.ValidationNumber("AcceptReturnDay") })</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">توضیحاتی در باره حمل:</td>
+                <td class="td2">@Html.TextArea("ShippingDiscription", Model.Entity.ShippingDiscription, new { @id = "ShippingDiscription", @onblur = JavaScript.StringValidation("ShippingDiscription", 0, 500) })</td>
+            </tr>
+            <tr class="tr2">
+                <td class="td1">کلمات کلیدی:</td>
+                <td class="td2">@Html.TextBox("WordKey", Model.Entity.WordKey, new { @id = "WordKey", @onblur = JavaScript.StringValidation("WordKey", 0, 250) })</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1"></td>
+                <td class="td2">
+                    <input type="submit" value="ذخیره " />
+                </td>
+            </tr>
+        </table>
+    }}

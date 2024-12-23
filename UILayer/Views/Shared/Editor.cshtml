@@ -1,0 +1,39 @@
+﻿@using DataLayer.Contract;
+@using System.Reflection;
+@using UILayer;
+@model IContract
+@*  @Html.Editor(((PropertyInfo)ViewData["ParameterInfo"]).Name, Model) ;*@ @*@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Adminstration/Views/Shared/_LayoutFullWidth.cshtml";
+}*@ @*<head></head>*@
+<link href=" @Url.Content("~/Content/CLeditor/jquery.cleditor.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.cleditor.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#input").cleditor({ width: 1000, height: 300 });
+    });
+    function showContent(size) {
+
+        $('#showContent').html($('#input').val());
+        switch (size) {
+            case "Small": $('#showContent').width("20%"); break;
+            case "Large": $('#showContent').width('60%'); break;
+            case "X_Large": $('#showContent').width("80%"); break;
+            case "FullWidth": $('#showContent').width("100%"); break;
+            default: break;
+
+        }
+    }
+</script>
+@Html.Label(((System.Reflection.PropertyInfo)ViewData["PropertyInfo"]).Name)
+<br />
+@*@Html.Partial("UploadImage")*@
+@* @Html.Editor(((PropertyInfo)ViewData["PropertyInfo"]).Name, Model)*@
+<br />
+<textarea id="input" name="ShowValue"> @(((PropertyInfo)ViewData["PropertyInfo"]).GetValue(Model, null))</textarea>
+<input type ="button" onclick ="showContent('Small')" value="کوچک" />
+<input type ="button" onclick ="showContent('Large')" value="متوسط" />
+<input type ="button" onclick ="showContent('X_Large')" value="بزرگ" />
+<input type ="button" onclick ="showContent('FullWidth')" value="تمام صفحه" />
+<div id="showContent" border="1">
+</div>

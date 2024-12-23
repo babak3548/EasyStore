@@ -1,0 +1,11 @@
+﻿
+  @using System.Reflection;
+  @model DataLayer.Contract.IContract  
+    @Html.Label(ViewData["langugeValue"].ToString())
+   @{ var fieldName= ViewData["feildName"].ToString();
+      var FKValue=((FieldInfo)ViewData["fieldInfo"]).GetValue(Model);
+    @Html.DropDownList(fieldName, (IEnumerable< SelectListItem >)((FieldInfo)ViewData["fieldInfo"]).GetValue(Model), "لطفا یکی از گزینه های زیر را انتخاب نمایید")
+    <br />
+    }
+   
+   

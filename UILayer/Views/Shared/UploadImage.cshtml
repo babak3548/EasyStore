@@ -1,0 +1,13 @@
+﻿@using UILayer.Miscellaneous;
+@{
+ string propName= ViewData["PropertyName"].ToString();
+ string UploadActionName = ViewData["UploadActionName"].ToString();
+ string langugeValue= ViewData["langugeValue"].ToString();
+ string InputPropName=propName + "Input";
+ <div id="DUpImg">
+<input id='@InputPropName' type="file" name='@(InputPropName)' title='@(UIUtility.ResourceManager.GetString("Select") + langugeValue)'  /><br />
+<input type="button" value='@(UIUtility.ResourceManager.GetString("Upload")+langugeValue)' onclick ="fileUpload(this.form,'@Url.Action(UploadActionName, "Upload", new {InputName=InputPropName})','@propName','@InputPropName'); return false;" />
+<input type="text" readonly="readonly"  id='@propName' name='@(propName)' value ="" />
+</div>
+}
+

@@ -1,0 +1,42 @@
+﻿@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@using DataLayer
+@using Utility
+@using Microsoft.AspNetCore.Http
+@using System.IO
+
+@model Marketer
+
+@{
+    AppSetting appSetting = new AppSetting();
+
+    bool UserIsBussinessOwner = (ViewBag.HttpContext as HttpContext).Session.Get("BusinessOwnerContract") != null ? true : false;
+
+    string srcImg = "";
+    if (Model.Image != null & Model.Image != "")
+    {
+        var fileInfo = new FileInfo(Model.Image);
+        if (fileInfo.Extension != "")
+        {
+            srcImg = Model.Image.Replace(fileInfo.Extension, "") + "2" + fileInfo.Extension;
+            srcImg = (File.Exists(appSetting.BaseServerPath + srcImg.Replace("/", "\\")) ? srcImg : Paths.DefaultPicMarketer);
+        }
+    }
+
+}
+@{
+    <div class="divBr">
+        <div id="imgViw">
+            <img class="MduImg" alt="@Model.Name" src="@srcImg" />
+        </div>
+        @Html.Partial("~/Views/Marketer/Tabs.cshtml", Model)
+
+    </div>
+
+    <br />
+}
+

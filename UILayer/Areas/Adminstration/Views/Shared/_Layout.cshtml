@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href=" @Url.Content("~/Content/style/whole.css")" rel="stylesheet" type="text/css" />
+    <link href=" @Url.Content("~/Content/style/StyleTopMenu.css")" rel="stylesheet" type="text/css" />
+    <link href="  @Url.Content("~/Content/style/jquery.calendars.picker.css")" rel="stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/jquery.min-3.5.1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min-3.6.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jTopMenu.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Total.js")" type="text/javascript"></script>
+    <script src= "@Url.Content("~/Scripts/jquery.calendars.all.js")" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="MainContent"  >
+        @Html.Partial("Menu")
+        @RenderBody()
+      <span>تعداد سیشن های باز شده:</span>  @*@UILayer.MvcApplication.VisitorCounter*@
+        <br />
+        <span>تعداد افراد بازدید کننده:</span> @*@UILayer.Hubs.ManageSeetionChat.CountAddedPerson*@
+    </div>
+</body>
+</html>

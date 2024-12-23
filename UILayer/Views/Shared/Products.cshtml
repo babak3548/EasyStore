@@ -1,0 +1,57 @@
+﻿@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+
+@using UILayer.Views
+@model ModelGrid
+@{
+    var List = ((IEnumerable<Product>)Model.Model).ToList();
+    int RowCount = List.Count;
+    AjaxOption ajaxOptionGrid = new AjaxOption { UpdateTargetId = "Grid", LoadingElementId = "Loding" };
+
+
+    <table class="TblPdc">
+        @foreach (var contract in List)
+        {
+            <tr class="trPdcLn">
+                <td class="tdPdcSh">
+                    <a class="img" href="@Url.Action(Model.ActionNameForm, Model.ControlerName, new { Id = @contract.Id }, "https")">
+                        <img class="img" alt="@contract.Name" src="@Url.Content('~' + @contract.Image)" />
+                    </a>
+
+                </td>
+                <td class="tdPdcLn">
+                    <a title="@contract.Name" href="@Url.Action(Model.ActionNameForm, Model.ControlerName, new { Id = @contract.Id }, "https")">
+                        @contract.Name
+                    </a>
+                    <br />
+                    @contract.Discription
+                </td>
+                <td class="tdPdcSh">
+                    فروشگاه:
+                    @contract.FkBusinessOwnerNavigation.Name
+                    <br />
+                    @contract.Brand
+                    <br />
+                    @contract.Price
+                    @(UIUtility.ResourceManager.GetString("Currencies"))
+                </td>
+            </tr>
+
+        }
+    </table>
+    for (int i = 0; i < RowCount; i = i + ConstSetting.PageSize)
+    {
+        @Ajax.ActionLink(" " + i.ToString(), Url.Action(Model.PageNumberActionName, Model.ControlerName, new
+   {
+       BeginRow = i        ,
+       query = Model.DicFilterParam["SearchValue"].ToString()        ,
+       FK_Category = Model.DicFilterParam["FK_Category"].ToString(),
+       CategoryName = Model.DicFilterParam["CategoryName"].ToString()
+   }), ajaxOptionGrid)
+    }
+        }
+@*<img id="spinner" src="../content/ajaxspinner.gif" style="display: none;">
+    @Ajax.ActionLink("Link Text", "ActionName", "ControllerName", null, new AjaxOptions{UpdateTargetId = "result", LoadingElementId = "spinner"}, null)*@

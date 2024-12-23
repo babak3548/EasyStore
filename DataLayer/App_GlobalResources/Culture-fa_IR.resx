@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buy_From" xml:space="preserve">
+    <value>buy From</value>
+    <comment>خرید از فروشگاه</comment>
+  </data>
+  <data name="FalseValue" xml:space="preserve">
+    <value>خیر</value>
+    <comment>خیر</comment>
+  </data>
+  <data name="TrueValue" xml:space="preserve">
+    <value>بله</value>
+    <comment>بله</comment>
+  </data>
+  <data name="BusinessOwnerAccept" xml:space="preserve">
+    <value>در انتظار پرداخت </value>
+    <comment>در انتظار پرداخت مشتری</comment>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>لغو </value>
+    <comment>لغو شده</comment>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>تحویل</value>
+    <comment>تحویل یا نهایی</comment>
+  </data>
+  <data name="payment" xml:space="preserve">
+    <value>در انتظار ارسال</value>
+    <comment>در انتظار تحویل کالا</comment>
+  </data>
+  <data name="request" xml:space="preserve">
+    <value>در انتظار تایید فروشنده</value>
+    <comment>در انتظار تایید فروشنده</comment>
+  </data>
+  <data name="initialize" xml:space="preserve">
+    <value>ایجاد</value>
+    <comment>ایجاد</comment>
+  </data>
+  <data name="Melat" xml:space="preserve">
+    <value>ملت</value>
+    <comment>ملت</comment>
+  </data>
+  <data name="Pasargad" xml:space="preserve">
+    <value>پاسارگاد</value>
+    <comment>پاسارگاد</comment>
+  </data>
+  <data name="Abstained" xml:space="preserve">
+    <value>ممتنع</value>
+    <comment>ممتنع</comment>
+  </data>
+  <data name="Aramex" xml:space="preserve">
+    <value>شرکت آرامیکس</value>
+    <comment>شرکت آرامیکس</comment>
+  </data>
+  <data name="NoSatisfied" xml:space="preserve">
+    <value>ناراضی</value>
+    <comment>ناراضی</comment>
+  </data>
+  <data name="OtherCo" xml:space="preserve">
+    <value>سایر شرکت  های حمل و نقل</value>
+    <comment>سایر شرکت  های حمل و نقل</comment>
+  </data>
+  <data name="PostIran" xml:space="preserve">
+    <value>شرکت پست جمهوری اسلامی ایران</value>
+    <comment>شرکت پست جمهوری اسلامی ایران</comment>
+  </data>
+  <data name="Satisfied" xml:space="preserve">
+    <value>راضی</value>
+    <comment>راضی</comment>
+  </data>
+  <data name="ShippingWithBusinessOwner" xml:space="preserve">
+    <value> پیک خود فروشنده</value>
+    <comment>پیک خود فروشنده</comment>
+  </data>
+  <data name="Tepaxs" xml:space="preserve">
+    <value>شرکت تیپاکس</value>
+    <comment>شرکت تیپاکس</comment>
+  </data>
+  <data name="TPG" xml:space="preserve">
+    <value>شرکت تی پی جی(TPG)</value>
+    <comment>شرکت تی پی جی(TPG)</comment>
+  </data>
+  <data name="Cancele" xml:space="preserve">
+    <value>لغو </value>
+    <comment>لغو شده</comment>
+  </data>
+  <data name="Final" xml:space="preserve">
+    <value>نهایی شد</value>
+    <comment>نهایی شده</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+    <comment>نهایی شده</comment>
+  </data>
+  <data name="ToPay" xml:space="preserve">
+    <value>اقدام به پرداخت</value>
+    <comment>اقدام به پرداخت</comment>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>فقط فروش اکسپرس دارم</value>
+    <comment>فقط فروش آنلاین دارم</comment>
+  </data>
+  <data name="RequestAndOnline" xml:space="preserve">
+    <value>هر دو حالت فروش اکسپرس و درخواستی را دارم</value>
+    <comment>هر دو حالت فروش آنلاین و درخواستی را دارم</comment>
+  </data>
+  <data name="RequestOnly" xml:space="preserve">
+    <value>فقط درخواست خرید قبول می کنم</value>
+    <comment>فقط درخواست خرید قبول می کنم</comment>
+  </data>
+</root>

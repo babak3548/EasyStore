@@ -1,0 +1,12 @@
+﻿@using DataLayer.Contract;
+@using System.Reflection;
+@using UILayer.Miscellaneous;
+@using DataLayer.EF
+@model IContract
+
+@Html.Label(ViewData["langugeValue"].ToString())
+@{var propInfo = ((PropertyInfo)ViewData["PropertyInfo"]);
+    @Html.CheckBox(propInfo.Name, (bool)propInfo.GetValue(Model, null), new { id = propInfo.Name })
+    <br />
+
+}

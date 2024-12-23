@@ -1,0 +1,35 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+@using DataLayer.EF
+@using System.Net
+
+@model Message
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+
+}
+
+@{
+    @Html.Label("فرستنده پیام")
+    @Html.TextBox("Name", Model.FkUseSenderNavigation.Name, new { @readonly = "readonly", @id = "Name" })
+    <br />
+
+    @Html.Label("تاریخ ارسال")
+    @Html.TextBox("Date", Model.Date, new { @readonly = "readonly", @id = "Date" })
+    <br />
+
+
+    <div class="frame">
+        <div class="hed1"><b>متن پیغام</b></div>
+        <div class="TR">
+            @Html.Raw(WebUtility.HtmlDecode(Model.Text.Replace("\r\n", "<br />")))
+        </div>
+    </div>
+
+    <a href="@Url.Action("GridView", "Message", null, "https")">مشاهده بقیه پیغام های خوانده نشده </a>
+    <br />
+}

@@ -1,0 +1,36 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous 
+@model IModelViews
+@*این ویو نهایتن باید در فولدر شییر قرار گیرد تا بتوان از
+تمام کنترولر های مشتق شده قابل دسترس باشد*@
+@{
+    ViewBag.Title = ""; 
+    Layout = "_LayoutUser.cshtml";
+}
+
+
+<div id="UserView">
+    <div id="DivCategory">
+        @Html.Partial("Category",Model.DicFilterParam)
+        @{var CatPageContents = ((IEnumerable<ContentContract>)ViewData["PageContent"]).Where(c => c.Position == (short)Position.Category).ToList();
+          if (CatPageContents.Count() > 0)
+          {
+            <p>
+                @Html.Partial("Propaganda", CatPageContents)
+            </p>
+          }
+        }
+    </div>
+    <div id="DivContent" dir="rtl">
+@Html.Partial(Model.PartialViewName,Model)
+    </div>
+
+</div>
+@*    @{var PropagPageContents = ((IEnumerable<ContentContract>)ViewData["PageContent"]).Where(c => c.Position == (short)Position.Propaganda).ToList();
+      if (PropagPageContents.Count() > 0)
+      {
+        <div id="DivePropaganda">
+            @Html.Partial("Propaganda", PropagPageContents)
+        </div>
+      }*@

@@ -1,0 +1,35 @@
+﻿
+@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+
+
+@model ReportAccountModel
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+<link href="  @Url.Content("~/Content/style/jquery.calendars.picker.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.calendars.all.js")" type="text/javascript"></script>
+
+@{
+
+    using (Html.BeginForm("AccountReport", "Accounting", null, FormMethod.Post, false, new { @id = "EditorRowForm" }))
+    {
+
+        @Html.Label("از تاریخ")
+        @Html.TextBox("StartDate", Model.StartDate, new { @id = "StartDate", @onfocus = JavaScript.datePiker("StartDate") })
+        <br />
+
+        @Html.Label("تا تاریخ ")
+        @Html.TextBox("EndDate", Model.EndDate, new { @id = "EndDate", @onblur = JavaScript.AlessThanB("StartDate", "EndDate", "تاریخ شروع باید از تاریخ پایان کوچکتر باشد"), @onfocus = JavaScript.datePiker("EndDate") })
+        <br />
+
+
+        <input type="submit" value="گزارش حسابداری" />
+
+        <br />
+    }
+}

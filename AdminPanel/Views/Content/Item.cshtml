@@ -1,0 +1,193 @@
+﻿@model Content
+@{
+    ViewData["Title"] = "Item";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var appSetting = new DataLayer.AppSetting();
+}
+<link rel="stylesheet" type="text/css" href="~/theme/assets/vendors/css/editors/quill/katex.min.css">
+<link rel="stylesheet" type="text/css" href="~/theme/assets/vendors/css/editors/quill/monokai-sublime.min.css">
+<link rel="stylesheet" type="text/css" href="~/theme/assets/vendors/css/editors/quill/quill.snow.css">
+<link rel="stylesheet" type="text/css" href="~/theme/assets/vendors/css/editors/quill/quill.bubble.css">
+
+
+
+
+<h3 id="imgArea">عکس  و ویدیو</h3>
+<hr />
+@if (Model.Id > 0)
+{
+    <div class="row">
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/Content/UploadFile">
+                <img style="width: 100px;height:100px" src="@Model.BanerImageAdress.GetOtherFilePath()" />
+                <label asp-for="BanerImageAdress" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="BanerImageAdress" />
+                <input type="hidden" name="contentId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/Content/UploadFile">
+                <video width="150" height="110" controls>
+                    <source src="@Model.VideoAdress.GetOtherFilePath()" type="video/mp4">
+                    بروزر شما تگ ویدیو رو ساپورت نمی کند
+                </video>
+
+                <label asp-for="VideoAdress" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="VideoAdress" />
+                <input type="hidden" name="contentId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+
+    </div>
+}
+
+<h3 id="formContent">@(Model.Id > 0 ? "ویرایش پست" : "ایجاد پست")</h3>
+<hr />
+<form asp-action="Item" onsubmit="return onSubmitForm(event)">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="BanerImageAdress" class="form-control" />
+    <input type="hidden" asp-for="UpdateDate" class="form-control" />
+    <input type="hidden" asp-for="VideoAdress" class="form-control" />
+    <input type="hidden" asp-for="RegisterDate" class="form-control" />
+
+    <div class="row">
+        <div class="col-md-6">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">عنوان</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Position" class="control-label"></label>
+                <input asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="VideoAdress" class="control-label"> آدرس ویدیو آپلود شده را در قسمت توضیحات متن از کلید ویدیو در سایت قرار دهید  </label>
+                <input readonly type="text" value="@Model.VideoAdress.GetOtherFilePath()" class="form-control" />
+                <span asp-validation-for="VideoAdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContentType" class="control-label"></label>
+                <select asp-for="ContentType" class="form-control" asp-items="ViewBag.ContentType"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Writer" class="control-label"></label>
+                <input asp-for="Writer" class="form-control" />
+                <span asp-validation-for="Writer" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abstract" class="control-label"></label>
+                <input asp-for="Abstract" class="form-control" />
+                <span asp-validation-for="Abstract" class="text-danger"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="ShowValue" class="control-label">توضیحات</label>
+                <input type="hidden" asp-for="ShowValue" class="control-label">متن</input>
+                <div id="full-wrapper">
+                    <div id="full-container">
+                        <div class="editor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label"> کانتنت در صورت HTML</label>
+        <textarea name="htmlShowValue" class="form-control" style="text-align:left;height: 250px;"  >@Model.ShowValue</textarea>
+   
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <input type="submit" value="ذخیره" class="btn btn-primary mx-2" />
+            <a asp-action="Index" class="btn btn-info mx-2">مشاهده لیست</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger mx-2">حذف</a>
+            <a href="@Url.Action("ShowContent","Content",new { contentId=Model.Id},"https" , appSetting.ClientDomainName)"> مشاهده در سایت</a>
+
+        </div>
+    </div>
+
+</form>
+
+
+<div>
+
+</div>
+@section Script{
+    <script src="~/theme/assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="~/theme/assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="~/theme/assets/vendors/js/editors/quill/quill.min.js"></script>
+    <script src="~/theme./assets/vendors/js/extensions/jquery.steps.min.js"></script>
+    <script src="~/theme/assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script>
+        var fullEditor = new Quill('#full-container .editor', {
+            bounds: '#full-container .editor',
+            modules: {
+                'formula': true,
+                'syntax': true,
+                'toolbar': [
+                    [{
+                        'size': []
+                    }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [{
+                        'color': []
+                    }, {
+                        'background': []
+                    }],
+                    [{
+                        'script': 'super'
+                    }, {
+                        'script': 'sub'
+                    }],
+                    [{
+                        'header': '1'
+                    }, {
+                        'header': '2'
+                    }, 'blockquote', 'code-block'],
+                    [{
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }, {
+                        'indent': '-1'
+                    }, {
+                        'indent': '+1'
+                    }],
+                    [{
+                        'align': []
+                    }],
+                    ['link', 'image', 'video', 'formula'],
+                    ['clean']
+                ],
+            },
+            theme: 'snow'
+        });
+
+        function onSubmitForm(event) {
+            $('#ShowValue').val(JSON.stringify(fullEditor.getContents()))
+        }
+        $(document).ready(a => {
+            let value = $('#ShowValue').val();
+            fullEditor.setContents(JSON.parse(value));
+        });
+    </script>
+}
+
+

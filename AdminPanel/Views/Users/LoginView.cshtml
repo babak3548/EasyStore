@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "ورود کاربر";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<h3 style="font-size: larger;">ورود کاربر</h3>
+
+<fieldset class="border p-2"  style="direction: rtl;">
+
+
+
+    @using (Html.BeginForm("Login", "Users", "https", FormMethod.Post, false, new { id = "loginForm" }))
+    {
+        <span Id="ErrSp"> </span>
+        <br />
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">شماره موبایل</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="Mobile" placeholder="09XXXXXXXXX">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">کلمه عبور</label>
+                    <div class="col-sm-5">
+                        <input type="password" class="form-control" name="Password" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                    <input type="submit" class="btn btn-primary" value="ورود" />
+                </div>
+            </div>
+        </div>
+    }
+</fieldset>
+
+
+
+
+
+
+

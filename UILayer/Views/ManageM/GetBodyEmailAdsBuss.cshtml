@@ -1,0 +1,20 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+@using DataLayer.EF
+
+
+@{
+    <div class="subD" id="stateP">
+        @Html.Partial("stateViewer")
+    </div>
+    <div class="subD">
+        <button type="button" title="ارسال ایمیل" class="btnAE" onclick="SendsEml()">ارسال ایمیل</button>
+    </div>
+    @Html.Hidden("MessageId", ViewData["MessageId"].ToString())
+
+    <textarea id="inputCleditor" name="ShowValue">@(ViewData["strHtmlBody"].ToString()) </textarea>
+
+}

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<DataLayer.EF.Wish>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li>لیست علاقه‌مندی‌ها</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--wishlist area start -->
+<div class="wishlist_page_bg">
+    <div class="container">
+        <div class="wishlist_area">
+            <div class="wishlist_inner">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table_desc wishlist">
+                                <div class="cart_page table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="product_remove">حذف</th>
+                                                <th class="product_thumb">تصویر</th>
+                                                <th class="product_name">محصول</th>
+                                                <th class="product-price">قیمت</th>
+                                                <th class="product_quantity">وضعیت انبار</th>
+                                                <th class="product_total">افزودن به سبد</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td class="product_remove"><a asp-action="RemoveWishlist" asp-route-id="@item.Id">×</a></td>
+                                                    <td class="product_thumb"><a href="@(Url.Action("AEntityClient","Product",new { nameForUrl=item.Product.NameForUrll}))"><img src="@item.Product.Image.GetUrlListImg()" alt=""></a></td>
+                                                    <td class="product_name"><a href="@(Url.Action("AEntityClient","Product",new { nameForUrl=item.Product.NameForUrll}))"> @item.Product.Name</a></td>
+                                                    <td class="product-price">@item.Product.BeforDiscountPrice.decimalToDigMony() </td>
+                                                    <td class="product_quantity">@(item.Product.Available>0 ?"موجود در انبار" : "ناموجود")</td>
+                                                    <td class="product_total"><a href="@(Url.Action("AEntityClient","Product",new { nameForUrl=item.Product.NameForUrll}))">مشاهده و افزودن به سبد</a></td>
+                                                </tr>
+
+                                            }
+
+                                            </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="wishlist_share">
+                        <h4>اشتراک گذاری در:</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--wishlist area end -->

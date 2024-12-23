@@ -1,0 +1,11 @@
+﻿  @using DataLayer.Contract;
+  @using System.Reflection;
+  @using UILayer.Miscellaneous;
+  @model ModelPartial  
+  
+    @Html.Label(Model.langugeValue)
+    @{
+ <input id='@(Model.PropertyName )' name='@(Model.PropertyName)'  type="text"   value='@(Model.value)'  onblur= '@( Model.ValidateMethod)' />                                                    
+    <br  />
+
+ }

@@ -1,0 +1,91 @@
+﻿@model DataLayer.EF.PromotionProduct
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4>ویرایش پروموشن</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="PromotionType" class="control-label"></label>
+                <select asp-for="PromotionType" class="form-control" asp-items="ViewBag.PromotionType"></select>
+                <span asp-validation-for="PromotionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkProduct" class="control-label"></label>
+                <select asp-for="FkProduct" class="form-control" asp-items="ViewBag.FkProduct"></select>
+                <span asp-validation-for="FkProduct" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order" class="control-label"></label>
+                <input asp-for="Order" class="form-control" />
+                <span asp-validation-for="Order" class="text-danger"></span>
+            </div>
+            <xmp>
+                <h3>*(titles.Length >= 1 ? titles[0]:"")</h3>
+                <h1>*(titles.Length >= 2 ? titles[1]:"")<br>*(titles.Length >= 3 ? titles[2]:"")</h1>
+                <p class="less-space">
+                    *(titles.Length >= 4 ? titles[3]:"")
+                    <span>*(titles.Length >= 5 ? titles[4]:"")</span>
+                    *(titles.Length >= 6 ? titles[5]:"")
+            </xmp>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Query" class="control-label"></label>
+                <input asp-for="Query" class="form-control" />
+                <span asp-validation-for="Query" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpireDateTime" class="control-label"></label>
+                <input asp-for="ExpireDateTime" class="form-control" />
+                <span asp-validation-for="ExpireDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input disabled asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkCategory" class="control-label"></label>
+                <select asp-for="FkCategory" class="form-control" asp-items="ViewBag.FkCategory"></select>
+                <span asp-validation-for="FkCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<h4 id="imgArea">عکس بنر پروموشن </h4>
+<hr />
+@if (Model.Id > 0)
+{
+    <div class="row">
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/PromotionProducts/UploadFile">
+                <img style="width: 200px;" src="@Model.Image.GetOtherFilePath()" />
+                <label asp-for="Image" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="Image" />
+                <input type="hidden" name="promotionProductId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+}
+<div>
+    <a asp-action="Index">برگشت به لیست</a>
+</div>
+

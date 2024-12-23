@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DataLayer.EF.CategoryProperty>
+
+@{
+    ViewData["Title"] = "ویژگی گروها";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">تعریف ویژگی جدید</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkCategoryNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Discription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkCategoryNavigation.Name)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id"> مشاهده</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

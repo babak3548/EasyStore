@@ -1,0 +1,112 @@
+﻿@using DataLayer.Models
+@using DataLayer.EF
+
+@using System.Linq
+@using System.Collections.Generic;
+@using UILayer.Miscellaneous
+@using Utility
+
+@model List<DataLayer.EF.Content>
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li>بلاگ بدون نوار کناری</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+
+<div class="blog_bg_area">
+    <div class="container">
+        <!--blog area start-->
+        <div class="row">
+            <div class="col-12">
+                <div class="blog_wrapper blog_nosidebar mb-60">
+                    <div class="blog_header">
+                        <h1>بلاگ</h1>
+                    </div>
+                    <div class="blog_wrapper_inner">
+                        @foreach (var item in Model)
+                        {
+                            if (string.IsNullOrEmpty(item.VideoAdress?.Trim()))
+                            {
+                                <article class="single_blog">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })"><img src="@item.BanerImageAdress.GetOtherFilePath()" alt="@item.Name"></a>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4 class="post_title"><a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })">@item.Name</a></h4>
+                                            <div class="blog_meta">
+                                                <span class="author">ارسال توسط : <a href="#">@item.Writer</a> / </span>
+                                                <span class="meta_date">ارسال شده در :  <a href="#">@item.UpdateDate.ToPersianDateWithMonthName()</a></span>
+                                            </div>
+                                            <div class="blog_desc">
+                                                <p>@item.Abstract</p>
+                                            </div>
+                                            <footer class="btn_more">
+                                                <a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })"> بیشتر بخوانید</a>
+                                            </footer>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            }
+                            else
+                            {
+                                <article class="single_blog blog_bidio">
+                                    <figure>
+                                        <div class="blog_thumb">
+                                            <iframe src="@item.BanerImageAdress.GetOtherFilePath()" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                        <figcaption class="blog_content">
+                                            <h4 class="post_title"><a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })">مطلب بلاگ ویدیویی</a></h4>
+                                            <div class="blog_meta">
+                                                <span class="author">ارسال توسط : <a href="#">@item.Writer</a> / </span>
+                                                <span class="meta_date">ارسال شده در :  <a href="#">@item.UpdateDate.ToPersianDateWithMonthName() </a></span>
+                                            </div>
+                                            <div class="blog_desc">
+                                                <p>@item.Abstract</p>
+                                            </div>
+                                            <footer class="btn_more">
+                                                <a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })"> بیشتر بخوانید</a>
+                                            </footer>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            }
+                        }
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!--blog pagination area start-->
+                @*<div class="blog_pagination">
+                        <div class="pagination">
+                            <ul>
+                                <li class="current">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="next"><a href="#">بعدی</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+                <!--blog pagination area end-->
+            </div>
+        </div>
+        <!--blog area end-->
+    </div>
+</div>
+

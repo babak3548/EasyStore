@@ -1,0 +1,49 @@
+﻿@using DataLayer.EF
+@using System
+
+@model Product
+@{ 
+    var imgs = !string.IsNullOrWhiteSpace(Model.Image2) ? Model.Image2.Split(",").ToList() : new List<string>();
+
+}
+
+<div class="col-lg-5 col-md-6">
+    <div class="product-details-tab">
+        <div id="img-1" class="zoomWrapper single-zoom">
+            <a href="#">
+                <img id="zoom1" src="@Model.Image.GetUrlDetailsImg()" data-zoom-image="@Model.Image.GetUrlDetailsImg()" alt="@Model.Name">
+            </a>
+        </div>
+        <div class="single-zoom-thumb">
+            <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+                <li>
+                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="@Model.Image.GetUrlDetailsImg()"
+                       data-zoom-image="@Model.Image.GetUrlDetailsImg()">
+                        <img src="@Model.Image.GetUrlDetailsImg()" alt="@Model.Name">
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="@Model.Image1.GetUrlDetailsImg()"
+                       data-zoom-image="@Model.Image1.GetUrlDetailsImg()">
+                        <img src="@Model.Image1.GetUrlListImg()" alt="@Model.Name">
+                    </a>
+
+                </li>
+                @foreach (var item in imgs)
+                {
+                    if (!string.IsNullOrWhiteSpace(item))
+                    {
+                        <li>
+                            <a href="#" class="elevatezoom-gallery active" data-update="" data-image="@item.GetUrlDetailsImg()" data-zoom-image="@item.GetUrlDetailsImg()">
+                                <img src="@item.GetUrlListImg()" alt="@Model.Name">
+                            </a>
+                        </li>
+                    }
+
+                }
+
+            </ul>
+        </div>
+    </div>
+</div>

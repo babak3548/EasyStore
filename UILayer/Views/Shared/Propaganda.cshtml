@@ -1,0 +1,8 @@
+﻿@using DataLayer.Contract
+
+@model IEnumerable<ContentContract>
+@foreach (var item in Model)
+{
+    if (item.ShowValue != null)
+    {@item.ShowValue.ToString() } @*@MvcHtmlString.Create()*@
+}

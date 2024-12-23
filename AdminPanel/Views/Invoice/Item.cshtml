@@ -1,0 +1,333 @@
+﻿@model Invoice
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var inv = new Invoice();
+    var invPrd = new BridgeInvoiceProduct();
+    var payLog = new PaymentLog();
+    var accounting = new Accounting();
+    var appSetting = new DataLayer.AppSetting();
+
+
+}
+    <div>
+        <a asp-action="Index" class="btn btn-info">مشاهده لیست</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">ویرایش</a> 
+        <a @*asp-action="Reject"*@ asp-route-id="@Model.Id" asp-route-isReject="1" class="btn btn-warning">ابطال</a>
+
+    </div>
+<hr />
+<dl class="row">
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.Id)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Id)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.RegisterDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.RegisterDate.ToPersianDateTime()
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        نوع و زمان ارسال
+    </dt>
+    <dd class="col-sm-10">
+        @(Model.ShippingCompany.GetDescription() +"  "
+        +Model.ShippingCompany.CalcDeliveryDatetime(Model.ProcessingDays).ToPersianDate())
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.SendingDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.SendingDate.ToPersianDateTime()
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.Status)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.Status.GetDescription()
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.DeliveryAddress)
+    </dt>
+    <dd class="col-sm-10">
+        <span>نام: @Model.DeliveryName</span><br />
+        <span>نام خانودگی: @Model.DeliveryLastName</span><br />
+        <span>نام شرکت: @Model.DeliveryCompanyName</span><br />
+        <span>نام شهر: @Model.DeliveryCityName</span><br />
+        <span>آدرس: @Model.DeliveryAddress</span><br />
+        <span>کد پستی: @Model.DeliveryPostCode</span><br />
+        <span>تلفن: @Model.DeliveryTel</span><br />
+        <span>موبایل: @Model.DeliveryMobile</span><br />
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.TotalSumProductPrice)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.TotalSumProductPrice.ToString("#,##")
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.ShippingCost)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.ShippingCost.ToString("#,##")
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.PaymentToCountinue)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.PaymentToCountinue.ToString("#,##")
+
+    </dd>
+
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.Discount)
+
+    </dt>
+    <dd class="col-sm-10">
+        @Model.Discount.ToString("#,##")
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.Vat)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.Vat.ToString("#,##")
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.RejectedCost)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.RejectedCost.ToString("#,##")
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.PaymentType)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.PaymentType.GetDescription()
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.NoteForBusinessOwner)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.NoteForBusinessOwner)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.NoteForUser)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.NoteForUser)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.TimeBankPayInfo)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.TimeBankPayInfo)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.PaymentBankCode)
+    </dt>
+    <dd class="col-sm-10">
+        @Model.PaymentBankCode.GetDescription()
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.TransctionRefrenceId)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.TransctionRefrenceId)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.TracingShippingNumber)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.TracingShippingNumber)
+    </dd>
+    <dt class="col-sm-2 mb-2">
+        @Html.DisplayNameFor(model => model.HistoryStateAndDescription)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.HistoryStateAndDescription)
+    </dd>
+
+    <dt class="col-sm-2 mb-2">
+        موبایل کاربر
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.FkUserNavigation.Mobile)
+    </dd>
+
+</dl>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.FkProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.InvoiceDetilasState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.Colore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => invPrd.Image)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.BridgeInvoiceProduct)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkProductNavigation.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+            <td>
+                @item.InvoiceDetilasState.GetDescription()
+            </td>
+            <td>
+                @item.Price.ToString("#,##")
+            </td>
+            <td>
+                <div style="background:@item.Colore;width: 40px;height: 40px;">    </div>
+            </td>
+            <td>
+                <a href="@( item.Image.GetUrlDetailsImg())">
+                    <img style="width: 100px;height:100px" src="@( item.Image.GetUrlListImg())" />
+                </a>
+
+                <a href="@(Url.Action("Index","Product",
+                         new { Id = item.FkProduct.ToString()+"-pp" },"https"
+                         , appSetting.ClientDomainName).Replace("/Index",""))">
+                    مشاهده محصول
+                </a>
+
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<h3>
+    لاگ های عملیات پرداخت
+</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(a => payLog.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => payLog.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => payLog.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => payLog.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => payLog.CreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => payLog.UpdateDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PaymentLogs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @item.Status.GetDescription()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @item.CreateDate.ToPersianDateTime()
+                </td>
+                <td>
+                    @item.UpdateDate.ToPersianDateTime()
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>
+    سند های حسابداری کاربر
+</h3>
+<span>موجودی کاربر @( ((decimal)ViewData["Balance"]).ToString("#,##") )</span>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(a => accounting.Id)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(a => accounting.Creditor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => accounting.Debtor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => accounting.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => accounting.RegisterDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a => accounting.Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var acc in (List<Accounting>)ViewData["accounting"])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => acc.Id)
+                </td>
+                <td>
+                    @acc.Creditor.ToString("#,##")
+                </td>
+                <td>
+
+                    @acc.Debtor.ToString("#,##")
+                </td>
+                <td>
+                    @acc.Date.ToPersianDateTime()
+                </td>
+                <td>
+                    @acc.RegisterDate.ToPersianDateTime()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => acc.Name)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

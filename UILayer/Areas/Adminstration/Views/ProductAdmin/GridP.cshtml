@@ -1,0 +1,72 @@
+﻿@using DataLayer.EF
+@using Utility
+@using UILayer.Views
+@model IEnumerable<Product>
+@{
+    int iRow = 1;
+    var ajaxOption = new AjaxOption { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+}
+<table class="TableCss">
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+        <th> ویرایش </th>
+        <th>  حذف</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Image</th>
+        <th>Image1</th>
+        <th>Image2</th>
+        <th>Price</th>
+        <th>RegisterDate</th>
+        <th>Discription</th>
+        <th>FK_BusinessOwner</th>
+        <th>MadeInCountry</th>
+        <th>CountPrice</th>
+        <th>MinCountForPrice</th>
+        <th>available</th>
+        <th>PersentMarkater</th>
+        <th>AcceptReturnDay</th>
+        <th>ShippingDiscription</th>
+        <th>WordKey</th>
+        <th>SellOrBuy</th>
+        <th>UnitBuy</th>
+        <th>wightUnitBuyWithKG</th>
+        <th>Active</th>
+        <th>FK_Category</th>
+        <th>RankShow</th>
+        <th>FK_Content</th>
+    </tr>
+    @foreach (var entity in Model)
+    {
+        <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td>@Ajax.ActionLink("ویرایش",Url.Action( "EditView", "ProductAdmin", new { area = "Adminstration", Id = entity.Id }), ajaxOption, null)</td>
+            <td>@Html.ActionLink("حذف", "Delete", "ProductAdmin", new { area = "Adminstration", Id = entity.Id }, null)         </td>
+            <td align="center">  @entity.Id  </td>
+            <td align="center">  @entity.Name  </td>
+            <td align="center">  @entity.Brand  </td>
+            <td align="center">  @entity.Image  </td>
+            <td align="center">  @entity.Image1  </td>
+            <td align="center">  @entity.Image2  </td>
+            <td align="center">  @entity.Price  </td>
+            <td align="center">  @entity.RegisterDate  </td>
+            <td align="center">  @entity.Discription.GetLenghStr(20)  </td>
+            <td align="center">  @entity.FkBusinessOwner  </td>
+            <td align="center">  @entity.MadeInCountry  </td>
+            <td align="center">  @entity.CountPrice  </td>
+            <td align="center">  @entity.MinCountForPrice  </td>
+            <td align="center">  @entity.Available  </td>
+            <td align="center">  @entity.PersentMarkater  </td>
+            <td align="center">  @entity.AcceptReturnDay  </td>
+            <td align="center">  @entity.ShippingDiscription.GetLenghStr(20)  </td>
+            <td align="center">  @entity.WordKey.GetLenghStr(20)  </td>
+            <td align="center">  @entity.Dimansion  </td>
+            <td align="center">  @entity.UnitBuy  </td>
+            <td align="center">  @entity.WightUnitBuyWithKg  </td>
+            <td align="center">  @entity.Active  </td>
+            <td align="center">  @entity.FkCategory  </td>
+            <td align="center">  @entity.RankShow  </td>
+            <td align="center">  @entity.FkContent  </td>
+        </tr>
+        iRow++;
+    }
+</table>

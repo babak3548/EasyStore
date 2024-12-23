@@ -1,0 +1,44 @@
+﻿@using UILayer.Views
+@using DataLayer.Enums
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@{
+    @Html.ActionLink("AEntityPartial", "ShowContent", new { Id = 31 })
+    using (Html.BeginForm("Register", "Comment", "https", FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+    @Html.Hidden("FK_Comment", (short)CommentType.ContractUs)
+
+    <table class="tb">
+        <tr class="tr1">
+            <td class="td1">ایمیل:</td>
+            <td class="td2">@Html.TextBox("KeyWord", "", new { @id = "KeyWord", @onblur = JavaScript.StringValidation("KeyWord", 1, 50) })
+            </td>
+        </tr>
+        <tr class="tr2">
+            <td class="td1">پیغام*:</td>
+            <td class="td2">@Html.TextArea("Comment1", "", new { @id = "Comment1", @onblur = JavaScript.StringValidation("Comment1", 1, 600) })</td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1"></td>
+            <td class="td2">
+                
+                        <input type="submit" value="ارسال" />
+                    </td>
+        </tr>
+
+    </table>
+@*
+    @Html.Label("ایمیل ")
+    @Html.TextBox("KeyWord", "", new { @id = "KeyWord", @onblur = JavaScript.StringValidation("KeyWord", 1, 50) })<br />
+           
+    @Html.Label("پیغام")<br />
+    @Html.TextArea("Comment1","", new {  @id = "Comment1", @onblur = JavaScript.StringValidation("Comment1", 1, 600) })<br />
+    
+      <input type="submit" value="ارسال" />;<br />*@
+        
+    }
+}

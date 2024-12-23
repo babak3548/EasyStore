@@ -1,0 +1,30 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+
+@{
+    List<string> list = (List<string>)ViewData["stateListStr"]; 
+
+         }
+@{
+    <table class="FtrCtr W100" >
+        <tbody class="W100">
+            <tr class="W100">
+                @foreach (var state in list)
+                {
+                    if (state== ViewData["currentStateStr"].ToString())
+                    {
+                      <td class="CTd" style="width:@(100/list.Count)%"> @(state + " >>")</td>  
+                    }
+                    else
+                    {
+                      <td class="STd" style="width:@(100/list.Count)%">@(state+ " >>")</td>
+                    }
+                     
+                }
+            </tr>
+        </tbody>
+
+    </table>
+  }

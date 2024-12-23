@@ -1,0 +1,68 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer
+@using Utility
+@using System.Net
+
+@model Message
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@{
+    //string isReadOnly = (ViewData["EmailSender"] as string) != "" ? "readonly='readonly'" : "";
+    var ajaxOption = new AjaxOption { UpdateTargetId = "divCapImg" };
+
+}
+
+@using (Html.BeginForm("sendSavedMsgToEmail", "Message", "https", FormMethod.Post, false, new { @id = "EditorRowForm" }))
+{
+    @Html.Hidden("Id", Model.Id);
+
+
+    <br clear="both" />
+    <div class="frame">
+        <div class="hed1 floatr"><span class="iconsp emaila"></span></div>
+        <table class="tb">
+            <tr class="tr1">
+                <td class="td1">ایمیل دریافت کننده :</td>
+                <td class="td2">
+                    <input value="" type="text" name="Email" id="Email" class="inputtd" onblur="@JavaScript.emailValidate("Email")" />
+                </td>
+            </tr>
+
+            <tr class="tr2">
+                <td class="td1">عنوان:</td>
+                <td class="td2">@Html.TextBox("title", ViewData["titleEmail"].ToString(), new { @id = "title", @class = "inputtd", @onblur = JavaScript.StringValidation("title", 0, 50) }) </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">متن*:</td>
+                <td class="td2">
+                    @Html.Raw(WebUtility.HtmlDecode(Model.Text))
+                </td>
+            </tr>
+            <tr class="tr2">
+                <td class="td1">@Ajax.ActionLink("لود مجدد عکس", Url.Action("CapthaImgTagAjax", "User"), ajaxOption)</td>
+                <td class="td2">
+                    <div id="divCapImg">
+                        <img id="capImg" style="width:200px; height:50px;" alt="Captha" src="@Url.Action("Captha", "User")" />
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">کارکتر های عکس بالا*:</td>
+                <td class="td2">@Html.TextBox("captcha", "", new { @id = "captcha", @onblur = JavaScript.StringValidation("captcha", 4, 4) })</td>
+            </tr>
+            <tr class="tr2">
+                <td class="td1"></td>
+                <td class="td2">
+                    <input type="submit" value="ارسال" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

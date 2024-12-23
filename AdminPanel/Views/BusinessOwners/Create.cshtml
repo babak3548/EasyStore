@@ -1,0 +1,122 @@
+﻿@model DataLayer.EF.BusinessOwner
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>ایجاد فروشنده</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeActivity" class="control-label"></label>
+                <input asp-for="TypeActivity" class="form-control" />
+                <span asp-validation-for="TypeActivity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WordKey" class="control-label"></label>
+                <textarea asp-for="WordKey" class="form-control"> </textarea>
+                <span asp-validation-for="WordKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <textarea asp-for="Address" class="form-control"> </textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationalCode" class="control-label"></label>
+                <input asp-for="NationalCode" class="form-control" />
+                <span asp-validation-for="NationalCode" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="FkUser" class="control-label"></label>
+            <select asp-for="FkUser" class ="form-control" asp-items="ViewBag.FkUser"></select> 
+        </div>*@
+            <div class="form-group">
+                <label asp-for="FkProvince" class="control-label"></label>
+                <select asp-for="FkProvince" class="form-control" asp-items="ViewBag.FkProvince"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkMarketer" class="control-label"></label>
+                <select asp-for="FkMarketer" class="form-control" asp-items="ViewBag.FkMarketer"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocumentFile" class="control-label"></label>
+                <input asp-for="DocumentFile" class="form-control" />
+                <span asp-validation-for="DocumentFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebSiteAddress" class="control-label"></label>
+                <input asp-for="WebSiteAddress" class="form-control" />
+                <span asp-validation-for="WebSiteAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label"></label>
+                <textarea asp-for="Discription" class="form-control" > </textarea>
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Active" class="control-label"></label>
+                <input asp-for="Active" class="form-control" />
+                <span asp-validation-for="Active" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tel" class="control-label"></label>
+                <input asp-for="Tel" class="form-control" />
+                <span asp-validation-for="Tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhatsApp" class="control-label"></label>
+                <input asp-for="WhatsApp" class="form-control" />
+                <span asp-validation-for="WhatsApp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InstaOrOtherSocial" class="control-label"></label>
+                <input asp-for="InstaOrOtherSocial" class="form-control" />
+                <span asp-validation-for="InstaOrOtherSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentPorsantAmount" class="control-label"></label>
+                <input asp-for="PaymentPorsantAmount" class="form-control" />
+                <span asp-validation-for="PaymentPorsantAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeSells" class="control-label"></label>
+                <select asp-for="TypeSells" class="form-control" asp-items="ViewBag.TypeSells"></select>
+                <span asp-validation-for="TypeSells" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeShippingBussinessOwner" class="control-label"></label>
+                <select asp-for="TypeShippingBussinessOwner" class="form-control" asp-items="ViewBag.TypeShippingBussinessOwner"></select>
+                <span asp-validation-for="TypeShippingBussinessOwner" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="ذخیره" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">برگشت به لیست</a>
+</div>
+

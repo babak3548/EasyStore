@@ -1,0 +1,107 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+
+@model IEnumerable<SearchResultContract>
+@{
+
+      int RowCount = Model.Count();
+    AjaxOption ajaxOptionGrid = new AjaxOption { UpdateTargetId = "Grid", LoadingElementId = "Loding" };
+
+
+    <table class="TblPdc">
+        @foreach (var contract in Model)
+        {
+            <tr class="trPdc">
+                <td class="tdPdc">
+                    <a class="img" href="@Url.Action(contract.LinkActionName, contract.LinkControlerName, new { Id = contract.Id }, "https")">
+                        <img class="img" alt="@contract.Name" src="@Url.Content('~'+@contract.ImageAddress)" />
+                    </a>
+                </td>
+                <td class="tdPLn">
+                    @foreach (var dataLong in contract.columesDataLong)
+                    {
+                        if (dataLong.Key == ConstSetting.Link)
+                        {
+                            <a title="" href='@dataLong.Value'>      </a>
+                        }
+                        else
+                        {
+                            <span>@dataLong.Value</span>
+                        }
+                    }
+                </td>
+                <td class="tdPdcSh">
+                    @foreach (var dataShort in contract.columesDataShort)
+                    {
+                        if (dataShort.Key == ConstSetting.Link)
+                        {
+
+                        }
+                        else
+                        {
+                        }
+                    }
+                </td>
+                @*                            @contract.Price
+                     @(UIUtility.ResourceManager.GetString("Currencies"))
+                               <a class="vip" itemprop="name" title="@contract.Name"
+                    href="@Url.Action(contract.LinkActionName, contract.LinkControlerName, new { Id = contract.Id }, "https")">
+                     @contract.Name
+                     </a>
+                      <td class="tdPdc" >
+                     @contract.Discription
+                     </td>*@
+            </tr>
+
+        }
+    </table>
+    for (int i = 0; i < RowCount; i = i + ConstSetting.PageSize)
+    {
+        @Ajax.ActionLink(" " + i.ToString(), Url.Action("GridProducts", "Product", new { BeginRow = i, FillterParam = ViewData["FillterParam"].ToString(), FK_Category = ViewData["FK_Category"].ToString() }), ajaxOptionGrid)
+    }
+}
+@*
+                <tr class="trPdcCss">
+                    <td>
+                        <a class="img"  href=tp://www.ebay.com/itm/New-Genuine-Dell-Latitude-D600-D610-D620-D631-D630-Modular-Battery-4R084-/290826863166?pt=Laptop_Batteries&hash=item43b6a1c23e">
+                            <img class="img"  alt="New Genuine Dell Latitude D600 D610 D620 D631 D630 Modular Battery 4R084"
+                                src="ttp://thumbs3.ebaystatic.com/d/l225/m/mePKr8-nCNsGi__QtdskvpQ.jpg">
+                        </a>
+                    </td>
+                    <td>
+                    <a class="vip" itemprop="name" title="New Genuine Dell Latitude D600 D610 D620 D631 D630 Modular Battery 4R084"
+                    href="ttp://www.ebay.com/itm/New-Genuine-Dell-Latitude-D600-D610-D620-D631-D630-Modular-Battery-4R084-/290826863166?pt=Laptop_Batteries&hash=item43b6a1c23e">
+                    New Genuine Dell Latitude D600 D610 D620 D631 D630 Modular Battery 4R084
+                    </a>
+                    </td>
+                    <div class="g-b" itemprop="price">$9.95</div>
+                    <td>
+                    </td>
+                </tr>
+
+    <li class="post-item">
+        <div class="item-warp">
+            <div class="item-picture">
+                <a href="/groupsourcing/detail/Hot-100Led-10Meters-Waterproof-220V-110V-CE-RoHs-Multicolor-Xmas-Led-String-Lights_58715.htm">
+                    <span class="img-vertical"></span>
+                    <img src="httpiimg.com/photo/v6/667203625/Hot_100Led_10Meters_Waterproof_220V_110V_CE.jpg_200x200.jpg"></a>
+            </div>
+            <p class="item-title">
+                <a href="/groupsourcing/detail/Hot-100Led-10Meters-Waterproof-220V-110V-CE-RoHs-Multicolor-Xmas-Led-String-Lights_58715.htm">
+                    Hot 100Led 10Meters Waterproof 220V/110V CE&amp;RoHs Multicolor Xmas Led String
+                    Lights</a></p>
+            <div class="item-price">
+                <span class="now">US $2.4</span> <span class="old">$4.5</span> <a class="ui-button ui-button-primary-s btn"
+                    href="/groupsourcing/detail/Hot-100Led-10Meters-Waterproof-220V-110V-CE-RoHs-Multicolor-Xmas-Led-String-Lights_58715.htm">
+                    View Details</a>
+            </div>
+            <div class="item-moq">
+                MOQ:<span class="now">40 Sets</span><span class="old">100 Sets</span>
+                </div>
+        </div>
+    </li>
+*@

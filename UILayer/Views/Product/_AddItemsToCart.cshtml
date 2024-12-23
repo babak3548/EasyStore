@@ -1,0 +1,122 @@
+﻿
+@using DataLayer.EF
+@using System.Linq;
+@model Product
+@{ 
+
+    string AbstractInfo= Model.ShippingDiscription != null ? Model.ShippingDiscription : "";
+}
+<form action="@Url.Action("AddItemsToCart" , "Invoice" )" method="post">
+
+    <h3><a href="#">@Model.Name</a></h3>
+    <div class="product_rating">
+        <ul>
+            @{
+                int countVotePos = Model.Comment.Count(c => c.IsPositiveComment == true && c.VotePositive > 0 && c.Active == true);
+                float AveScorePos = countVotePos == 0 ? 0 : Model.Comment.Where(c => c.IsPositiveComment == true && c.VotePositive > 0).Sum(c => c.VotePositive.Value) / countVotePos;
+
+                int countVoteNeg = Model.Comment.Count(c => c.IsPositiveComment == false && c.VotePositive > 0 && c.Active == true);
+                float AveScoreNeg = countVoteNeg == 0 ? 0 : Model.Comment.Where(c => c.IsPositiveComment == false && c.VotePositive > 0).Sum(c => c.VotePositive.Value) / countVoteNeg;
+
+                float totalVote = ((AveScorePos * countVotePos) + ((5 - AveScoreNeg) * countVoteNeg)) / (countVotePos + countVoteNeg);
+
+                string firstColore = Model.AvailableColors?.Split(',').Length > 0 ? Model.AvailableColors?.Split(',')[0] : "";
+            }
+
+            @for (int i = 1; i <= 5; i++)
+            {
+                if (i <= totalVote)
+                {
+                    <li><a href="#reviews"><i class="ion-android-star"></i></a></li>
+                }
+                else
+                {
+                    <li><a href="#reviews"><i class="ion-android-star-outline"></i></a></li>
+                }
+            }
+
+            <li class="review"><a href="#reviews">( @Model.Comment.Count نظرات )</a></li>
+        </ul>
+    </div>
+    <div class="price_box">
+        @if (Model.BeforDiscountPrice > 0 && Model.BeforDiscountPrice > Model.Price)
+        {
+            @Html.Raw(Model.OldPrice())
+        }
+
+        <span class="current_price">@Model.Price.decimalToDigMony() </span>
+    </div>
+    <div class="product_desc">
+        @foreach (var desc in AbstractInfo.Split("\n"))
+        {
+            <p>@desc</p>
+        }
+    </div>
+    <div class="product_variant color">
+        <h3>گزینه های در دسترس</h3>
+        <label>انتخاب رنگ</label>
+        <ul>
+            @if (Model.AvailableColors != null)
+            {
+                foreach (var _color in Model.AvailableColors.Split(','))
+                {
+                    if (_color == "#mmm")
+                    {
+                        <li id="@_color" class="@_color.Replace("#", "") multiColor" style="background:@_color"><a  data-original-title="چند رنگ"  onclick="TSBtnSelectColorDetails('@_color')"></a></li>
+                    }
+                    else if(!string.IsNullOrWhiteSpace(_color))
+                    {
+                        <li id="@_color" class="@_color.Replace("#", "")" style="background:@_color"><a  onclick="TSBtnSelectColorDetails('@_color')"></a></li>
+                    }
+
+                }
+            }
+        </ul>
+    </div>
+    <div class="product_variant quantity">
+        <label>تعداد</label>
+        @if (Model.Available > 0)
+        {
+            <input name="productCount" min="@(Model.MinCountForPrice!= null ? Model.MinCountForPrice:1)" max="@Model.Available" value="@(Model.MinCountForPrice!= null ? Model.MinCountForPrice:1)" type="number">
+        }
+        else
+        {
+            <label> : ناموجود</label>
+        }
+        <input name="productColor" id="hiddInputColore" type="hidden" value="@firstColore" />
+        <input name="ProductId" type="hidden" value="@Model.Id" />
+        @if (Model.Available > 0)
+        {
+            <button class="button" type="submit">افزودن به سبد</button>
+        }
+        else
+        {
+            <button class="button" style="background: #9e9394" type="button" disabled>ناموجود</button>
+        }
+ 
+
+    </div>
+    <div class=" product_d_action">
+        <ul>
+            @{if (Model.MinCountForPrice > 1)
+                {
+                    <li style="font-size:11px">این کالا به صورت عمده بفروش می رسد و حداقل تعداد آن در یک سفارش @Model.MinCountForPrice عدد می باشد</li>
+                }
+            }
+
+            <li><a href="@Url.Action("AddWishlist", "Wishlist", new { productId=Model.Id})" title="افزودن به علاقه‌مندی‌ها">+ افزودن به علاقه‌مندی‌ها</a></li>
+            @*<li><a href="#" title="افزودن به مقایسه‌ها">+ افزودن به مقایسه‌ها</a></li>*@
+        </ul>
+    </div>
+    <div class="product_meta">
+        @if (!string.IsNullOrWhiteSpace(Model.VideoUrl))
+        {
+            <video width="120" height="70" controls>
+                <source src="Model.VideoUrl" type="video/mp4">
+                بروز شما قابلیت پخش ویدیو رو ندارد.
+            </video>
+        }
+        <span>دسته: <a href="#">@Model.FkCategoryNavigation.Name</a></span>
+    </div>
+
+</form>

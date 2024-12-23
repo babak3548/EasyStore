@@ -1,0 +1,342 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.Contract
+@using DataLayer.EF
+
+@model DataLayer.EF.Invoice
+@{
+    UserContract userContract = null;
+    if (ViewBag.User != null)
+    {
+        userContract = (UserContract)ViewBag.User;
+
+    }
+    var LastInvoice = ViewBag.LastInvoice != null ? (Invoice)ViewBag.LastInvoice : new Invoice();
+}
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li>پرداخت</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--Checkout page section-->
+<div class="checkout_page_bg">
+    <div class="container">
+        <div class="Checkout_section">
+            <div class="row">
+                <div class="col-12">
+                    @if (userContract == null)
+                    {
+                        <div class="user-actions">
+                            <h3>
+                                <i class="fa fa-file-o" aria-hidden="true"></i>
+                                حساب کاربری دارید؟
+                                <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_login" aria-expanded="true">وارد حساب خود شوید</a>
+
+                            </h3>
+                            <div id="checkout_login" class="collapse">
+                                <div class="checkout_info">
+                                    <p>لطفا لاگین نمایید</p>
+                                    <form action="#">
+                                        <div class="form_group">
+                                            <label>نام کاربری یا ایمیل <span>*</span></label>
+                                            <input type="text" dir="ltr">
+                                        </div>
+                                        <div class="form_group">
+                                            <label>رمز عبور <span>*</span></label>
+                                            <input type="password" dir="ltr">
+                                        </div>
+                                        <div class="form_group group_3 ">
+                                            <button type="submit">ورود</button>
+                                            <label for="remember_box">
+                                                <input id="remember_box" type="checkbox">
+                                                <span> به خاطر سپاری </span>
+                                            </label>
+                                        </div>
+                                        <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="user-actions">
+                        <h3>
+                            <i class="fa fa-file-o" aria-hidden="true"></i>
+                            کد تخفیف دارید؟
+                            <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_coupon" aria-expanded="true">برای وارد کردن کد تخفیف کلیک کنید</a>
+
+                        </h3>
+                        <div id="checkout_coupon" class="collapse">
+                            <div class="checkout_info">
+                                <form action="#">
+                                    <input placeholder="کد تخفیف" type="text" dir="ltr">
+                                    <button type="submit">اعمال کد تخفیف</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout_form">
+                <form id="formPaymetToContineId"  method="post" Action="@Url.Action( "PaymentWithMeli","Invoice" )">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="checkout_form_left">
+                                <h3>جزئیات پرداخت</h3>
+                                <div class="row">
+
+                                    <div class="col-lg-6 mb-20">
+                                        <label>نام <span>*</span></label>
+                                        <input name="name" id="nameId" value="@LastInvoice.DeliveryName" type="text">
+                                    </div>
+                                    <div class="col-lg-6 mb-20">
+                                        <label>نام خانوادگی <span>*</span></label>
+                                        <input name="familyName" id="familyNameId" value="@LastInvoice.DeliveryLastName" type="text">
+                                    </div>
+                                    <div class="col-12 mb-20">
+                                        <label>نام شرکت</label>
+                                        <input name="company" id="companyId" placeholder="اختیاری" value="@LastInvoice.DeliveryCompanyName" type="text">
+                                    </div>
+
+                                    <div class="col-lg-6 mb-20">
+                                        <label for="country">استان <span>*</span></label>
+                                        <select class="niceselect_option" name="fkProvince" id="fkProvinceId">
+                                            @foreach (var item in (List<Province>)ViewBag.provinces)
+                                            {
+                                                if (item.Id == LastInvoice.FkProvince)
+                                                {
+                                                    <option selected value="@item.Id">@item.Name</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item.Id">@item.Name</option>
+                                                }
+
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 mb-20">
+                                        <label>شهر / شهرستان <span>*</span></label>
+                                        <input name="cityName" type="text" id="cityNameId" value="@LastInvoice.DeliveryCityName">
+                                    </div>
+                                    <div class="col-12 mb-20">
+                                        <label>آدرس خیابان <span>*</span></label>
+                                        <input name="address" value="@LastInvoice.DeliveryAddress" placeholder="نام خیابان، کوچه، پلاک و واحد " type="text" id="addressId">
+                                    </div>
+                                    @*<div class="col-12 mb-20">
+                            <input placeholder="نام آپارتمان، واحد و ... (اختیاری)" type="text">
+                        </div>*@
+
+                                    <div class="col-lg-4 mb-20">
+                                        <label>کد پستی <span>*</span></label>
+                                        <input value="@LastInvoice.DeliveryPostCode" name="postCode" id="postCodeId" type="text">
+                                    </div>
+                                    <div class="col-lg-4 mb-20">
+                                        <label>تلفن <span>*</span></label>
+                                        <input value="@LastInvoice.DeliveryTel" type="tel" name="tel" id="telId" dir="ltr">
+
+                                    </div>
+                                    <div class="col-lg-4 mb-20">
+                                        <label>شماره موبایل <span>*</span></label>
+                                        <input type="tel" name="mobile" value="@LastInvoice.DeliveryMobile" id="mobileId" value="@userContract.Mobile" dir="ltr">
+
+                                    </div>
+                                    @*<div class="col-12 mb-20">  این قسمت باید پیاده سازی بشه
+                            <label data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                                <input type="checkbox"> ساخت حساب کاربری؟
+                            </label>
+
+                            <div id="collapseOne" class="collapse one">
+                                <div class="card-body1">
+                                    <label> رمز عبور <span>*</span></label>
+                                    <input placeholder="رمز عبور" type="password" dir="ltr">
+                                </div>
+                            </div>
+                        </div>*@
+                                    @*<div class="col-12 mb-20">   این قسمت باید پیاده سازی بشه
+                            <label data-toggle="collapse" data-target="#collapsetwo" aria-controls="collapsetwo">
+                                <input type="checkbox"> ارسال به آدرسی دیگر؟
+                            </label>
+
+                            <div id="collapsetwo" class="collapse one">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-20">
+                                        <label>نام <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-lg-6 mb-20">
+                                        <label>نام خانوادگی <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-12 mb-20">
+                                        <label>نام شرکت</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-12 mb-20">
+                                        <div class="select_form_select">
+                                            <label for="countru_name">استان <span>*</span></label>
+                                            <select class="niceselect_option" name="cuntry" id="fkProvince">
+                                                <option value="2">تهران</option>
+                                                <option value="3">سمنان</option>
+                                                <option value="4">آذربایجان غربی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-20">
+                                        <label>آدرس <span>*</span></label>
+                                        <input id="address" placeholder="نام خیابان و پلاک منزل" type="text">
+                                    </div>
+
+                                    <div class="col-12 mb-20">
+                                        <label>شهر / شهرستان <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-12 mb-20">
+                                        <label>استان <span>*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-lg-6 mb-20">
+                                        <label>تلفن <span>*</span></label>
+                                        <input type="text" dir="ltr">
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>آدرس ایمیل <span>*</span></label>
+                                        <input type="email" dir="ltr">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                                    <div class="col-12">
+                                        <div class="order-notes">
+                                            <label for="order_note">توضیحات سفارش</label>
+                                            <textarea name="noteForBussiness" id="noteForBussinessId" placeholder="یادداشت های مربوط به سفارش، مانند توضیح نحوه ارسال."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="checkout_form_right">
+
+                                <h3>سفارش شما</h3>
+                                <div class="order_table table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>محصول</th>
+                                                <th>جمع</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var bip in Model.BridgeInvoiceProduct)
+                                            {
+                                                <tr>
+                                                    <td><span class="d-inline-block">@bip.FkProductNavigation.Name</span> <strong>× @bip.Count</strong></td>
+                                                    <td>@((bip.Count * bip.Price ).decimalToDigMony()) </td>
+                                                </tr>
+                                            }
+
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>جمع سبد</th>
+                                                <td>@Model.TotalSumProductPrice.decimalToDigMony() </td>
+                                            </tr>
+                                            <tr>
+                                                <th>حمل و نقل</th>
+                                                <td><strong>@(Model.ShippingCost == 0 ? "ارسال با مشتری هماهنگ می شود" : Model.ShippingCost.decimalToDigMony() )  </strong></td>
+                                            </tr>
+                                            <tr class="order_total">
+                                                <th>مجموع سفارش</th>
+                                                <td><strong>@Model.PaymentToCountinue.decimalToDigMony()</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="payment_method" id="accordion">
+                                    <div class="panel-default">
+                                        <label data-toggle="collapse" data-target="#method" aria-controls="method">
+                                            <input name="shippingCompany" type="radio" value="@((int)ShippingCompanies.PostIran)" checked> ارسال پستی
+                                            <span style="font-size:11px; color: #464243;">ارسال با پست - زمان تقریبی تحویل @(ShippingCompanies.PostIran.CalcDeliveryDatetime(Model.ProcessingDays ).ToPersianDateWithMonthName()) </span>
+                                        </label>
+                                        @*<div id="method" class="collapse show one" data-parent="#accordion">
+                                <div class="card-body1">
+                                    <p>ارسال با پست - زمان تقریبی تحویل</p>
+                                </div>
+                            </div>*@
+                                    </div>
+                                    <div class="panel-default">
+                                        <label data-toggle="collapse" data-target="#method" aria-controls="method">
+                                            <input name="shippingCompany" value="@((int)ShippingCompanies.ShippingInLocalCity)" type="radio">ارسال در تهران
+                                            <span style="font-size:11px; color: #464243;">ارسال برای شهر تهران - زمان تقریبی تحویل @(ShippingCompanies.ShippingInLocalCity.CalcDeliveryDatetime( Model.ProcessingDays).ToPersianDateWithMonthName()) </span>
+                                        </label>
+                                        @*<div id="method" class="collapse show one" data-parent="#accordion">
+                                <div class="card-body1">
+                                    <p>ارسال با پیک فقط در شهر تهران - زمان تقریبی تحویل @(DateTime.Now.AddDays(Model.ProcessingDays).ToPersianDateWithMonthName()) </p>
+                                </div>
+                            </div>*@
+                                    </div>
+
+                                </div>
+                                <hr />
+                                <div class="payment_method" id="accordion">
+                                    <div class="panel-default">
+                                        <label data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">
+                                            <input id="inputMeliId" name="check_method" value="meli" checked type="radio"> پرداخت با درگاه ملی <img src="assets/img/icon/papyel.png" alt="">
+                                            <input id="inputPasargadId" name="check_method" value="Pasargad"  type="radio"> پرداخت با درگاه پاسارگاد <img src="assets/img/icon/papyel.png" alt="">
+                                        </label>
+
+                                        @*<div id="collapsedefult" class="collapse one" data-parent="#accordion">
+                                <div class="card-body1">
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک</p>
+                                </div>
+                            </div>*@
+                                    </div>
+                                    <div class="order_button">
+                                        <button id="btnPayment" onclick="TSGoToPayment('@Url.Action("PaymentWithPasargad", "Invoice")')" type="button">ادامه پرداخت</button>
+                                       
+                                        <input type="hidden" id="invoiceId" name="invoiceId" value="@Model.Id" />
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form id="formSubmitToBank" method="post" Action="BankURL">
+                    <input type="hidden" id="invoiceNumber" name="invoiceNumber" value="" />
+                    <input type="hidden" id="invoiceDate" name="invoiceDate" value="" />
+                    <input type="hidden" id="amount" name="amount" value="" />
+                    <input type="hidden" id="terminalCode" name="terminalCode" value="" />
+                    <input type="hidden" id="merchantCode" name="merchantCode" value="" />
+                    <input type="hidden" id="redirectAddress" name="redirectAddress" value="" />
+                    <input type="hidden" id="timeStamp" name="timeStamp" value="" />
+                    <input type="hidden" id="action" name="action" value="" />
+                    <input type="hidden" id="sign" name="sign" value="" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Checkout page section end-->

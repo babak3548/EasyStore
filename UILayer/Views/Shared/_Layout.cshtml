@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    @if (!string.IsNullOrWhiteSpace(ViewBag.canonical))
+    {
+        <link rel="canonical" href="@(ViewBag.canonical)" />
+        <meta property="og:url" content="@ViewBag.canonical" />
+    }
+    <title>@ViewBag.Title</title>
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta name="twitter:title" content="@ViewBag.Title" />
+    @if (!string.IsNullOrWhiteSpace(ViewBag.MetaDescription))
+    {
+        <meta name="description" content="@ViewBag.MetaDescription" />
+        <meta property="og:description" content="@ViewBag.MetaDescription" />
+        <meta name="twitter:description" content="@ViewBag.MetaDescription"/>
+    }
+    @if (!string.IsNullOrWhiteSpace(ViewBag.MetaKeywords))
+    {
+        <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    }
+    @if (!string.IsNullOrWhiteSpace(ViewBag.MetaImage))
+    {
+        <meta property="og:image" content="@ViewBag.MetaImage" />
+        <meta name="twitter:image" content="@ViewBag.MetaImage" />
+    }
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content( "~/assets/img/favicon.ico")" />
+
+    <meta name="theme-color" content="#c40316" />
+    <meta name="twitter:card" content="photo" />
+
+    <!-- CSS
+    ========================= -->
+    @*<link href=" @Url.Content("~/Content/style/whole.css")" rel="stylesheet" type="text/css" />*@
+    @*<link href=" @Url.Content("~/Content/style/StyleTopMenu.css")" rel="stylesheet" type="text/css" />*@
+    @*<link href="  @Url.Content("~/Content/style/jquery.calendars.picker.css")" rel="stylesheet" type="text/css" />*@
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/plugins.css")" />
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/style.css")" />
+
+    <!-- yektanet -->
+    <script>
+        !function (t, e, n) {
+            t.yektanetAnalyticsObject = n, t[n] = t[n] || function () {
+                t[n].q.push(arguments)
+            }, t[n].q = t[n].q || [];
+            var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(),
+                c = e.getElementsByTagName("script")[0], s = e.createElement("script");
+            s.id = "ua-script-Ol2rbZfi"; s.dataset.analyticsobject = n;
+            s.async = 1; s.type = "text/javascript";
+            s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/Ol2rbZfi/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c)
+        }(window, document, "yektanet");
+    </script>
+    <!--End yektanet -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P7WKJK2');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7WKJK2"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    @*<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="..." class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>*@
+    <!--Offcanvas menu area start-->
+    @Html.Partial("_HeaderMobile")
+    <!--Offcanvas menu area end-->
+    <!--header area start-->
+    @Html.Partial("_Header")
+    <!--header area end-->
+    @RenderBody()
+    <!--footer area start-->
+    @Html.Partial("_Footer")
+    <!--footer area end-->
+    <!-- modal area start-->
+    @Html.Partial("_ModalQuick")
+
+
+    <!-- modal area end-->
+    @*delete in desing*@
+    <!-- modal area end-->
+    <!-- JS
+    ============================================ -->
+    <!-- Plugins JS -->
+    @*<script type="text/javascript">
+            // befor all scripts
+            debugger;
+            //var exports = {};
+            var defaultValue = [ @ViewBag.Price_min , @ViewBag.Price_max];
+            var price_max_calc =@ViewBag.Price_max;
+           // var promotionProductsQuickShow = null;
+            //var exports = {};
+
+
+        </script>*@
+    <script src="@Url.Content("~/assets/js/plugins.js")"></script>
+
+    @RenderSection("Scripts", required: false)
+    <!-- Main JS -->
+    <script src="@Url.Content("~/assets/js/main.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/ExtentionMethods.js")"></script>*@
+    <script src="@Url.Content("~/Scripts/app.js?v=1.3")"></script>
+
+
+    @*<script src="@Url.Content("~/Scripts/jquery.min-3.5.1.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min-3.6.2.js")" type="text/javascript"></script>*@
+    @*<script src="@Url.Content("~/Scripts/jTopMenu.js")" type="text/javascript"></script>*@
+    @*<script src="@Url.Content("~/Scripts/Total.js")" type="text/javascript"></script>*@
+    @*<script src="@Url.Content("~/Scripts/jquery.calendars.all.js")" type="text/javascript"></script>*@
+
+    <script type="text/javascript">
+        // after all scripts
+
+
+
+        //function setParameters(defaultVal, priceMaxCalcArr) {
+        //    defaultValue = defaultVal;
+        //    price_max_calc = priceMaxCalcArr;
+        //}
+
+        $(document).ready(function () {
+          @*var defaultVal = [ @ViewBag.Price_min , @ViewBag.Price_max];
+        var priceMaxCalc =@ViewBag.Price_max;*@
+           // setParameters(defaultVal , priceMaxCalc)
+              urlAddToCart = '@Url.Action("AddItemsToCart" , "Invoice")';
+
+        EMS_AppSetting_ImagePathInVirtual ='@ExtentionMethodsImage.AppSetting.ImagePathInVirtual';
+        EMS_ImgDetailsSize =@ExtentionMethodsImage.ImgDetailsSize;
+        EMS_ImgListSize =@ExtentionMethodsImage.ImgListSize;
+            EMS_ImgListSizeUI =@ExtentionMethodsImage.ImgListSizeUI;
+
+            FullDomainUrl ='@DataLayer.AppSetting.DomainName';
+            yektanetObj = yektanet;
+
+            console.log("EMS_ImgDetailsSize:", EMS_ImgDetailsSize);
+
+            var exports = {};
+        });
+    </script>
+
+</body>
+
+</html>

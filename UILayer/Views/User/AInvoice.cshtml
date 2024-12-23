@@ -1,0 +1,25 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@*ViewBag.Title = "";*@
+@model string
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@{
+   
+    using (Html.BeginForm("AInvoiceView", Model, "https", FormMethod.Post,false, new { id = "EditorRowForm" }))
+      {
+           
+    @Html.Label("کد فاکتور")
+    @Html.TextBox("Id", "", new {  @id = "Id" })<br />
+    
+      <input type="submit" value="ارسال" />  
+      
+      }
+        
+  }

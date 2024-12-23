@@ -1,0 +1,66 @@
+﻿  @using DataLayer.EF
+    
+    @model User
+    
+    @{
+        using (Html.BeginForm("Edit", "UserAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1">
+    <td class="tdf1">Id:</td>
+    <td class="tdf2"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Name:</td>
+    <td class="tdf2"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Email:</td>
+    <td class="tdf2"> @Html.TextBox("Email", Model.Email, new { @id = "Email" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Mobile:</td>
+    <td class="tdf2"> @Html.TextBox("Mobile", Model.Mobile, new { @id = "Mobile" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">RegisterDate:</td>
+    <td class="tdf2"> @Html.TextBox("RegisterDate", Model.RegisterDate, new { @id = "RegisterDate" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">FK_Role:</td>
+    <td class="tdf2"> @Html.TextBox("FK_Role", Model.FkRole, new { @id = "FK_Role" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">CurrentInvoice:</td>
+    <td class="tdf2"> @Html.TextBox("CurrentInvoice", Model.CurrentInvoice, new { @id = "CurrentInvoice" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Ative:</td>
+    <td class="tdf2"> @Html.TextBox("Ative", Model.Ative, new { @id = "Ative" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">AtivationCode:</td>
+    <td class="tdf2"> @Html.TextBox("AtivationCode", Model.AtivationCode, new { @id = "AtivationCode" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Password:</td>
+    <td class="tdf2"> @Html.TextBox("Password", Model.Password, new { @id = "Password" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">TempPassword:</td>
+    <td class="tdf2"> @Html.TextBox("TempPassword", Model.TempPassword, new { @id = "TempPassword" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">IpComputerCreator:</td>
+    <td class="tdf2"> @Html.TextBox("IpComputerCreator", Model.IpComputerCreator, new { @id = "IpComputerCreator" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">IpComputerLast:</td>
+    <td class="tdf2"> @Html.TextBox("IpComputerLast", Model.IpComputerLast, new { @id = "IpComputerLast" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 

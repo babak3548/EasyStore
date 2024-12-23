@@ -1,0 +1,102 @@
+﻿       @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name*:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", " ", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Brand:</td>
+    <td class="tdf2A"> @Html.TextBox("Brand", "", new { @id = "Brand" }) And </td>     
+    
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", "", new { @id = "Image" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Image1:</td>
+    <td class="tdf2A"> @Html.TextBox("Image1", "", new { @id = "Image1" }) And </td>     
+    
+    <td class="tdf1A">Image2:</td>
+    <td class="tdf2A"> @Html.TextBox("Image2", "", new { @id = "Image2" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Price:</td>
+    <td class="tdf2A"> @Html.TextBox("Price", "", new { @id = "Price" }) And </td>     
+    
+    <td class="tdf1A">RegisterDate*:</td>
+    <td class="tdf2A"> @Html.TextBox("RegisterDate", " ", new { @id = "RegisterDate" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">MadeInCountry:</td>
+    <td class="tdf2A"> @Html.TextBox("MadeInCountry", "", new { @id = "MadeInCountry" }) And </td>     
+    
+    <td class="tdf1A">CountPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("CountPrice", "", new { @id = "CountPrice" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">MinCountForPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("MinCountForPrice", "", new { @id = "MinCountForPrice" }) And </td>     
+    
+    <td class="tdf1A">available:</td>
+    <td class="tdf2A"> @Html.TextBox("available", "", new { @id = "available" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PersentMarkater:</td>
+    <td class="tdf2A"> @Html.TextBox("PersentMarkater", "", new { @id = "PersentMarkater" }) And </td>     
+    
+    <td class="tdf1A">AcceptReturnDay:</td>
+    <td class="tdf2A"> @Html.TextBox("AcceptReturnDay", "", new { @id = "AcceptReturnDay" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">ShippingDiscription:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingDiscription", "", new { @id = "ShippingDiscription" }) And </td>     
+    
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", "", new { @id = "WordKey" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">SellOrBuy:</td>
+    <td class="tdf2A"> @Html.TextBox("SellOrBuy", "", new { @id = "SellOrBuy" }) And </td>     
+    
+    <td class="tdf1A">UnitBuy*:</td>
+    <td class="tdf2A"> @Html.TextBox("UnitBuy", " ", new { @id = "UnitBuy" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">wightUnitBuyWithKG:</td>
+    <td class="tdf2A"> @Html.TextBox("wightUnitBuyWithKG", "", new { @id = "wightUnitBuyWithKG" }) And </td>     
+    
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", "", new { @id = "Active" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Category:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Category", "", new { @id = "FK_Category" }) And </td>     
+    
+    <td class="tdf1A">RankShow:</td>
+    <td class="tdf2A"> @Html.TextBox("RankShow", "", new { @id = "RankShow" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Content:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Content", "", new { @id = "FK_Content" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    

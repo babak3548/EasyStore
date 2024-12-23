@@ -1,0 +1,48 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+
+@model object
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+
+@{
+   
+    using (Html.BeginForm("ActivateUser", "User", "https", FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+       
+    @Html.Hidden("Id",Model.ToString())
+    <br />
+    <div class="csrtl csTop15">
+    <span>ثبت نام شما با موفقیت انجام شد.</span><br />
+    <span>کد فعال سازی به موبایل  شما ارسال شد </span><br />
+    @*<span> برای فعال سازی حساب خود کد ارسال شده را در فیلد زیر وارد نمایید یا بر روی لینک ارسالی در ایمیل تان کلیک نمایید </span><br />
+    <span>ممکن است این کد چند دقیقه آینده به دست شما برسد </span><br />
+    <span>ممکن است این ایمیل در فولدر اسپم جا گرفته باشد </span><br />*@
+    </div>
+ 
+    <table class="tb" >
+        <tbody>
+            <tr class="tr1">
+                <td class="td1">کد ارسال شده به موبایل   *:</td>
+                <td class="td2">@Html.TextBox("ActivateCode")</td>
+            </tr>
+            <tr class="tr2">
+                <td class="td1"></td>
+                <td class="td2">
+                 <input type="submit" value="ارسال" />
+                  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+   
+  
+    }
+        
+}
+

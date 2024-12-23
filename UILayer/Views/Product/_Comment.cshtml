@@ -1,0 +1,71 @@
+﻿@using DataLayer.Enums
+@using UILayer.Views
+@using DataLayer.EF
+@using Utility
+@using System.Linq;
+@model Product
+
+<div class="tab-pane fade" id="reviews" role="tabpanel">
+    <div class="reviews_wrapper">
+        <h2>@Model.Comment.Count(c=>c.Active==true) نقد و بررسی برای این محصول</h2>
+        @foreach (var comm in Model.Comment.Where(c => c.Active == true))
+        {
+            <div class="reviews_comment_box">
+                <div class="comment_thmb">
+                    <img src="/assets/img/blog/comment2.jpg" alt="">
+                </div>
+                <div class="comment_text">
+                    <div class="reviews_meta">
+                        <div class="product_rating">
+                            <ul>
+                                <li><a href="@Url.Action("registerScore","Comment",new {id=comm.Id, score=1 })"><i title="ثبت 1 امتیاز برای این نقد" class=@(comm.VotePositive >= 1 ? "ion-android-star": "ion-android-star-outline" )></i></a></li>
+                                <li><a href="@Url.Action("registerScore","Comment",new {id=comm.Id ,score=2 })"><i title="ثبت 2 امتیاز برای این نقد" class=@(comm.VotePositive >= 2 ? "ion-android-star": "ion-android-star-outline" )></i></a></li>
+                                <li><a href="@Url.Action("registerScore","Comment",new {id=comm.Id ,score=3 })"><i title="ثبت 3 امتیاز برای این نقد" class=@(comm.VotePositive >= 3 ? "ion-android-star": "ion-android-star-outline" )></i></a></li>
+                                <li><a href="@Url.Action("registerScore","Comment",new {id=comm.Id ,score=4 })"><i title="ثبت 4 امتیاز برای این نقد" class=@(comm.VotePositive >= 4 ? "ion-android-star": "ion-android-star-outline" )></i></a></li>
+                                <li><a href="@Url.Action("registerScore","Comment",new {id=comm.Id ,score=5 })"><i title="ثبت 5 امتیاز برای این نقد" class=@(comm.VotePositive >= 5 ? "ion-android-star": "ion-android-star-outline" )></i></a></li>
+                            </ul>
+                        </div>
+                        <p><strong>@comm.FullName </strong> &nbsp;	&nbsp; <span style="display: inline-block;"> @comm.RegisterDate.ToPersianDateWithMonthName()</span> </p>
+                    </div>
+                    <p>@Html.Raw(comm.TextValue)      </p>
+                </div>
+            </div>
+        }
+        <div class="comment_title">
+            <h2>یک نقد و نظر یا سوال بنویسید </h2>
+            <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی مشخص شده اند</p>
+        </div>
+        @*<div class="product_rating mb-10">
+            <h3>امتیاز شما</h3>
+            <ul>
+                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+            </ul>
+        </div>*@
+        <div class="product_review_form">
+            <form id="EditorRowForm" action="@Url.Action("Register", "Comment" )" method="post">
+                @Html.Hidden("CommentType", (int)CommentType.CommentForProduct)
+                @Html.Hidden("FKProduct", Model.Id)
+                <div class="row">
+                    <div class="col-12">
+                        <label for="review_comment">نظر یا سوال شما* </label>
+                        <textarea name="TextValue" id="review_comment" onblur=@JavaScript.StringValidation("TextValue", 1, 600)></textarea>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <label for="author">نام</label>
+                        <input id="author" name="FullName" type="text">
+
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <label for="email">ایمیل </label>
+                        <input id="email" name="EmailOrMobile" type="email" dir="ltr">
+                    </div>
+                </div>
+                <button type="submit">ثبت</button>
+            </form>
+        </div>
+    </div>
+</div>

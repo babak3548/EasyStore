@@ -1,0 +1,29 @@
+﻿
+@using DataLayer.Contract;
+@using DataLayer.Enums;
+
+@model List<UILayer.Miscellaneous.ModelRow> 
+
+@{ 
+    ViewBag.Title = "";
+    Layout = "_LayoutUser.cshtml";
+}
+<div id="Inv">
+@*<h2>@ViewBag.Title</h2>*@
+@{
+    foreach (var modelRow in Model)
+    {
+        if (modelRow.PartialViewName == ScenarioOrViewName.ActionResult)
+        {
+            var acVa = ((UILayer.Miscellaneous.ModelRow)modelRow.Model);
+         @Html.ActionLink(acVa.PartialNameEntity, acVa.ActionNameForm, acVa.ControlerName)
+        }
+        else if (modelRow.PartialViewName == ScenarioOrViewName.Propaganda)
+        { @Html.Partial(modelRow.PartialViewName, modelRow.Model)  }
+        else
+            {     @Html.Partial(modelRow.PartialViewName, modelRow)}
+      
+    }
+    }
+  
+</div>

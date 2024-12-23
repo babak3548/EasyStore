@@ -1,0 +1,54 @@
+﻿@model IEntityPagination
+@{ 
+
+    var p = ViewBag.SearchValue == null ? new Product() : (Product)ViewBag.SearchValue;
+}
+
+<nav aria-label="...">
+    <ul class="pagination">
+        @{
+            var si = 1;
+            var li = Model.TotalPages;
+
+            if (Model.TotalPages > 5)
+            {
+                si = (Model.PageIndex - 3) + 1;
+                if (si < 1)
+                {
+                    si = 1;
+                }
+
+                li = si + 4;
+                if (li > Model.TotalPages)
+                {
+                    li = Model.TotalPages;
+                }
+            }
+
+
+
+        }
+        @for (int i = si; i <= li; i++)
+        {
+            var cls = Model.PageIndex == i ? "page-item active" : "page-item";
+            <li class="@cls">
+                <a class="page-link" href="@Url.Action("Index", new {
+                                           pageIndex = i ,
+                                           Id=p.Id,
+                                       Name=p.Name,
+                                       FkCategory=p.FkCategory,
+                                       BeforDiscountPrice=p.BeforDiscountPrice,
+                                       Active=p.Active,
+                                       addDateStr=p.AddDate.ToPersianDate(),
+                                      productActivationStatus= ViewBag.productActivationStatusSelected
+                                      })">
+                    @i
+                    @if (Model.PageIndex == i)
+                    {
+                        <span class="sr-only">(current)</span>
+                    }
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

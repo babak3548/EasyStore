@@ -1,0 +1,60 @@
+﻿@model PromotionProduct
+
+
+
+    <form asp-action="Index" method="get">
+        <div class="row">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PromotionType" class="control-label"></label>
+                    <select asp-for="PromotionType" class="form-control" asp-items="ViewBag.PromotionType"> </select>
+                    <span asp-validation-for="PromotionType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Order" class="control-label"></label>
+                    <input asp-for="Order" class="form-control" />
+                    <span asp-validation-for="Order" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input asp-for="Image" class="form-control" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="FkProduct" class="control-label"></label>
+                    <select asp-for="FkProduct" class="form-control" asp-items="ViewBag.FkProduct">  <option  value="0">یکی از گزینه های زیرا انتخاب نمایید</option> </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label asp-for="ExpireDateTime" class="control-label"></label>
+                    <input asp-for="ExpireDateTime" class="form-control" />
+                    <span asp-validation-for="ExpireDateTime" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label asp-for="FkCategory" class="control-label"></label>
+                    <select asp-for="FkCategory" class="form-control" asp-items="ViewBag.FkCategory"> <option  value="0">یکی از گزینه های زیرا انتخاب نمایید</option></select>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <input type="submit" value="جستجو" class="btn btn-primary" />
+        </div>
+    </form>

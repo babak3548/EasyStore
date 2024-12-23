@@ -1,0 +1,20 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+
+@model ModelGrid
+
+
+
+@Html.Partial("search", Model)
+
+@{
+    if (Model.PartialViewName == "ShowContent")
+    { @Html.Partial("Propaganda", ((IEnumerable<ContentContract>)ViewData["ShowContent"]).ToList())}
+else
+{ @Html.Partial("Products", (Model))}
+
+}
+
+

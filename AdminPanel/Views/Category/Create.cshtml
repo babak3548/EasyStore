@@ -1,0 +1,42 @@
+﻿@model DataLayer.EF.Category
+
+@{
+    ViewData["Title"] = "گروه بندی";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4>ایجاد گروه</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">نام</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitlePage" class="control-label"></label>
+                <input asp-for="TitlePage" class="form-control" />
+                <span asp-validation-for="TitlePage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label"></label>
+                <input asp-for="Discription" class="form-control" />
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkCategory" class="control-label">سر گروه</label>
+                <select asp-for="FkCategory" class="form-control" asp-items="ViewBag.FkCategory"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ذخیره" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-info mx-2">مشاهده لیست</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

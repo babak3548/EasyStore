@@ -1,0 +1,96 @@
+﻿@model IEnumerable<DataLayer.EF.Comment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <style>
+        .table td, .table th {
+            padding: 0.5rem 0.5rem !important;
+        }
+    </style>
+<h1>نظرات و سوالات کاربران</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmailOrMobile)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TextValue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VotePositive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsPositiveComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VoteCount)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Active)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommentType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegisterDate)
+                </th>
+         
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailOrMobile)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TextValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VotePositive)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsPositiveComment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VoteCount)
+                    </td>
+                    <td>
+                        @(item.Active == true ? "فعال":"غیر فعال")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CommentType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterDate)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">مشاهده</a> 
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

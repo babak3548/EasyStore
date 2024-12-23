@@ -1,0 +1,1251 @@
+﻿ 
+
+
+
+
+
+
+
+
+
+    
+    @*///  Access
+    @using DataLayer.EF
+    
+    @model Access
+    
+    @{
+        using (Html.BeginForm("Edit", "AccessAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DisplayMode:</td>
+    <td class="tdf2A"> @Html.TextBox("DisplayMode", Model.DisplayMode, new { @id = "DisplayMode" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Role:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Role", Model.FK_Role, new { @id = "FK_Role" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Filed:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Filed", Model.FK_Filed, new { @id = "FK_Filed" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Accounting
+    @using DataLayer.EF
+    
+    @model Accounting
+    
+    @{
+        using (Html.BeginForm("Edit", "AccountingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Debtor:</td>
+    <td class="tdf2A"> @Html.TextBox("Debtor", Model.Debtor, new { @id = "Debtor" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Creditor:</td>
+    <td class="tdf2A"> @Html.TextBox("Creditor", Model.Creditor, new { @id = "Creditor" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", Model.FkUser, new { @id = "FK_User" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", Model.FK_Invoice, new { @id = "FK_Invoice" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", Model.Date, new { @id = "Date" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_BusinessOwner_Marketer
+    @using DataLayer.EF
+    
+    @model Bridge_BusinessOwner_Marketer
+    
+    @{
+        using (Html.BeginForm("Edit", "Bridge_BusinessOwner_MarketerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", Model.FkMarketer, new { @id = "FK_Marketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DiscriptionRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("DiscriptionRequest", Model.DiscriptionRequest, new { @id = "DiscriptionRequest" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">AcceptRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("AcceptRequest", Model.AcceptRequest, new { @id = "AcceptRequest" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RequestFromBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("RequestFromBusinessOwner", Model.RequestFromBusinessOwner, new { @id = "RequestFromBusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RequestFromMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("RequestFromMarketer", Model.RequestFromMarketer, new { @id = "RequestFromMarketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RejectRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("RejectRequest", Model.RejectRequest, new { @id = "RejectRequest" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">date:</td>
+    <td class="tdf2A"> @Html.TextBox("date", Model.date, new { @id = "date" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_Invoice_Product
+    @using DataLayer.EF
+    
+    @model Bridge_Invoice_Product
+    
+    @{
+        using (Html.BeginForm("Edit", "Bridge_Invoice_ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Count:</td>
+    <td class="tdf2A"> @Html.TextBox("Count", Model.Count, new { @id = "Count" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Product:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Product", Model.FK_Product, new { @id = "FK_Product" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", Model.FK_Invoice, new { @id = "FK_Invoice" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_Province_BusinessOwner
+    @using DataLayer.EF
+    
+    @model Bridge_Province_BusinessOwner
+    
+    @{
+        using (Html.BeginForm("Edit", "Bridge_Province_BusinessOwnerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", Model.FkProvince, new { @id = "FK_Province" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">AnyXKG:</td>
+    <td class="tdf2A"> @Html.TextBox("AnyXKG", Model.AnyXKG, new { @id = "AnyXKG" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">AnyXKGMony:</td>
+    <td class="tdf2A"> @Html.TextBox("AnyXKGMony", Model.AnyXKGMony, new { @id = "AnyXKGMony" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FreeGratherThanMony:</td>
+    <td class="tdf2A"> @Html.TextBox("FreeGratherThanMony", Model.FreeGratherThanMony, new { @id = "FreeGratherThanMony" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  BusinessOwner
+    @using DataLayer.EF
+    
+    @model BusinessOwner
+    
+    @{
+        using (Html.BeginForm("Edit", "BusinessOwnerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">TypeActivity:</td>
+    <td class="tdf2A"> @Html.TextBox("TypeActivity", Model.TypeActivity, new { @id = "TypeActivity" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", Model.WordKey, new { @id = "WordKey" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Address:</td>
+    <td class="tdf2A"> @Html.TextBox("Address", Model.Address, new { @id = "Address" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">NationalCode:</td>
+    <td class="tdf2A"> @Html.TextBox("NationalCode", Model.NationalCode, new { @id = "NationalCode" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", Model.FkUser, new { @id = "FK_User" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", Model.FkProvince, new { @id = "FK_Province" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", Model.FkMarketer, new { @id = "FK_Marketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DocumentFile:</td>
+    <td class="tdf2A"> @Html.TextBox("DocumentFile", Model.DocumentFile, new { @id = "DocumentFile" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", Model.Image, new { @id = "Image" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">WebSiteAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("WebSiteAddress", Model.WebSiteAddress, new { @id = "WebSiteAddress" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", Model.Active, new { @id = "Active" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Tel:</td>
+    <td class="tdf2A"> @Html.TextBox("Tel", Model.Tel, new { @id = "Tel" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Yahoo:</td>
+    <td class="tdf2A"> @Html.TextBox("Yahoo", Model.Yahoo, new { @id = "Yahoo" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Gmail:</td>
+    <td class="tdf2A"> @Html.TextBox("Gmail", Model.Gmail, new { @id = "Gmail" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Skype:</td>
+    <td class="tdf2A"> @Html.TextBox("Skype", Model.Skype, new { @id = "Skype" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PaymentPorsantAmount:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentPorsantAmount", Model.PaymentPorsantAmount, new { @id = "PaymentPorsantAmount" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">TypeSell:</td>
+    <td class="tdf2A"> @Html.TextBox("TypeSell", Model.TypeSell, new { @id = "TypeSell" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Category
+    @using DataLayer.EF
+    
+    @model Category
+    
+    @{
+        using (Html.BeginForm("Edit", "CategoryAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Category:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Category", Model.FK_Category, new { @id = "FK_Category" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  CategorySetting
+    @using DataLayer.EF
+    
+    @model CategorySetting
+    
+    @{
+        using (Html.BeginForm("Edit", "CategorySettingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">GroupName:</td>
+    <td class="tdf2A"> @Html.TextBox("GroupName", Model.GroupName, new { @id = "GroupName" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Comment
+    @using DataLayer.EF
+    
+    @model Comment
+    
+    @{
+        using (Html.BeginForm("Edit", "CommentAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Comment:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Comment", Model.FK_Comment, new { @id = "FK_Comment" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">KeyWord:</td>
+    <td class="tdf2A"> @Html.TextBox("KeyWord", Model.KeyWord, new { @id = "KeyWord" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Comment1:</td>
+    <td class="tdf2A"> @Html.TextBox("Comment1", Model.Comment1, new { @id = "Comment1" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">VotePositive:</td>
+    <td class="tdf2A"> @Html.TextBox("VotePositive", Model.VotePositive, new { @id = "VotePositive" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ComputerIp:</td>
+    <td class="tdf2A"> @Html.TextBox("ComputerIp", Model.ComputerIp, new { @id = "ComputerIp" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", Model.Active, new { @id = "Active" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Product:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Product", Model.FK_Product, new { @id = "FK_Product" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">CommentType:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentType", Model.CommentType, new { @id = "CommentType" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">VoteNegative:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteNegative", Model.VoteNegative, new { @id = "VoteNegative" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Content
+    @using DataLayer.EF
+    
+    @model Content
+    
+    @{
+        using (Html.BeginForm("Edit", "ContentAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ShowValue:</td>
+    <td class="tdf2A"> @Html.TextBox("ShowValue", Model.ShowValue, new { @id = "ShowValue" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PartialType:</td>
+    <td class="tdf2A"> @Html.TextBox("PartialType", Model.PartialType, new { @id = "PartialType" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Width:</td>
+    <td class="tdf2A"> @Html.TextBox("Width", Model.Width, new { @id = "Width" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Position:</td>
+    <td class="tdf2A"> @Html.TextBox("Position", Model.Position, new { @id = "Position" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ContentType:</td>
+    <td class="tdf2A"> @Html.TextBox("ContentType", Model.ContentType, new { @id = "ContentType" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  DisputeResolution
+    @using DataLayer.EF
+    
+    @model DisputeResolution
+    
+    @{
+        using (Html.BeginForm("Edit", "DisputeResolutionAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", Model.FK_Invoice, new { @id = "FK_Invoice" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", Model.FkUser, new { @id = "FK_User" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", Model.FkMarketer, new { @id = "FK_Marketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">writer:</td>
+    <td class="tdf2A"> @Html.TextBox("writer", Model.writer, new { @id = "writer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FileDocumentAdress:</td>
+    <td class="tdf2A"> @Html.TextBox("FileDocumentAdress", Model.FileDocumentAdress, new { @id = "FileDocumentAdress" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", Model.Date, new { @id = "Date" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">disputerwhoPerson:</td>
+    <td class="tdf2A"> @Html.TextBox("disputerwhoPerson", Model.disputerwhoPerson, new { @id = "disputerwhoPerson" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Entity
+    @using DataLayer.EF
+    
+    @model Entity
+    
+    @{
+        using (Html.BeginForm("Edit", "EntityAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PersianName:</td>
+    <td class="tdf2A"> @Html.TextBox("PersianName", Model.PersianName, new { @id = "PersianName" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Filed
+    @using DataLayer.EF
+    
+    @model Filed
+    
+    @{
+        using (Html.BeginForm("Edit", "FiledAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PartialType:</td>
+    <td class="tdf2A"> @Html.TextBox("PartialType", Model.PartialType, new { @id = "PartialType" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">OrderByValue:</td>
+    <td class="tdf2A"> @Html.TextBox("OrderByValue", Model.OrderByValue, new { @id = "OrderByValue" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Entity:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Entity", Model.FK_Entity, new { @id = "FK_Entity" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Invoice
+    @using DataLayer.EF
+    
+    @model Invoice
+    
+    @{
+        using (Html.BeginForm("Edit", "InvoiceAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", Model.Date, new { @id = "Date" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">State:</td>
+    <td class="tdf2A"> @Html.TextBox("State", Model.State, new { @id = "State" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DeliveryAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryAddress", Model.DeliveryAddress, new { @id = "DeliveryAddress" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">MoneySum:</td>
+    <td class="tdf2A"> @Html.TextBox("MoneySum", Model.MoneySum, new { @id = "MoneySum" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discount:</td>
+    <td class="tdf2A"> @Html.TextBox("Discount", Model.Discount, new { @id = "Discount" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Shipping:</td>
+    <td class="tdf2A"> @Html.TextBox("Shipping", Model.Shipping, new { @id = "Shipping" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PaymentSum:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentSum", Model.PaymentSum, new { @id = "PaymentSum" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PaymentToCountinue:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentToCountinue", Model.PaymentToCountinue, new { @id = "PaymentToCountinue" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", Model.FkUser, new { @id = "FK_User" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">type:</td>
+    <td class="tdf2A"> @Html.TextBox("type", Model.type, new { @id = "type" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DeliveryCode:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryCode", Model.DeliveryCode, new { @id = "DeliveryCode" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">DeliveryCodedUnPerfect:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryCodedUnPerfect", Model.DeliveryCodedUnPerfect, new { @id = "DeliveryCodedUnPerfect" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">NoteForBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("NoteForBusinessOwner", Model.NoteForBusinessOwner, new { @id = "NoteForBusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">NoteForUser:</td>
+    <td class="tdf2A"> @Html.TextBox("NoteForUser", Model.NoteForUser, new { @id = "NoteForUser" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", Model.FkMarketer, new { @id = "FK_Marketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", Model.FkProvince, new { @id = "FK_Province" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">VoteBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteBusinessOwner", Model.VoteBusinessOwner, new { @id = "VoteBusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">VoteMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteMarketer", Model.VoteMarketer, new { @id = "VoteMarketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Time:</td>
+    <td class="tdf2A"> @Html.TextBox("Time", Model.Time, new { @id = "Time" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PaymentBankCode:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentBankCode", Model.PaymentBankCode, new { @id = "PaymentBankCode" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">TransctionRefrenceId:</td>
+    <td class="tdf2A"> @Html.TextBox("TransctionRefrenceId", Model.TransctionRefrenceId, new { @id = "TransctionRefrenceId" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ShippingNumber:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingNumber", Model.ShippingNumber, new { @id = "ShippingNumber" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ShippingCompany:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingCompany", Model.ShippingCompany, new { @id = "ShippingCompany" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">CommentForBusinessman:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentForBusinessman", Model.CommentForBusinessman, new { @id = "CommentForBusinessman" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">CommentForMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentForMarketer", Model.CommentForMarketer, new { @id = "CommentForMarketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Vat:</td>
+    <td class="tdf2A"> @Html.TextBox("Vat", Model.Vat, new { @id = "Vat" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">writer:</td>
+    <td class="tdf2A"> @Html.TextBox("writer", Model.writer, new { @id = "writer" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Languge
+    @using DataLayer.EF
+    
+    @model Languge
+    
+    @{
+        using (Html.BeginForm("Edit", "LangugeAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Value:</td>
+    <td class="tdf2A"> @Html.TextBox("Value", Model.Value, new { @id = "Value" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Title:</td>
+    <td class="tdf2A"> @Html.TextBox("Title", Model.Title, new { @id = "Title" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Filed:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Filed", Model.FK_Filed, new { @id = "FK_Filed" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Marketer
+    @using DataLayer.EF
+    
+    @model Marketer
+    
+    @{
+        using (Html.BeginForm("Edit", "MarketerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Specialty:</td>
+    <td class="tdf2A"> @Html.TextBox("Specialty", Model.Specialty, new { @id = "Specialty" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", Model.WordKey, new { @id = "WordKey" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", Model.FkUser, new { @id = "FK_User" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", Model.FkMarketer, new { @id = "FK_Marketer" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", Model.Image, new { @id = "Image" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">WebSiteAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("WebSiteAddress", Model.WebSiteAddress, new { @id = "WebSiteAddress" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Tel:</td>
+    <td class="tdf2A"> @Html.TextBox("Tel", Model.Tel, new { @id = "Tel" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", Model.Active, new { @id = "Active" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Yahoo:</td>
+    <td class="tdf2A"> @Html.TextBox("Yahoo", Model.Yahoo, new { @id = "Yahoo" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Gmail:</td>
+    <td class="tdf2A"> @Html.TextBox("Gmail", Model.Gmail, new { @id = "Gmail" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Skype:</td>
+    <td class="tdf2A"> @Html.TextBox("Skype", Model.Skype, new { @id = "Skype" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PaymentPorsantAmount:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentPorsantAmount", Model.PaymentPorsantAmount, new { @id = "PaymentPorsantAmount" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Message
+    @using DataLayer.EF
+    
+    @model Message
+    
+    @{
+        using (Html.BeginForm("Edit", "MessageAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_UseSender:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_UseSender", Model.FK_UseSender, new { @id = "FK_UseSender" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_UserReceiver:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_UserReceiver", Model.FkUserReceiver, new { @id = "FK_UserReceiver" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", Model.Date, new { @id = "Date" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Readed:</td>
+    <td class="tdf2A"> @Html.TextBox("Readed", Model.Readed, new { @id = "Readed" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Text:</td>
+    <td class="tdf2A"> @Html.TextBox("Text", Model.Text, new { @id = "Text" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">type:</td>
+    <td class="tdf2A"> @Html.TextBox("type", Model.type, new { @id = "type" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Product
+    @using DataLayer.EF
+    
+    @model Product
+    
+    @{
+        using (Html.BeginForm("Edit", "ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Brand:</td>
+    <td class="tdf2A"> @Html.TextBox("Brand", Model.Brand, new { @id = "Brand" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", Model.Image, new { @id = "Image" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Image1:</td>
+    <td class="tdf2A"> @Html.TextBox("Image1", Model.Image1, new { @id = "Image1" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Image2:</td>
+    <td class="tdf2A"> @Html.TextBox("Image2", Model.Image2, new { @id = "Image2" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Price:</td>
+    <td class="tdf2A"> @Html.TextBox("Price", Model.Price, new { @id = "Price" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RegisterDate:</td>
+    <td class="tdf2A"> @Html.TextBox("RegisterDate", Model.RegisterDate, new { @id = "RegisterDate" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">MadeInCountry:</td>
+    <td class="tdf2A"> @Html.TextBox("MadeInCountry", Model.MadeInCountry, new { @id = "MadeInCountry" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">CountPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("CountPrice", Model.CountPrice, new { @id = "CountPrice" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">MinCountForPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("MinCountForPrice", Model.MinCountForPrice, new { @id = "MinCountForPrice" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">available:</td>
+    <td class="tdf2A"> @Html.TextBox("available", Model.available, new { @id = "available" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">PersentMarkater:</td>
+    <td class="tdf2A"> @Html.TextBox("PersentMarkater", Model.PersentMarkater, new { @id = "PersentMarkater" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">AcceptReturnDay:</td>
+    <td class="tdf2A"> @Html.TextBox("AcceptReturnDay", Model.AcceptReturnDay, new { @id = "AcceptReturnDay" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">ShippingDiscription:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingDiscription", Model.ShippingDiscription, new { @id = "ShippingDiscription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", Model.WordKey, new { @id = "WordKey" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">SellOrBuy:</td>
+    <td class="tdf2A"> @Html.TextBox("SellOrBuy", Model.SellOrBuy, new { @id = "SellOrBuy" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">UnitBuy:</td>
+    <td class="tdf2A"> @Html.TextBox("UnitBuy", Model.UnitBuy, new { @id = "UnitBuy" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">wightUnitBuyWithKG:</td>
+    <td class="tdf2A"> @Html.TextBox("wightUnitBuyWithKG", Model.wightUnitBuyWithKG, new { @id = "wightUnitBuyWithKG" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", Model.Active, new { @id = "Active" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Category:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Category", Model.FK_Category, new { @id = "FK_Category" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RankShow:</td>
+    <td class="tdf2A"> @Html.TextBox("RankShow", Model.RankShow, new { @id = "RankShow" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Content:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Content", Model.FK_Content, new { @id = "FK_Content" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Province
+    @using DataLayer.EF
+    
+    @model Province
+    
+    @{
+        using (Html.BeginForm("Edit", "ProvinceAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Country:</td>
+    <td class="tdf2A"> @Html.TextBox("Country", Model.Country, new { @id = "Country" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Role
+    @using DataLayer.EF
+    
+    @model Role
+    
+    @{
+        using (Html.BeginForm("Edit", "RoleAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Type:</td>
+    <td class="tdf2A"> @Html.TextBox("Type", Model.Type, new { @id = "Type" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Setting
+    @using DataLayer.EF
+    
+    @model Setting
+    
+    @{
+        using (Html.BeginForm("Edit", "SettingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Value:</td>
+    <td class="tdf2A"> @Html.TextBox("Value", Model.Value, new { @id = "Value" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Value2:</td>
+    <td class="tdf2A"> @Html.TextBox("Value2", Model.Value2, new { @id = "Value2" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_CategorySetting:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_CategorySetting", Model.FK_CategorySetting, new { @id = "FK_CategorySetting" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  User
+    @using DataLayer.EF
+    
+    @model User
+    
+    @{
+        using (Html.BeginForm("Edit", "UserAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Email:</td>
+    <td class="tdf2A"> @Html.TextBox("Email", Model.Email, new { @id = "Email" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Mobile:</td>
+    <td class="tdf2A"> @Html.TextBox("Mobile", Model.Mobile, new { @id = "Mobile" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">RegisterDate:</td>
+    <td class="tdf2A"> @Html.TextBox("RegisterDate", Model.RegisterDate, new { @id = "RegisterDate" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">FK_Role:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Role", Model.FK_Role, new { @id = "FK_Role" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">CurrentInvoice:</td>
+    <td class="tdf2A"> @Html.TextBox("CurrentInvoice", Model.CurrentInvoice, new { @id = "CurrentInvoice" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Ative:</td>
+    <td class="tdf2A"> @Html.TextBox("Ative", Model.Ative, new { @id = "Ative" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">AtivationCode:</td>
+    <td class="tdf2A"> @Html.TextBox("AtivationCode", Model.AtivationCode, new { @id = "AtivationCode" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">Password:</td>
+    <td class="tdf2A"> @Html.TextBox("Password", Model.Password, new { @id = "Password" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">TempPassword:</td>
+    <td class="tdf2A"> @Html.TextBox("TempPassword", Model.TempPassword, new { @id = "TempPassword" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">IpComputerCreator:</td>
+    <td class="tdf2A"> @Html.TextBox("IpComputerCreator", Model.IpComputerCreator, new { @id = "IpComputerCreator" })</td>     
+    </tr>
+                 <tr class="tr1A">
+    <td class="tdf1A">IpComputerLast:</td>
+    <td class="tdf2A"> @Html.TextBox("IpComputerLast", Model.IpComputerLast, new { @id = "IpComputerLast" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره تغییرات" />    
+        }
+    }*@ 
+    
+     
+    
+    
+    
+
+
+
+

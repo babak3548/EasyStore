@@ -1,0 +1,21 @@
+﻿@using DataLayer.EF
+@using Utility
+@{
+    var Invoices = (ViewData["invoicesCart"] as IEnumerable<Invoice>).ToList();
+
+}
+<li onmousemove='hoverTM(this)'>
+    <a id="cartM">@Invoices.Count</a>
+    <ul>
+        @{if (Invoices != null && Invoices.Count > 0)
+            {
+                foreach (var invoice in Invoices)
+                {  //براساس مهمان بودن یا نبودن ویو فاکتور مناسب را انتخاب می نمایید
+                    var urlInvoiceView = invoice.Id > 0 ? "/User/DeterminView/" + invoice.Id : "/User/initializeGuestView/" + invoice.FkBusinessOwner;
+                    <li><a href="@urlInvoiceView"><span>سبد شما از فروشگاه @invoice.FkBusinessOwnerNavigation.Name.GetLenghStr(14):</span>@invoice.PaymentToCountinue.decimalToDigMony() </a></li>
+                }
+            }
+        }
+        <li><a href="@Url.Action("Invoices", "User", null, "https")">مشاهده لیست تمام سفارشات </a></li>
+    </ul>
+</li>

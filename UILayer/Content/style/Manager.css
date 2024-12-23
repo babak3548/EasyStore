@@ -1,0 +1,79 @@
+﻿/*hedMng
+rghMng
+bdyMng*/
+
+#hedMng, #rghMng, #bdyMng,#bdyMng *,.FR,.aMu
+{float:right;}
+.with100,#hedMng,.subD,.AD{
+    width:100%;
+}
+
+#hedMng {
+border-bottom: #CFCDCD 1px solid;
+}
+#bdyMng {
+    width:82.76%;
+    border-left: #CFCDCD  1px solid;
+    border-right: #CFCDCD  1px solid;
+    min-height:200px;
+}
+#rghMng {
+    width:17%;
+  
+}
+.br {
+     border-top:#E1E4E6 1px solid;
+}
+.tbM {margin-right:5px;
+}
+.trM {
+    margin-top:4px;
+}
+.ED {
+    width:49.5%;
+    padding-top: 4px;
+}
+.AD {
+margin: 2px;
+}
+.subD {
+}
+.btnAE ,.btnSnd{
+width: 100px;
+margin: 2px;
+border: none;
+padding: 3px;
+cursor:pointer;
+
+}
+.btnAE {
+    background-color: #F7B875;
+}
+.btnSnd {
+     background-color: #0094ff;
+}
+.noD {
+    display:none;
+}
+#TEmail {
+    text-align: left;
+    direction:ltr;
+}
+.aMu {
+    padding-top:3px;
+}
+.sAMu {
+color: #EE6205 !important;
+zoom: 1.02;
+}
+.cntLi {
+border-top: 1px #E1E4E6  solid;
+border-bottom: 1px #E1E4E6 solid;
+width: 99.88%;
+overflow-x: hidden;
+overflow-y: scroll;
+height: 500px;
+}
+#bdyMng .cleditorMain {
+    margin:15px;
+}

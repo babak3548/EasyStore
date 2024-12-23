@@ -1,0 +1,34 @@
+﻿@*@using UILayer.Hubs*@
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    int iRow = 1;
+}
+<br />
+<br />
+<table class="TableCss">
+    <tr class="@(UIUtility.CssFardRow(iRow))">
+        <th>سیشن آیدی </th>
+        <th>نام کاربر</th>
+        <th>کانکشن آدی پنجره اصلی  </th>
+        <th>کانکشن آدی پنجره چت </th>
+        <th>زمان کانکت شدن </th>
+    </tr>
+    @*@foreach (Person person in UILayer.Hubs.ManageSeetionChat.GetAll())
+    {
+        <tr class="@(UIUtility.CssFardRow(iRow))">
+            <td align="center">@person.UserSestionId </td>
+            <td align="center">@person.UserName </td>
+            <td align="center">@person.UserConnectionIdMainW </td>
+            <td align="center">@person.UserConnectionIdChatW  </td>
+            <td align="center">@person.ConnectDate  </td>
+        </tr>
+        iRow++;
+    }*@
+</table>

@@ -1,0 +1,17 @@
+﻿@using DataLayer.Contract
+@using DataLayer.EF
+@model IEnumerable<IContract>
+@*این ویو برای نوع رول صاحب بیزینس طراحی شده است*@
+@{
+
+    ViewBag.Title = ViewData["ControlerName"];
+    Layout = "_Layout.cshtml";
+}
+<h2>@ViewBag.Title</h2>
+
+
+<div id="Grid" class="BaseIndexDiv" dir="rtl">
+    @Html.Partial("Grid", Model)
+    <div id="EditorRow">
+    </div>
+</div>

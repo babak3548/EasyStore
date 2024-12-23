@@ -1,0 +1,28 @@
+﻿@* @using DataLayer.Contract; *@
+@using System.Reflection;
+@using UILayer.Miscellaneous;
+@model ModelPartial
+@{  object htmlObj = new
+{
+    id = Model.PropertyName,
+    onblur = "drdValidation('" + Model.PropertyName + "','" + UIUtility.ResourceManager.GetString("this_fieled_cannot_null") + "')"
+};
+    if (Model.IsReadonly)
+    {
+        htmlObj = new
+            {
+                id = Model.PropertyName,
+                disabled = "disabled",
+                onblur = "drdValidation('" + Model.PropertyName + "','" + UIUtility.ResourceManager.GetString("this_fieled_cannot_null") + "')"
+
+            };
+    }
+}
+@Html.Label(Model.langugeValue)
+@(Html.DropDownList(Model.PropertyName, (List<SelectListItem>)Model.value, "لطفا یکی از گزینه های زیر را انتخاب نمایید", htmlObj))
+<br />
+@*disabled if(Model.IsReadonly)*@
+<script type="text/javascript">
+
+
+</script>

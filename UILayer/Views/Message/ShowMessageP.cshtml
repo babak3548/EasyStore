@@ -1,0 +1,9 @@
+﻿<div class="csrtl">
+ @{
+     foreach (string item in ViewData["ShowContent"].ToString().Split(','))
+     {
+        <span> @item</span>  <br />
+     }
+     }
+
+</div>

@@ -1,0 +1,137 @@
+﻿* {
+    font-family: Tahoma !important;
+font-size: 9pt;
+line-height: 18px;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #E2F1F7;
+    direction:rtl;
+}
+
+#chatArea {
+    float: right;
+    width: 100%;
+    direction: rtl;
+    text-align: right;
+}
+
+.submitButton {
+    background-color: #d7e5e4;
+    border: #ccc solid 1px;/*ccc*/
+    width:18%;
+    cursor: pointer;
+}
+
+    .submitButton:hover {
+        background-color: #e1e1e1;
+    }
+
+
+.userName {
+    float: right;
+}
+
+
+.draggable {
+    /*position: absolute; #5f9482  */
+    border: #ccc solid 1px !important;
+    float: inherit;
+    position: static;
+    width: 470px;
+margin: 15px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+    .draggable .header {
+        /*cursor: move;*/
+        background-color: #d7e5e4;
+        border-bottom: #ccc solid 1px;
+        color: #1e4638;
+    }
+
+    .draggable .messageArea {
+        width: 100%;
+        overflow-y: scroll;
+        height: 200px;
+        border-bottom: #ccc solid 1px;
+        background-color: white;
+    }
+   
+/*--------------------*/
+ #txtPrivateMessage ,.submitButton {
+    padding: 5px;
+    margin: 5px;
+}
+#txtPrivateMessage {
+width: 77%;
+}
+.header{
+    height: 30px;
+}
+#imgDelete {
+/*height:29px;*/
+margin: 5px;
+border: solid 1px #ccc;
+background-color: blanchedalmond;
+}
+.selText{
+padding-left: 80px;
+padding-right: 18px;
+background-repeat: no-repeat;
+background-position-y: 10px;
+background-position: right;
+margin-top: 6px;
+float: right;
+}
+.selTextu {
+        background-image: url('../../Images/online.png');
+}
+.selTexts {
+        background-image: url('../../Images/subject.png');
+        margin-right:30px;
+}
+.icon {
+
+}
+.message {width: 415px;
+margin: auto;
+}
+/*table*/
+.tb {
+    border: 2px solid #F0F0F0;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+    .tb #span {
+        font-size: 8pt;
+    }
+.tr1 {
+    background-color:#d7e5e4 ; /*rgb(237, 239, 241)#F0F0F0 */
+}
+.tr2 {
+    background-color: #d7e5e4;
+}
+.td1 {
+    width: 10%;
+    text-align: left;
+}
+.td2 {
+    text-align: right;
+}
+.inputtd {
+width:100%;
+ padding: 5px;
+}
+.txtArea{
+        width: 100%;
+        height: 200px;
+        border: #ccc solid 1px;
+        background-color: white;
+    }
+.btnsend {
+background-color:#99B6B3;
+}

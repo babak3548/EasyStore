@@ -1,0 +1,1009 @@
+﻿ 
+
+
+
+
+
+
+
+
+
+    
+    @*///  Access
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Access> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>DisplayMode</th>        
+                                  <th>FK_Role</th>        
+                                  <th>FK_Filed</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "AccessAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "AccessAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.DisplayMode  </td>
+                      <td align="center">  @entity.FK_Role  </td>
+                      <td align="center">  @entity.FK_Filed  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Accounting
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Accounting> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Debtor</th>        
+                                  <th>Creditor</th>        
+                                  <th>FK_User</th>        
+                                  <th>FK_Invoice</th>        
+                                  <th>Date</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "AccountingAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "AccountingAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Debtor  </td>
+                      <td align="center">  @entity.Creditor  </td>
+                      <td align="center">  @entity.FK_User  </td>
+                      <td align="center">  @entity.FK_Invoice  </td>
+                      <td align="center">  @entity.Date  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Bridge_BusinessOwner_Marketer
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Bridge_BusinessOwner_Marketer> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>FK_BusinessOwner</th>        
+                                  <th>FK_Marketer</th>        
+                                  <th>DiscriptionRequest</th>        
+                                  <th>AcceptRequest</th>        
+                                  <th>RequestFromBusinessOwner</th>        
+                                  <th>RequestFromMarketer</th>        
+                                  <th>RejectRequest</th>        
+                                  <th>date</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "Bridge_BusinessOwner_MarketerAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "Bridge_BusinessOwner_MarketerAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.FK_BusinessOwner  </td>
+                      <td align="center">  @entity.FK_Marketer  </td>
+                      <td align="center">  @entity.DiscriptionRequest  </td>
+                      <td align="center">  @entity.AcceptRequest  </td>
+                      <td align="center">  @entity.RequestFromBusinessOwner  </td>
+                      <td align="center">  @entity.RequestFromMarketer  </td>
+                      <td align="center">  @entity.RejectRequest  </td>
+                      <td align="center">  @entity.date  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Bridge_Invoice_Product
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Bridge_Invoice_Product> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Count</th>        
+                                  <th>FK_Product</th>        
+                                  <th>FK_Invoice</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "Bridge_Invoice_ProductAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "Bridge_Invoice_ProductAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Count  </td>
+                      <td align="center">  @entity.FK_Product  </td>
+                      <td align="center">  @entity.FK_Invoice  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Bridge_Province_BusinessOwner
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Bridge_Province_BusinessOwner> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>FK_Province</th>        
+                                  <th>FK_BusinessOwner</th>        
+                                  <th>AnyXKG</th>        
+                                  <th>AnyXKGMony</th>        
+                                  <th>FreeGratherThanMony</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "Bridge_Province_BusinessOwnerAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "Bridge_Province_BusinessOwnerAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.FK_Province  </td>
+                      <td align="center">  @entity.FK_BusinessOwner  </td>
+                      <td align="center">  @entity.AnyXKG  </td>
+                      <td align="center">  @entity.AnyXKGMony  </td>
+                      <td align="center">  @entity.FreeGratherThanMony  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  BusinessOwner
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<BusinessOwner> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>TypeActivity</th>        
+                                  <th>WordKey</th>        
+                                  <th>Address</th>        
+                                  <th>NationalCode</th>        
+                                  <th>FK_User</th>        
+                                  <th>FK_Province</th>        
+                                  <th>FK_Marketer</th>        
+                                  <th>DocumentFile</th>        
+                                  <th>Image</th>        
+                                  <th>WebSiteAddress</th>        
+                                  <th>Discription</th>        
+                                  <th>Active</th>        
+                                  <th>Tel</th>        
+                                  <th>Yahoo</th>        
+                                  <th>Gmail</th>        
+                                  <th>Skype</th>        
+                                  <th>PaymentPorsantAmount</th>        
+                                  <th>TypeSell</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "BusinessOwnerAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "BusinessOwnerAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.TypeActivity  </td>
+                      <td align="center">  @entity.WordKey  </td>
+                      <td align="center">  @entity.Address  </td>
+                      <td align="center">  @entity.NationalCode  </td>
+                      <td align="center">  @entity.FK_User  </td>
+                      <td align="center">  @entity.FK_Province  </td>
+                      <td align="center">  @entity.FK_Marketer  </td>
+                      <td align="center">  @entity.DocumentFile  </td>
+                      <td align="center">  @entity.Image  </td>
+                      <td align="center">  @entity.WebSiteAddress  </td>
+                      <td align="center">  @entity.Discription  </td>
+                      <td align="center">  @entity.Active  </td>
+                      <td align="center">  @entity.Tel  </td>
+                      <td align="center">  @entity.Yahoo  </td>
+                      <td align="center">  @entity.Gmail  </td>
+                      <td align="center">  @entity.Skype  </td>
+                      <td align="center">  @entity.PaymentPorsantAmount  </td>
+                      <td align="center">  @entity.TypeSell  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Category
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Category> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Discription</th>        
+                                  <th>FK_Category</th>        
+                                  <th>Ids_Parent</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "CategoryAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "CategoryAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Discription  </td>
+                      <td align="center">  @entity.FK_Category  </td>
+                      <td align="center">  @entity.Ids_Parent  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  CategorySetting
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<CategorySetting> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>GroupName</th>        
+                                  <th>Discription</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "CategorySettingAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "CategorySettingAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.GroupName  </td>
+                      <td align="center">  @entity.Discription  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Comment
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Comment> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>FK_Comment</th>        
+                                  <th>KeyWord</th>        
+                                  <th>Comment1</th>        
+                                  <th>VotePositive</th>        
+                                  <th>ComputerIp</th>        
+                                  <th>Active</th>        
+                                  <th>FK_Product</th>        
+                                  <th>CommentType</th>        
+                                  <th>VoteNegative</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "CommentAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "CommentAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.FK_Comment  </td>
+                      <td align="center">  @entity.KeyWord  </td>
+                      <td align="center">  @entity.Comment1  </td>
+                      <td align="center">  @entity.VotePositive  </td>
+                      <td align="center">  @entity.ComputerIp  </td>
+                      <td align="center">  @entity.Active  </td>
+                      <td align="center">  @entity.FK_Product  </td>
+                      <td align="center">  @entity.CommentType  </td>
+                      <td align="center">  @entity.VoteNegative  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Content
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Content> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>ShowValue</th>        
+                                  <th>PartialType</th>        
+                                  <th>Width</th>        
+                                  <th>Position</th>        
+                                  <th>ContentType</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "ContentAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "ContentAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.ShowValue  </td>
+                      <td align="center">  @entity.PartialType  </td>
+                      <td align="center">  @entity.Width  </td>
+                      <td align="center">  @entity.Position  </td>
+                      <td align="center">  @entity.ContentType  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  DisputeResolution
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<DisputeResolution> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>FK_Invoice</th>        
+                                  <th>FK_User</th>        
+                                  <th>FK_BusinessOwner</th>        
+                                  <th>FK_Marketer</th>        
+                                  <th>writer</th>        
+                                  <th>Discription</th>        
+                                  <th>FileDocumentAdress</th>        
+                                  <th>Date</th>        
+                                  <th>disputerwhoPerson</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "DisputeResolutionAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "DisputeResolutionAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.FK_Invoice  </td>
+                      <td align="center">  @entity.FK_User  </td>
+                      <td align="center">  @entity.FK_BusinessOwner  </td>
+                      <td align="center">  @entity.FK_Marketer  </td>
+                      <td align="center">  @entity.writer  </td>
+                      <td align="center">  @entity.Discription  </td>
+                      <td align="center">  @entity.FileDocumentAdress  </td>
+                      <td align="center">  @entity.Date  </td>
+                      <td align="center">  @entity.disputerwhoPerson  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Entity
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Entity> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>PersianName</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "EntityAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "EntityAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.PersianName  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Filed
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Filed> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>PartialType</th>        
+                                  <th>OrderByValue</th>        
+                                  <th>FK_Entity</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "FiledAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "FiledAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.PartialType  </td>
+                      <td align="center">  @entity.OrderByValue  </td>
+                      <td align="center">  @entity.FK_Entity  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Invoice
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Invoice> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Date</th>        
+                                  <th>State</th>        
+                                  <th>DeliveryAddress</th>        
+                                  <th>MoneySum</th>        
+                                  <th>Discount</th>        
+                                  <th>Shipping</th>        
+                                  <th>PaymentSum</th>        
+                                  <th>PaymentToCountinue</th>        
+                                  <th>FK_User</th>        
+                                  <th>FK_BusinessOwner</th>        
+                                  <th>type</th>        
+                                  <th>DeliveryCode</th>        
+                                  <th>DeliveryCodedUnPerfect</th>        
+                                  <th>NoteForBusinessOwner</th>        
+                                  <th>NoteForUser</th>        
+                                  <th>FK_Marketer</th>        
+                                  <th>FK_Province</th>        
+                                  <th>VoteBusinessOwner</th>        
+                                  <th>VoteMarketer</th>        
+                                  <th>Time</th>        
+                                  <th>PaymentBankCode</th>        
+                                  <th>TransctionRefrenceId</th>        
+                                  <th>ShippingNumber</th>        
+                                  <th>ShippingCompany</th>        
+                                  <th>CommentForBusinessman</th>        
+                                  <th>CommentForMarketer</th>        
+                                  <th>Vat</th>        
+                                  <th>writer</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "InvoiceAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "InvoiceAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Date  </td>
+                      <td align="center">  @entity.State  </td>
+                      <td align="center">  @entity.DeliveryAddress  </td>
+                      <td align="center">  @entity.MoneySum  </td>
+                      <td align="center">  @entity.Discount  </td>
+                      <td align="center">  @entity.Shipping  </td>
+                      <td align="center">  @entity.PaymentSum  </td>
+                      <td align="center">  @entity.PaymentToCountinue  </td>
+                      <td align="center">  @entity.FK_User  </td>
+                      <td align="center">  @entity.FK_BusinessOwner  </td>
+                      <td align="center">  @entity.type  </td>
+                      <td align="center">  @entity.DeliveryCode  </td>
+                      <td align="center">  @entity.DeliveryCodedUnPerfect  </td>
+                      <td align="center">  @entity.NoteForBusinessOwner  </td>
+                      <td align="center">  @entity.NoteForUser  </td>
+                      <td align="center">  @entity.FK_Marketer  </td>
+                      <td align="center">  @entity.FK_Province  </td>
+                      <td align="center">  @entity.VoteBusinessOwner  </td>
+                      <td align="center">  @entity.VoteMarketer  </td>
+                      <td align="center">  @entity.Time  </td>
+                      <td align="center">  @entity.PaymentBankCode  </td>
+                      <td align="center">  @entity.TransctionRefrenceId  </td>
+                      <td align="center">  @entity.ShippingNumber  </td>
+                      <td align="center">  @entity.ShippingCompany  </td>
+                      <td align="center">  @entity.CommentForBusinessman  </td>
+                      <td align="center">  @entity.CommentForMarketer  </td>
+                      <td align="center">  @entity.Vat  </td>
+                      <td align="center">  @entity.writer  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Languge
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Languge> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Value</th>        
+                                  <th>Title</th>        
+                                  <th>FK_Filed</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "LangugeAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "LangugeAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Value  </td>
+                      <td align="center">  @entity.Title  </td>
+                      <td align="center">  @entity.FK_Filed  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Marketer
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Marketer> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Specialty</th>        
+                                  <th>WordKey</th>        
+                                  <th>FK_User</th>        
+                                  <th>FK_Marketer</th>        
+                                  <th>Image</th>        
+                                  <th>WebSiteAddress</th>        
+                                  <th>Tel</th>        
+                                  <th>Active</th>        
+                                  <th>Yahoo</th>        
+                                  <th>Gmail</th>        
+                                  <th>Skype</th>        
+                                  <th>PaymentPorsantAmount</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "MarketerAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "MarketerAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Specialty  </td>
+                      <td align="center">  @entity.WordKey  </td>
+                      <td align="center">  @entity.FK_User  </td>
+                      <td align="center">  @entity.FK_Marketer  </td>
+                      <td align="center">  @entity.Image  </td>
+                      <td align="center">  @entity.WebSiteAddress  </td>
+                      <td align="center">  @entity.Tel  </td>
+                      <td align="center">  @entity.Active  </td>
+                      <td align="center">  @entity.Yahoo  </td>
+                      <td align="center">  @entity.Gmail  </td>
+                      <td align="center">  @entity.Skype  </td>
+                      <td align="center">  @entity.PaymentPorsantAmount  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Message
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Message> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>FK_UseSender</th>        
+                                  <th>FK_UserReceiver</th>        
+                                  <th>Date</th>        
+                                  <th>Readed</th>        
+                                  <th>Text</th>        
+                                  <th>type</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "MessageAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "MessageAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.FK_UseSender  </td>
+                      <td align="center">  @entity.FK_UserReceiver  </td>
+                      <td align="center">  @entity.Date  </td>
+                      <td align="center">  @entity.Readed  </td>
+                      <td align="center">  @entity.Text  </td>
+                      <td align="center">  @entity.type  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Product
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Product> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Brand</th>        
+                                  <th>Image</th>        
+                                  <th>Image1</th>        
+                                  <th>Image2</th>        
+                                  <th>Price</th>        
+                                  <th>RegisterDate</th>        
+                                  <th>Discription</th>        
+                                  <th>FK_BusinessOwner</th>        
+                                  <th>MadeInCountry</th>        
+                                  <th>CountPrice</th>        
+                                  <th>MinCountForPrice</th>        
+                                  <th>available</th>        
+                                  <th>PersentMarkater</th>        
+                                  <th>AcceptReturnDay</th>        
+                                  <th>ShippingDiscription</th>        
+                                  <th>WordKey</th>        
+                                  <th>SellOrBuy</th>        
+                                  <th>UnitBuy</th>        
+                                  <th>wightUnitBuyWithKG</th>        
+                                  <th>Active</th>        
+                                  <th>FK_Category</th>        
+                                  <th>RankShow</th>        
+                                  <th>FK_Content</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "ProductAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "ProductAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Brand  </td>
+                      <td align="center">  @entity.Image  </td>
+                      <td align="center">  @entity.Image1  </td>
+                      <td align="center">  @entity.Image2  </td>
+                      <td align="center">  @entity.Price  </td>
+                      <td align="center">  @entity.RegisterDate  </td>
+                      <td align="center">  @entity.Discription  </td>
+                      <td align="center">  @entity.FK_BusinessOwner  </td>
+                      <td align="center">  @entity.MadeInCountry  </td>
+                      <td align="center">  @entity.CountPrice  </td>
+                      <td align="center">  @entity.MinCountForPrice  </td>
+                      <td align="center">  @entity.available  </td>
+                      <td align="center">  @entity.PersentMarkater  </td>
+                      <td align="center">  @entity.AcceptReturnDay  </td>
+                      <td align="center">  @entity.ShippingDiscription  </td>
+                      <td align="center">  @entity.WordKey  </td>
+                      <td align="center">  @entity.SellOrBuy  </td>
+                      <td align="center">  @entity.UnitBuy  </td>
+                      <td align="center">  @entity.wightUnitBuyWithKG  </td>
+                      <td align="center">  @entity.Active  </td>
+                      <td align="center">  @entity.FK_Category  </td>
+                      <td align="center">  @entity.RankShow  </td>
+                      <td align="center">  @entity.FK_Content  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Province
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Province> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Country</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "ProvinceAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "ProvinceAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Country  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Role
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Role> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Discription</th>        
+                                  <th>Type</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "RoleAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "RoleAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Discription  </td>
+                      <td align="center">  @entity.Type  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  Setting
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<Setting> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Value</th>        
+                                  <th>Value2</th>        
+                                  <th>FK_CategorySetting</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "SettingAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "SettingAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Value  </td>
+                      <td align="center">  @entity.Value2  </td>
+                      <td align="center">  @entity.FK_CategorySetting  </td>
+         </tr>
+            iRow++;
+        }
+    </table> 
+    
+     
+    
+    
+    
+    ///  User
+    @using DataLayer.EF
+    @using Utility
+      @model IEnumerable<User> 
+      @{
+        int iRow = 1;   
+      var ajaxOption = new AjaxOptions { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+    }
+    <table  class="TableCss" >
+     <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                        <th> ویرایش </th>
+                        <th>  حذف</th>
+                     <th>Id</th>        
+                                  <th>Name</th>        
+                                  <th>Email</th>        
+                                  <th>Mobile</th>        
+                                  <th>RegisterDate</th>        
+                                  <th>FK_Role</th>        
+                                  <th>CurrentInvoice</th>        
+                                  <th>Ative</th>        
+                                  <th>AtivationCode</th>        
+                                  <th>Password</th>        
+                                  <th>TempPassword</th>        
+                                  <th>IpComputerCreator</th>        
+                                  <th>IpComputerLast</th>        
+                 </tr>
+        @foreach (var entity in Model)
+        {
+    <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td>@Ajax.ActionLink("ویرایش", "EditView", "UserAdmin", new {area = "Adminstration", Id = entity.Id },ajaxOption, null)</td>
+                <td>@Html.ActionLink("حذف", "Delete", "UserAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+                  <td align="center">  @entity.Id  </td>
+                      <td align="center">  @entity.Name  </td>
+                      <td align="center">  @entity.Email  </td>
+                      <td align="center">  @entity.Mobile  </td>
+                      <td align="center">  @entity.RegisterDate  </td>
+                      <td align="center">  @entity.FK_Role  </td>
+                      <td align="center">  @entity.CurrentInvoice  </td>
+                      <td align="center">  @entity.Ative  </td>
+                      <td align="center">  @entity.AtivationCode  </td>
+                      <td align="center">  @entity.Password  </td>
+                      <td align="center">  @entity.TempPassword  </td>
+                      <td align="center">  @entity.IpComputerCreator  </td>
+                      <td align="center">  @entity.IpComputerLast  </td>
+         </tr>
+            iRow++;
+        }
+    </table>*@ 
+    
+     
+    
+    
+    
+
+
+
+

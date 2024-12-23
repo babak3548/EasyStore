@@ -1,0 +1,13 @@
+﻿  @using DataLayer.Contract;
+  @using System.Reflection;
+  @using UILayer.Miscellaneous;
+  @model IContract  
+  
+    @Html.Label(ViewData["langugeValue"].ToString())
+    @{var propInfo = ((PropertyInfo)ViewData["PropertyInfo"]); }
+
+<textarea style="border-color:Silver;border-width:1px;border-style:Solid;font-family:Tahoma;height:183px;width:521px;" id="Agrement" readonly="readonly" cols="20" rows="2" name="Agrement">
+@UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("Agrement")
+ </textarea> 
+ <br />
+    <textarea  id="Agrement" readonly="readonly" name="Agrement"> </textarea>    <br />

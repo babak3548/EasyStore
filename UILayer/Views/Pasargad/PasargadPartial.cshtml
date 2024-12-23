@@ -1,0 +1,21 @@
+﻿@using DataLayer.EF
+@using UILayer.BankGetWays
+@using UILayer
+@{
+    var _PasargadData = (PasargadData)(ViewData["DataBank"]);
+    var v = _PasargadData.action;
+}
+<form id="Form2" method="post" Action="@Pasargad.gatewayUrl">
+    <input type="hidden" name="invoiceNumber" value="@_PasargadData.invoiceNumber" />
+    <input type="hidden" name="invoiceDate" value="@_PasargadData.invoiceDate" />
+    <input type="hidden" name="amount" value="@_PasargadData.amount" />
+    <input type="hidden" name="terminalCode" value="@_PasargadData.terminalCode" />
+    <input type="hidden" name="merchantCode" value="@_PasargadData.merchantCode" />
+    <input type="hidden" name="redirectAddress" value="@_PasargadData.redirectAddress" />
+    <input type="hidden" name="timeStamp" value="@_PasargadData.timeStamp" />
+    <input type="hidden" name="action" value="@_PasargadData.action" />
+    <input type="hidden" name="sign" value="@_PasargadData.sign" />
+
+    <input type="submit" name="submit" value="پرداخت" />
+</form>
+

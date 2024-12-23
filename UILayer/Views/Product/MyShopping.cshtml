@@ -1,0 +1,23 @@
+﻿@using DataLayer.EF
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@model ModelGrid
+
+@{
+    ViewBag.Title = ViewData["ShoppingName"].ToString();
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@{
+
+    // var modelGrid = new ModelGrid {Model=Model,  };
+}
+
+@{
+    <h1 id="logo"> @ViewData["ShoppingName"].ToString()</h1>
+    @Html.Partial("Products", Model);
+}

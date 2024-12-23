@@ -1,0 +1,46 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@model IEnumerable< Content>
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    int iRow = 1;
+   
+    
+}
+
+@Html.ActionLink("اضافه کردن محتوا","RegisterView","ShowContent",null,null)<br />
+        <table  class="TableCss" >
+
+  
+                <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            
+                    <th> ویرایش </th>
+                    <th>  حذف</th>
+                    <th>  کد </th>
+                    <th>  نام </th>
+                    <th>  محتویات اصلی</th>
+
+
+                </tr>
+    @foreach (var entity in Model)
+    {
+        
+                <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+
+                        <td>  @Html.ActionLink("ویرایش","EditView", "ShowContent", new   { Id = entity.Id  },null)</td>
+                        <td>  @Html.ActionLink("حذف","Delete" , "ShowContent", new { Id = entity.Id},null)         </td>
+                        <td align="center">  @entity.Id  </td>
+                        <td align="center">  @entity.Name  </td>
+                        <td align="center">  @(entity.ShowValue.Length > 200 ?entity.ShowValue.Substring(0,200): entity.ShowValue )</td>
+
+                    
+
+                </tr>
+        iRow++;
+            }
+        </table>  

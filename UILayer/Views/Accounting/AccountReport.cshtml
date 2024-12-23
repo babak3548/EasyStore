@@ -1,0 +1,49 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+
+@model IEnumerable<Accounting>
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@{
+    int iRow = 1;
+    var ModelInList = Model.ToList();
+
+}
+@{
+    <table class="TableCss">
+
+        <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <th>  تاریخ</th>
+            @*<th>  کد فاکتور</th>*@
+
+            <th> نوع عملیات</th>
+            <th> مبلغ</th>
+
+
+        </tr>
+        @foreach (var contract in ModelInList)
+        {
+            <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+                <td align="center">@contract.Date  </td>
+                @*<td align="center">  @contract.FkInvoiceNavigati.Id  </td>*@
+               
+                <td align="center">  @UIUtility.ResourceManager.GetString(contract.Name)  </td>
+                <td align="center">  @(contract.Creditor - contract.Debtor)</td>
+
+            </tr>
+            iRow++;
+        }
+    </table>
+
+
+
+
+
+}

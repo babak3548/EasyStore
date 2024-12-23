@@ -1,0 +1,112 @@
+﻿@using DataLayer.EF
+
+@{
+    Category selectedCat = (Category)ViewBag.selectedCategory;
+    ViewBag.Title = selectedCat==null || selectedCat.Discription == DataLayer.Enums.DefualtValue.AllCategory?
+     "فروش عمده انواع هدیه کارمندی عید نوروز و یلدا،پک افطاری و همایش، عروسک با قیمت عمده تولیدی در فروشگاه ایزی"
+      : selectedCat.TitlePage;
+    ViewBag.canonical = DataLayer.AppSetting.DomainName;
+    ViewBag.MetaDescription = "فروش عمده انواع هدیه کارمندی عید نوروز و یلدا،پک افطاری، پک همایش ،پک مجلس ترحیم، عروسک با قیمت عمده تولیدی در فروشگاه ایزی";
+
+ }
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+              var poms=@Html.Raw(ViewBag.allPromotionProductModels);
+            setArrPromotionProductModels(poms);
+        });
+
+
+    </script>
+}
+
+<!--slider area start-->
+@Html.Partial("_HomeMainSlider", (List<DataLayer.EF.PromotionProduct>)ViewBag.HomeMainSlider)
+<!--slider area end-->
+<!--shipping area start-->
+<div class="shipping_area mb-60">
+    <div class="container">
+        <div class="shipping_inner">
+            <div class="single_shipping">
+                <div class="shipping_icone">
+                    <img src="assets/img/about/shipping3.png" alt="7 روز ضمانت بازگشت کالا">
+                </div>
+                <div class="shipping_content">
+                    <h4>ضمانت بازگشت</h4>
+                    <p>7 روز ضمانت بازگشت کالا</p>
+                </div>
+            </div>
+            <div class="single_shipping">
+                <div class="shipping_icone">
+                    <img src="assets/img/about/shipping4.png" alt="تطبیق کامل کالا با عکس">
+                </div>
+                <div class="shipping_content">
+                    <h4>ضمانت تطبیق</h4>
+                    <p>تطبیق کامل کالا با عکس</p>
+                </div>
+            </div>
+            <div class="single_shipping">
+                <div class="shipping_icone">
+                    <img src="assets/img/about/shipping2.png" alt="بررسی سلامت کالا قبل از ارسال">
+                
+                </div>
+                <div class="shipping_content">
+                    <h4>بررسی صحت</h4>
+                    <p>بررسی سلامت کالا قبل از ارسال</p>
+                </div>
+            </div>
+            <div class="single_shipping">
+                <div class="shipping_icone">
+                    <img src="assets/img/about/shipping1.png" alt="ارسال رایگان به تمام نقاط کشور">
+                </div>
+                <div class="shipping_content">
+                    <h4>ارسال رایگان</h4>
+                    <p>ارسال رایگان به تمام نقاط کشور</p>
+                </div>
+            </div>
+
+            <div class="single_shipping">
+                <div class="shipping_icone">
+                    <img src="assets/img/about/shipping5.png" alt="ضمانت اصل بود کالا">
+                </div>
+                <div class="shipping_content">
+                    <h4>ضمانت اصالت</h4>
+                    <p>ضمانت اصل بودن کالا</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--shipping area end-->
+<!--home section bg area start-->
+<div class="home_section_bg">
+    <!--Categories product area start-->
+    @Html.Partial("TopHomeCategory", (IQueryable<DataLayer.Models.TopHomeCategoryModel>)ViewBag.TopHomeCategory)
+    <!--Categories product area end-->
+    <!--product area start-->
+    @Html.Partial("BestOfferMonth")
+    <!--product area end-->
+    <!--banner area start-->
+    @Html.Partial("_SecondHomeBaner", (List<PromotionProduct>)ViewBag._SecondHomeBaner)
+    <!--banner area end-->
+    <!--product area start-->
+    @Html.Partial("HomeSlidersPromotion", new PromotionSliderModel { TitleSlider = "محصولات ویژه", PromotionProducts = ViewBag.SpecialProducts })
+    <!--product area end-->
+    <!--product area start-->
+    @Html.Partial("HomeSlidersPromotion", new PromotionSliderModel { TitleSlider = "محصولات جدید", PromotionProducts = ViewBag.NewProducts })
+    <!--product area end-->
+    <!--banner area start-->
+    @Html.Partial("_HomeImgTopRow", (List<PromotionProduct>)ViewBag._HomeImgTopRow)
+
+    <!--banner area end-->
+    <!--product area start-->
+    @Html.Partial("HomeSlidersPromotion", new PromotionSliderModel { TitleSlider = "بالاترین امتیاز ماه", PromotionProducts = ViewBag.TopScoreMonth })
+    <!--product area end-->
+    <!--blog area start-->
+    @Html.Partial("HomeBlogSlider", (IQueryable<DataLayer.EF.Content>)ViewBag.Content_BottomHomePage)
+    <!--blog area end-->
+
+</div>
+<!--home section bg area end-->
+

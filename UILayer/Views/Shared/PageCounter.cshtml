@@ -1,0 +1,13 @@
+﻿@using DataLayer.Enums
+@using UILayer.Views
+
+@model string 
+
+     @{
+         AjaxOption ajaxOptionGrid = new AjaxOption { UpdateTargetId = "Grid", LoadingElementId = "Loding" };
+        for (int i = 0; i < (int)ViewData["RowCount"]; i = i + ConstSetting.PageSize )
+        {
+        @Ajax.ActionLink(" " + i.ToString(), Url.Action("Grid", Model, new { BeginRow = i }), ajaxOptionGrid)
+        }
+
+        }

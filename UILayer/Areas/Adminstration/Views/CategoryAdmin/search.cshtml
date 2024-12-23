@@ -1,0 +1,30 @@
+﻿        @using DataLayer.EF
+        @using Utility
+    
+    
+    @{
+        using (Html.BeginForm("Search", "CategoryAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1">
+    <td class="tdf1">Id:</td>
+    <td class="tdf2"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Name:</td>
+    <td class="tdf2"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Discription:</td>
+    <td class="tdf2"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">FK_Category:</td>
+    <td class="tdf2"> @Html.TextBox("FK_Category", "", new { @id = "FK_Category" }) And </td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 

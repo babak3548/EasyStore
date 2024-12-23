@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "GetImageList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int radif = 0;
+}
+
+<h1>لیست </h1>
+
+<div class="row">
+    <div class="col-12">
+        @foreach (var item in ((string)ViewBag.imageList).Split(","))
+        {
+            radif++;
+        <div class="row">
+            <div class="col-1">
+                @radif
+            </div>
+            <div style="text-align:left;" class="col-5">
+                @item
+            </div>
+            <div class="col-6">
+               
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <a asp-action="RemoveResizeCopyImage" class="btn btn-primary"> حذف عکس های سایز بندی</a>
+        <a asp-action="CreateResizeCopyImage" class="btn btn-primary">ایجاد عکس های سایز بندی</a>
+    </div>
+</div>

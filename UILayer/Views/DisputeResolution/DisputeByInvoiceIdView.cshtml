@@ -1,0 +1,30 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+
+
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@{
+    string message = "کاربر گرامی برای برداشتن کد سفارش  به قسمت سفارشات مراجعه کرده و سفارش مورد نظر را باز کرده و کد سفارش بردارید";
+}
+
+@{
+
+    using (Html.BeginForm("DisputeStart", "DisputeResolution", null, FormMethod.Post,false, new { @id = "EditorRowForm" }))
+    {
+        <br />
+        <span>@message</span>
+        <br />
+        @Html.Label("کد سفارش یا فاکتور")
+        @Html.TextBox("InvoiceId", "", new { @id = "InvoiceId", @onblur = JavaScript.ValidationNumber("InvoiceId") })
+        <br />
+
+        <input type="submit" value="ارسال"/>
+        <br />
+    }
+}

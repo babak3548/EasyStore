@@ -1,0 +1,8 @@
+﻿@using DataLayer.Contract;
+@using System.Reflection;
+@using UILayer;
+@model IContract
+
+
+<img alt=""  src='@(((PropertyInfo)ViewData["PropertyInfo"]).GetValue(Model, null))' width="50px" height="70px"/>
+teeeeeeeeeeesttttttttttt

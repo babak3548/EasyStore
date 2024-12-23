@@ -1,0 +1,114 @@
+﻿@using DataLayer.EF
+
+@model Product
+
+@{
+    using (Html.BeginForm("Edit", "ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+    <table>
+
+        <tr class="tr1A">
+            <td class="tdf1A">Id:</td>
+            <td class="tdf2A">@Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Name:</td>
+            <td class="tdf2A">@Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Brand:</td>
+            <td class="tdf2A">@Html.TextBox("Brand", Model.Brand, new { @id = "Brand" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Image:</td>
+            <td class="tdf2A">@Html.TextBox("Image", Model.Image, new { @id = "Image" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Image1:</td>
+            <td class="tdf2A">@Html.TextBox("Image1", Model.Image1, new { @id = "Image1" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Image2:</td>
+            <td class="tdf2A">@Html.TextBox("Image2", Model.Image2, new { @id = "Image2" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Price:</td>
+            <td class="tdf2A">@Html.TextBox("Price", Model.Price, new { @id = "Price" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">RegisterDate:</td>
+            <td class="tdf2A">@Html.TextBox("RegisterDate", Model.RegisterDate, new { @id = "RegisterDate" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Discription:</td>
+            <td class="tdf2A">@Html.TextArea("Discription", Model.Discription, new { @id = "Discription" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">FK_BusinessOwner:</td>
+            <td class="tdf2A">@Html.TextBox("FK_BusinessOwner", Model.FkBusinessOwner, new { @id = "FK_BusinessOwner" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">MadeInCountry:</td>
+            <td class="tdf2A">@Html.TextBox("MadeInCountry", Model.MadeInCountry, new { @id = "MadeInCountry" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">CountPrice:</td>
+            <td class="tdf2A">@Html.TextBox("CountPrice", Model.CountPrice, new { @id = "CountPrice" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">MinCountForPrice:</td>
+            <td class="tdf2A">@Html.TextBox("MinCountForPrice", Model.MinCountForPrice, new { @id = "MinCountForPrice" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">available:</td>
+            <td class="tdf2A">@Html.TextBox("available", Model.Available, new { @id = "available" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">PersentMarkater:</td>
+            <td class="tdf2A">@Html.TextBox("PersentMarkater", Model.PersentMarkater, new { @id = "PersentMarkater" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">AcceptReturnDay:</td>
+            <td class="tdf2A">@Html.TextBox("AcceptReturnDay", Model.AcceptReturnDay, new { @id = "AcceptReturnDay" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">ShippingDiscription:</td>
+            <td class="tdf2A">@Html.TextBox("ShippingDiscription", Model.ShippingDiscription, new { @id = "ShippingDiscription" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">WordKey:</td>
+            <td class="tdf2A">@Html.TextBox("WordKey", Model.WordKey, new { @id = "WordKey" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">SellOrBuy:</td>
+            <td class="tdf2A">@Html.TextBox("Dimansion", Model.Dimansion, new { @id = "Dimansion" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">UnitBuy:</td>
+            <td class="tdf2A">@Html.TextBox("UnitBuy", Model.UnitBuy, new { @id = "UnitBuy" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">wightUnitBuyWithKG:</td>
+            <td class="tdf2A">@Html.TextBox("wightUnitBuyWithKG", Model.WightUnitBuyWithKg, new { @id = "wightUnitBuyWithKG" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">Active:</td>
+            <td class="tdf2A">@Html.TextBox("Active", Model.Active, new { @id = "Active" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">FK_Category:</td>
+            <td class="tdf2A">@Html.TextBox("FK_Category", Model.FkCategory, new { @id = "FK_Category" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">RankShow:</td>
+            <td class="tdf2A">@Html.TextBox("RankShow", Model.RankShow, new { @id = "RankShow" })</td>
+        </tr>
+        <tr class="tr1A">
+            <td class="tdf1A">FK_Content:</td>
+            <td class="tdf2A">@Html.TextBox("FK_Content", Model.FkContent, new { @id = "FK_Content" })</td>
+        </tr>
+
+    </table>           
+    <input type="submit" value="ذخیره تغییرات" />    
+    }
+}

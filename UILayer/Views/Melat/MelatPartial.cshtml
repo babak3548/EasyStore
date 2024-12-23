@@ -1,0 +1,11 @@
+﻿@using DataLayer.EF
+@using UILayer.BankGetWays
+@{
+    var _MelatData = (MelatData)(ViewData["DataBank"]);
+
+}
+<form id="Form2" method="post" Action="@_MelatData.pgwSite">
+    <input type="hidden" name="RefId" value="@_MelatData.refId" />
+    <input type="submit" name="submit" value="پرداخت" />
+</form>
+

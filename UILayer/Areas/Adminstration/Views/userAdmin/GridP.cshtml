@@ -1,0 +1,50 @@
+﻿
+@using DataLayer.EF
+@using UILayer.Views
+@model IEnumerable<User>
+@{
+    int iRow = 1;
+
+    var ajaxOption = new AjaxOption { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+}
+
+<table class="TableCss">
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+        <th>ویرایش </th>
+        <th>حذف</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>RegisterDate</th>
+        <th>FK_Role</th>
+        <th>CurrentInvoice</th>
+        <th>Ative</th>
+        <th>AtivationCode</th>
+        <th>Password</th>
+        <th>TempPassword</th>
+        <th>IpComputerCreator</th>
+        <th>IpComputerLast</th>
+    </tr> 
+    @foreach (var entity in Model)
+    {
+        <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td>@Ajax.ActionLink("ویرایش",Url.Action( "EditView", "UserAdmin", new {area = "Adminstration", Id = entity.Id }),ajaxOption, null)</td>
+            <td>@Html.ActionLink("حذف", "Delete", "UserAdmin", new {area = "Adminstration", Id = entity.Id }, null)         </td>
+            <td align="center">@entity.Id  </td>
+            <td align="center">@entity.Name  </td>
+            <td align="center">@entity.Email  </td>
+            <td align="center">@entity.Mobile  </td>
+            <td align="center">@entity.RegisterDate  </td>
+            <td align="center">@entity.FkRole  </td>
+            <td align="center">@entity.CurrentInvoice  </td>
+            <td align="center">@entity.Ative  </td>
+            <td align="center">@entity.AtivationCode  </td>
+            <td align="center">@entity.Password  </td>
+            <td align="center">@entity.TempPassword  </td>
+            <td align="center">@entity.IpComputerCreator  </td>
+            <td align="center">@entity.IpComputerLast  </td>
+        </tr>
+        iRow++;
+    }
+</table>

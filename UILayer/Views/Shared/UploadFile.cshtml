@@ -1,0 +1,15 @@
+﻿@using UILayer.Miscellaneous;
+@using UILayer.Views
+@model UploadFileModel
+@{
+
+ <div id="DUpImg">
+<input id='@Model.InputPropName' type="file" style="width: 304px ; " name='@(Model.InputPropName)' title='@(UIUtility.ResourceManager.GetString("Select") + Model.langugeValue)'
+     onchange="fileUpload(this.form,'@Url.Action(Model.UploadActionName
+, Model.UploadControlName, new {InputName=Model.InputPropName})','@Model.propName','@Model.InputPropName'); return false;" /><br />
+
+@*<input type="button" value='@(UIUtility.ResourceManager.GetString("Upload")+Model.langugeValue)' onclick ="" />*@
+<input type="text" readonly="readonly"  id='@Model.propName' name='@(Model.propName)' value ='@Model.Value' onblur ='@(Model.OnburMethod)' />
+</div>
+}
+

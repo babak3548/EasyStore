@@ -1,0 +1,47 @@
+﻿@using DataLayer.Models
+@using DataLayer.Enums
+@model List<DataLayer.EF.PromotionProduct>
+
+<section class="slider_section slider_s_three mb-60 mt-20">
+    <div class="slider_area slider3_carousel owl-carousel">
+
+        @foreach (var item in Model.OrderBy(o => o.Order))
+        {
+            if (item.Title == null) item.Title = "";
+            if (string.IsNullOrWhiteSpace( item.Image)) item.Image = DefualtValue.sliderDefaultImg;
+            string[] titles = item.Title.Split(',');
+
+
+            <div class="single_slider d-flex align-items-center" data-bgimg='@item.Image.GetOtherFilePath()'>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="slider_content slider_c_three color_white">
+
+                                <h3>@(titles.Length >= 1 ? titles[0]:"")</h3>
+                                <h1>@(titles.Length >= 2 ? titles[1]:"")<br> @(titles.Length >= 3 ? titles[2]:"")</h1>
+                                <p class="less-space">
+                                    @(titles.Length >= 4 ? titles[3]:"")
+                                    <span>@(titles.Length >= 5 ? titles[4]:"")</span>
+                                    @(titles.Length >= 6 ? titles[5]:"")
+                                </p>
+
+                                @if (string.IsNullOrWhiteSpace(item.Query))
+                                {
+                                    <a class="button" href="@(Url.Action("Index", "Home", new  { PromotionType = item.PromotionType.GetPromotionTypeProduct() }))"> هم اکنون بخرید</a>
+                                }
+                                else
+                                {
+                                    <a class="button" href="@(Url.Action("Index", "Home", new  { query = item.Query }))"> هم اکنون بخرید</a>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</section>

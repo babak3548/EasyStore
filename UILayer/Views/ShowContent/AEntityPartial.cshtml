@@ -1,0 +1,7 @@
+﻿@using System.Net
+@model DataLayer.EF.Content
+@{
+    <h2> @Model.Name</h2>
+    <br />
+    @Html.Raw(WebUtility.HtmlDecode(Model.ShowValue))
+}

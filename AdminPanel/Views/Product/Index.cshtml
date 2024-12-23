@@ -1,0 +1,168 @@
+﻿@model IPagedList<Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var p = ViewBag.SearchValue==null ? new Product() : (Product)ViewBag.SearchValue ;
+   
+}
+<style>
+    .table td, .table th {
+        padding: 0.5rem 0.5rem !important;
+    }
+</style>
+
+<p>
+    <a asp-action="Item" class="btn btn-primary">تعریف محصول جدید</a>   
+    <a asp-action="CalcStarProduct" title="محاسبه ستارهای محصول با انتصاب ستاره آدمین و ستاره های کامنت ها" class="btn btn-primary">محاسبه ستارهای محصولات</a>
+</p>
+<form enctype="multipart/form-data" method="post" asp-action="Index">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-md-2">
+                <label asp-for="@p.Id" class="control-label"></label>
+                <input name="Id" value="@p.Id" class="form-control" />
+
+            </div>
+            <div class="col-md-2">
+                <label asp-for="@p.Name" class="control-label"></label>
+                <input name="Name" value="@p.Name" class="form-control" />
+
+            </div>
+            <div class="col-md-3">
+                <label asp-for="@p.FkCategory" class="control-label"></label>
+                <select name="FkCategory" value="@p.FkCategory" class="form-control" asp-items="ViewBag.FkCategory"></select>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="@p.Active" class="control-label"></label>
+                <select name="productActivationStatus" class="form-control" asp-items="ViewBag.productActivationStatus"></select>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label asp-for="@p.AddDate" class="control-label">بعد از این تاریخ</label>
+                <input name="addDateStr" value="@p.AddDate.ToPersianDate()" placeholder="1399/10/20"   class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">تخفیف بزرگتر</label>
+                <input placeholder="ریال" title="تخفیف های بزرگتر مساوی عدد وارد شده را می اره " name="BeforDiscountPrice" value="@p.BeforDiscountPrice" class="form-control" />
+            </div>
+            <div class="col-md-1">
+                <input style="margin-top:1.8em" type="submit" value="جستجو" class="btn btn-primary" />
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post" action="@Url.Action("CreateProduct","PromotionProducts")">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(a => p.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.Image)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.FkCategory)
+                    </th>
+                    @*<th>
+                        @Html.DisplayNameFor(a => p.Brand)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(a => p.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.BeforDiscountPrice)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.Active)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => p.Available)
+                    </th>
+                    <th>پرومشن</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    item.Image.SaveImgListUI();
+                    item.Image.SaveImgList();
+                    item.Image.SaveImgDetails();
+                    item.Image1.SaveImgListUI();
+                    item.Image1.SaveImgList();
+                    item.Image1.SaveImgDetails();
+                    // item.Image.SaveImgDetails();
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            <img style="width: 100px;height:100px" src="@item.Image.GetUrlListImg()" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FkCategoryNavigation.Name)
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Brand)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BeforDiscountPrice)
+                        </td>
+                        <td>
+                            @(item.Active ?"فعال":"غیر فعال")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Available)
+                        </td>
+                        <td>
+                            <input type="checkbox" name="productIds" value="@item.Id" />
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Item",new { id=item.Id , pageIndex = Model.PageIndex})" class="btn btn-primary">ویرایش</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @Html.Partial("_PaginationProduct", (IEntityPagination)Model)
+
+    <h4>ایجاد پرومشن های غیر محصولی و بنری</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">نوع پرومشن</label>
+                <select name="PromotionType" class="form-control" asp-items="ViewBag.PromotionType"></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">تاریخ انقضا</label>
+                <input name="ExpireDateTime" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </div>
+    </div>
+</form>

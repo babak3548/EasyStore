@@ -1,0 +1,400 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@using Utility;
+
+@model UILayer.Models.SearchResultModel
+
+@{
+    var subcats =((List<CategoryContract>)ViewBag.subCategories).ToList() ;
+    if(ViewBag.selectedCategory != null)
+    {
+        ViewBag.Title = ((CategoryContract)ViewBag.selectedCategory).TitlePage;
+        ViewBag.canonical = @Url.Action("Index", "Home", new { category = ((CategoryContract)ViewBag.selectedCategory).Discription },"https");
+    }
+    else if(Model.Model.Count() > 0  )
+    {
+        var productFirst = Model.Model?.FirstOrDefault();
+        if (productFirst != null && productFirst.FkCategoryNavigation != null)
+        {
+            ViewBag.Title = productFirst.FkCategoryNavigation.TitlePage;
+        }
+        else
+        {
+            ViewBag.Title = "فروش عمده انواع هدیه کارمندی عید نوروز و یلدا،پک افطاری و همایش، عروسک با قیمت عمده تولیدی ";
+        }
+    }
+    else
+    {
+        ViewBag.Title = "فروش عمده انواع هدیه کارمندی عید نوروز و یلدا،پک افطاری و همایش، عروسک با قیمت عمده تولیدی ";
+    }
+    //"ClientGrid2",ClientGridProduct
+    int pageNoCalc = 1;
+}
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+              var poms=@Html.Raw(ViewBag.allPromotionProductModels);
+            setArrPromotionProductModels(poms);
+        });
+
+
+    </script>
+}
+<input id="price_max_calc_dynamic" type="hidden" value="@ViewBag.DefaultPrice_max" />
+<!--shop  area start-->
+<div class="shop_area shop_reverse">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <!--sidebar widget start-->
+                <aside class="sidebar_widget">
+                    <div class="widget_list widget_categories">
+                        <h3>دسته های محصولات</h3>
+                        <ul>
+                            @foreach (var subCat in subcats )
+                            {
+                                //,  PromotionType = Model.SearchModel.PromotionType  to do add after show filter items to user
+                                <li>
+                                    <a href="@Url.Action("Index", "Home",new {   category=subCat.Discription    })">@subCat.Name</a>
+                                    </li>
+                                }
+
+
+                        </ul>
+                    </div>
+                    <div class="widget_list widget_filter">
+                        <h3>فیلتر با قیمت</h3>
+                        <form action="@Url.Action("Index", "Home", null, "https")" method="get">
+                            <div id="slider-range"></div>
+                            <input type="text" id="amount">
+
+                            <input type="hidden" id="price-min" name="Price_min" value="@Model.SearchModel.Price_min" />
+                            <input type="hidden" id="price-max" name="Price_max" value="@Model.SearchModel.Price_max" />
+                            <input type="hidden" name="query" value="@Model.SearchModel.query" />
+                            <input type="hidden" name="category" value="@Model.SearchModel.category" />
+                            <input type="hidden" name="Fk_Marketer" value="@Model.SearchModel.Fk_Marketer" />
+                            <input type="hidden" name="Sorting" value="@Model.SearchModel.Sorting" />
+                            <input type="hidden" name="PromotionType" value="@Model.SearchModel.PromotionType" />
+
+                            <button type="submit">فیلتر</button>
+                        </form>
+                    </div>
+                    @*<div class="widget_list">
+                        <h3>مقایسه محصولات</h3>
+                        <div class="recent_product_container">
+                            <article class="recent_product_list">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="#"><img src="/assets/img/product/product9.jpg" alt=""></a>
+                                        <a class="secondary_img" href="#"><img src="/assets/img/product/product10.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product_content">
+                                        <h4><a href="#">فروش و مقایسه انواع گوشی های به زودی در سایت</a></h4>
+                                        <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="price_box">
+                                            <span class="old_price">10,000,000 تومان</span>
+                                            <span class="current_price">9,500,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </article>
+                            <article class="recent_product_list">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="#"><img src="/assets/img/product/product11.jpg" alt=""></a>
+                                        <a class="secondary_img" href="#"><img src="/assets/img/product/product12.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product_content">
+                                        <h4><a href="#">فروش و مقایسه انواع تبلت های به زودی در سایت</a></h4>
+                                        <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="price_box">
+                                            <span class="old_price">10,000,000 تومان</span>
+                                            <span class="current_price">9,500,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </article>
+                            <article class="recent_product_list">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="#"><img src="/assets/img/product/product14.jpg" alt=""></a>
+                                        <a class="secondary_img" href="#"><img src="/assets/img/product/product13.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product_content">
+                                        <h4><a href="#">فروش و مقایسه انواع گوشی های به زودی در سایت</a></h4>
+                                        <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="price_box">
+                                            <span class="old_price">80,000,000 تومان</span>
+                                            <span class="current_price">7,500,000 تومان</span>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>*@
+                    @*<div class="widget_list tags_widget">
+                        <h3>برچسب های محصولات</h3>
+                        <div class="tag_cloud">
+                            <a href="@Url.Action("Index","Home", new {category= DefualtValue.AllCategory, query="کارمنذی"} )">مبل کودک</a>
+                            <a href="@Url.Action("Index","Home", new {category= DefualtValue.AllCategory,query="فیل"} )"> فیل بالشتی</a>
+                            <a href="@Url.Action("Index","Home", new {category= DefualtValue.AllCategory,query="خرس"} )">خرس پولیشی</a>
+                            <a href="@Url.Action("Index","Home", new {category= DefualtValue.AllCategory,query="هدیه"} )">ست های هدیه</a>
+                            <a href="@Url.Action("Index","Home", new {category= DefualtValue.AllCategory,query="دخترانه"} )">عروسکهای دخترانه</a>
+                        </div>
+                    </div>*@
+                </aside>
+                <!--sidebar widget end-->
+            </div>
+            <div class="col-lg-9 col-md-12">
+
+                <!--shop banner area start-->
+                @*<div class="shop_banner_area mb-30">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="shop_banner_thumb">
+                                <img src="/assets/img/bg/banner16.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+                <!--shop banner area end-->
+                <!--shop toolbar start-->
+                <div class="shop_toolbar_wrapper">
+                    <div class="shop_toolbar_btn">
+                        <button data-role="grid_4" type="button" class=" active btn-grid-4" data-toggle="tooltip" title="4"></button>
+                        <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                    </div>
+                    <div class="niceselect_container">
+                        <form>
+                            <label>ترتیب:</label>
+                            <select class="select_option" id="short" name="forma" onchange="location = this.value;">
+                                @if (Model.SearchModel.Sorting == Sorting.cheaper)
+                                {
+                                    <option selected value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.cheaper ,
+                                                           Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        ارزان ترین ها
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.cheaper ,
+                                                  Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        ارزان ترین ها
+                                    </option>
+                                }
+                                @if (Model.SearchModel.Sorting == Sorting.expensive)
+                                {
+                                    <option selected value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.expensive ,
+                                                           Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        گران ترین ها
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.expensive ,
+                                                  Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        گران ترین ها
+                                    </option>
+                                }
+
+                                @if (Model.SearchModel.Sorting == Sorting.newer)
+                                {
+                                    <option selected value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.newer ,
+                                                           Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        جدیدترین ها
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.newer ,
+                                                  Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        جدیدترین ها
+                                    </option>
+                                }
+                                @if (Model.SearchModel.Sorting == Sorting.RankSelling)
+                                {
+                                    <option selected value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.RankSelling ,
+                                                           Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        پرفروش ترین ها
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.RankSelling ,
+                                                  Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        پرفروش ترین ها
+                                    </option>
+                                }
+                                @if (Model.SearchModel.Sorting == Sorting.RankShow)
+                                {
+                                    <option selected value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.RankShow ,
+                                                           Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        پربازدیدترین ها
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@Url.Action("Index", "Home",new {query=Model.SearchModel.query , Sorting=Sorting.RankShow ,
+                                                  Price_min=Model.SearchModel.Price_min ,  Price_max=Model.SearchModel.Price_max
+                                          ,  category=Model.SearchModel.category  ,  Fk_Marketer=Model.SearchModel.Fk_Marketer })">
+                                        پربازدیدترین ها
+                                    </option>
+                                }
+
+
+                            </select>
+                        </form>
+                    </div>
+                    <div class="page_amount">
+                        <p>نمایش 1-9 از 21 محصول</p>
+                    </div>
+                </div>
+                <!--shop toolbar end-->
+                <!--shop wrapper start-->
+                <div>
+                    <div>
+                        <div class="row no-gutters shop_wrapper">
+
+                            @{
+                                <table class="TblPdc">
+                                    @foreach (var product in Model.Model)
+                                    {
+                                        @Html.Partial("ProductRow", product)
+                                    }
+                                </table>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop_toolbar t_bottom">
+                    <div class="pagination">
+                        <ul>
+                            @{
+                                int startPageing = 0;
+                                if (Model.SearchModel.PageNo > 10)
+                                {
+                                    startPageing = (((Model.SearchModel.PageNo - 1) / 10) * 10);
+                                }
+
+                                int maxPagingNum = Model.RowCount / ConstSetting.PageSize;
+                                int nextPageNum = 0;
+                                if (maxPagingNum > (startPageing + 10))
+                                {
+                                    maxPagingNum = startPageing + 10;
+                                    nextPageNum = maxPagingNum + 1;
+                                }
+                                else if (Model.RowCount == 0) { maxPagingNum = 0; }
+                                else { maxPagingNum += 1; }
+
+                            }
+
+                            @if (startPageing != 0)
+                            {
+                                <li class="next">
+                                    @Html.ActionLink("قبلی", "Index", "Home", new
+                               {
+                                   PageNo = startPageing,
+                                   query = Model.SearchModel.query,
+                                   Sorting = Model.SearchModel.Sorting,
+                                   Price_min = Model.SearchModel.Price_min,
+                                   Price_max = Model.SearchModel.Price_max,
+                                   category = Model.SearchModel.category,
+                                   Fk_Marketer = Model.SearchModel.Fk_Marketer,
+                                   PromotionType = Model.SearchModel.PromotionType,
+
+                               }, null)
+                                </li>
+                            }
+
+                            @for (int i = (startPageing + 1); i <= maxPagingNum; i = i + 1)
+                            {
+
+                                <li @(i == Model.SearchModel.PageNo ? "class=current" : "" )>
+
+                                    @Html.ActionLink(" " + i.ToString(), "Index", "Home", new
+                               {
+                                   PageNo = i,
+                                   query = Model.SearchModel.query,
+                                   Sorting = Model.SearchModel.Sorting,
+                                   Price_min = Model.SearchModel.Price_min,
+                                   Price_max = Model.SearchModel.Price_max,
+                                   category = Model.SearchModel.category,
+                                   Fk_Marketer = Model.SearchModel.Fk_Marketer,
+                                   PromotionType = Model.SearchModel.PromotionType,
+
+                               }, null)
+                                </li>
+                            }
+
+                            @if (nextPageNum != 0)
+                            {
+                                <li class="next">
+                                    @Html.ActionLink("بعدی", "Index", "Home", new
+                               {
+                                   PageNo = nextPageNum,
+                                   query = Model.SearchModel.query,
+                                   Sorting = Model.SearchModel.Sorting,
+                                   Price_min = Model.SearchModel.Price_min,
+                                   Price_max = Model.SearchModel.Price_max,
+                                   category = Model.SearchModel.category,
+                                   Fk_Marketer = Model.SearchModel.Fk_Marketer,
+                                   PromotionType = Model.SearchModel.PromotionType,
+                               }, null)
+                                </li>
+                            }
+
+                            @*<li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>*@
+                        </ul>
+                    </div>
+                </div>
+                <!--shop toolbar end-->
+                <!--shop wrapper end-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--shop  area end-->
+<!-- modal area start-->
+<!-- modal area end-->

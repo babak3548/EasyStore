@@ -1,0 +1,97 @@
+﻿@using  DataLayer.Contract
+@using Utility
+
+@if (ViewBag.User != null)
+{
+    UserContract userContract = (UserContract)ViewBag.User;
+
+    @if (userContract.InvoiveUser != null)
+    {
+        <div class="mini_cart_wrapper">
+            <a href="javascript:void(0)">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="cart_price"><span>@userContract.InvoiveUser.PaymentToCountinue.decimalToDigMony() </span> <i class="ion-ios-arrow-down"></i></span>
+                <span class="cart_count">@userContract.InvoiveUser.InvoiveItemUsers.Count</span>
+            </a>
+            <!--mini cart-->
+            <div class="mini_cart">
+                <div class="mini_cart_inner">
+                    @foreach (var item in userContract.InvoiveUser.InvoiveItemUsers)
+                    {
+                        <div class="cart_item">
+                            <div class="cart_img">
+                                <a href="@Url.Action("AEntityClient","Product",new { nameForUrl=item.ProductNameForUrl})"><img src="@item.ProductImage.GetUrlListImg()" alt=""></a>
+                            </div>
+                            <div class="cart_info">
+                                <a href="@Url.Action("AEntityClient","Product",new {nameForUrl=item.ProductNameForUrl})">@item.ProductName.GetLenghStr(40)</a>
+                                <p>تعداد: @item.Count × <span> @item.Price.decimalToDigMony()  </span></p>
+                            </div>
+                            <div class="cart_remove">
+                                <a href="@Url.Action("DeleteItemInvoice","Invoice",new { bipId=item.BIPId})"><i class="ion-android-close"></i></a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <div class="mini_cart_table">
+                    <div class="cart_total">
+                        <span>جمع اجزا:</span>
+                        <span class="price">@userContract.InvoiveUser.TotalSumProductPrice.decimalToDigMony() </span>
+                    </div>
+                    <div class="cart_total mt-10">
+                        <span>جمع قابل پرداخت:</span>
+                        <span class="price">@userContract.InvoiveUser.PaymentToCountinue.decimalToDigMony()</span>
+                    </div>
+                </div>
+                <div class="mini_cart_footer">
+                    <div class="cart_button">
+                        <a href="@Url.Action("GetPaymentView","Invoice",new { invoiceId=userContract.InvoiveUser.InvoiceId})">پرداخت</a>
+                    </div>
+                    <div class="cart_button">
+                        <a href="@Url.Action("GetCart","Invoice",new { invoiceId=userContract.InvoiveUser.InvoiceId})">مشاهده سبد</a>
+                    </div>
+                    <div class="cart_button">
+                        <a href="@Url.Action("MyAccount","User")">مشاهده حساب کاربری</a>
+                    </div>
+                    <div class="cart_button">
+                        <a href="@Url.Action("LogOut", "User")">خروج</a>
+                    </div>
+                </div>
+            </div>
+            <!--mini cart end-->
+        </div>
+    }
+    else
+    {
+        <div class="mini_cart_wrapper">
+            <a href="javascript:void(0)">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="cart_price"><span>0 تومان</span> <i class="ion-ios-arrow-down"></i></span>
+                <span class="cart_count">0</span>
+            </a>
+            <div class="mini_cart">
+                <div class="cart_button">
+                    <div class="mini_cart_footer" style="margin-bottom: 5px;"  >
+                        <a href="@Url.Action("MyAccount","User")">مشاهده حساب کاربری</a>
+                    </div>
+                    <div class="mini_cart_footer">
+                        <a href="@Url.Action("LogOut", "User")">خروج</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+
+}
+else
+{
+    <div class="mini_cart_wrapper">
+        <a href="@Url.Action("LoginView","User")">
+            <i class="fa fa-user-o"></i>
+            <span class="cart_price"><span> </span> <i class="ion-ios-arrow-down"></i></span>
+            <span class="cart_count">ورود</span>
+        </a>
+
+    </div>
+}

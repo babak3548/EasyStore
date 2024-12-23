@@ -1,0 +1,40 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+
+
+@model MyAccountShippingRequest
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@{
+    var Message = "کاربر گرامی هزینه انتقال وجه توسط بانک 7000 ریال می باشد";
+}
+
+@{
+
+    using (Html.BeginForm("RequestShippingMoneyInvoice", "Accounting", "https", FormMethod.Post, false, new { @id = "EditorRowForm" }))
+    {
+        <span>@Message</span>
+        <br />
+
+        @Html.Label("مانده حساب")
+        @Html.TextBox("MyReimaningAccount", Model.MyReimaningAccount, new { @readonly = "readonly", @id = "Name", @class = "dig" })
+        <br />
+
+        @Html.Label("مبلغ درخواستی ")
+        @Html.TextBox("MyRequestMony", Model.MyRequestMony, new { @id = "MyRequestMony", @onblur = JavaScript.ValidationNumber("MyRequestMony"), @class = "dig" })
+        <br />
+
+        @Html.Label("شماره حساب بانکی ")
+        @Html.TextBox("BankAccountNumber", Model.BankAccountNumber, new { @id = "BankAccountNumber", @onblur = JavaScript.ValidationNumberLength("BankAccountNumber", 16, 20) })
+        <br />
+
+       
+        <input type="submit" value=" پرداخت" />
+        <br />
+    }
+}

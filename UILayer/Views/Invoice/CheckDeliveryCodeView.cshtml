@@ -1,0 +1,45 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@*ViewBag.Title = "";*@
+
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@{
+    AjaxOption ajaxOptionRowEditor = new AjaxOption
+    {
+
+        UpdateTargetId = "estelam"
+    };
+}
+
+@{
+    using (Html.BeginForm("CheckDeliveryCode", "Invoice", null,FormMethod.Post ,false, new { id = "EditorRowForm" }))
+    {
+
+
+        @Html.Label("کد فاکتور")
+        @Html.TextBox("Id", "", new { @id = "Id", @onblur = JavaScript.ValidationNumber("Id") })
+        <br />
+
+        @Html.Label("کد تایید تحویل")
+        @Html.TextBox("DeliveryCode", "", new { @id = "DeliveryCode", @onblur = JavaScript.ValidationNumberLength("DeliveryCode", 16, 16) })
+        <br />
+        <input type="submit" value="استعلام کد تحویل"/>
+        <br />
+        <div id="estelam"></div>
+        <div class="csrtl">
+            <span>در فروشگاه ایزی دو روش برای تایید تحویل کالا توسط خریدار وجود دارد</span><br />
+            <span>روش اول: خریدار بعد از تحویل سفارش از سایت اقدام به تایید تحویل سفارش می نمایید</span><br />
+            <span>
+                روش دوم: در این روش بعد از پرداخت کد 16 رقمی در اختیار خریدار قرار می گیرد و خریدار این کد را زمان تحویل سفارش در اختیار فروشنده یا پیک وی قرار می دهد
+                و فروشند با این کد مبلغ سفارش مربوطه را به حساب خود انتقال می دهد
+            </span>
+        </div>
+    }
+}

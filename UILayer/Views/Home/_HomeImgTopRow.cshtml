@@ -1,0 +1,36 @@
+﻿@using DataLayer.Enums
+@using DataLayer.Models
+
+@model List<DataLayer.EF.PromotionProduct>
+@{
+    var prom1 = Model.FirstOrDefault(f => f.PromotionType == PromotionTypes.HomeImgTopRow1_3);
+    var prom2 = Model.FirstOrDefault(f => f.PromotionType == PromotionTypes.HomeImgTopRow2_3);
+    var prom3 = Model.FirstOrDefault(f => f.PromotionType == PromotionTypes.HomeImgTopRow3_3);
+}
+<div class="banner_area banner_style2 mb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <figure class="single_banner">
+                    <div class="banner_thumb">
+                        <a href="@(Url.Action("Index", "Home",new SearchModel {PromotionType=PromotionTypes.HomeImgTopRow1_3_M }))"><img src="@(prom1?.Image.GetOtherFilePath())" alt="ببین بخر"></a>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <figure class="single_banner">
+                    <div class="banner_thumb">
+                        <a href="@(Url.Action("Index", "Home",new SearchModel {PromotionType=PromotionTypes.HomeImgTopRow2_3_M }))"><img src="@(prom2?.Image.GetOtherFilePath())" alt="فروشگاه ایزی"></a>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <figure class="single_banner">
+                    <div class="banner_thumb">
+                        <a href="@(Url.Action("Index", "Home",new SearchModel {PromotionType=PromotionTypes.HomeImgTopRow3_3_M }))"><img src="@(prom3?.Image.GetOtherFilePath())" alt="فروشگاه ایزی"></a>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>

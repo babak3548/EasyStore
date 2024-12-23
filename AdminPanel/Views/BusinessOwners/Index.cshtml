@@ -1,0 +1,124 @@
+﻿@model IEnumerable<DataLayer.EF.BusinessOwner>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>لیست فروشندها</h4>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">ایجاد فروشنده جدید</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeActivity)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.WebSiteAddress)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Tel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WhatsApp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InstaOrOtherSocial)
+                </th>
+
+                <th> عملیات</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeActivity)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WebSiteAddress)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WhatsApp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InstaOrOtherSocial)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">مشاهده</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+    @*
+                        <td>
+                        @Html.DisplayFor(modelItem => item.WordKey)
+                    </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NationalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentFile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>*@
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>*@
+    @*<td>
+             @Html.DisplayFor(modelItem => item.Email)
+         </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.PaymentPorsantAmount)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.TypeSells)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.TypeShippings)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.CalcTypeShipping)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.FkMarketerNavigation.Name)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.FkProvinceNavigation.Id)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.FkUserNavigation.Mobile)
+         </td>*@

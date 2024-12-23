@@ -1,0 +1,84 @@
+﻿@using DataLayer.Models
+@using System.Linq
+@using System.Collections.Generic;
+@using UILayer.Miscellaneous
+@using Utility
+@model UILayer.Models.PromotionSliderModel
+
+@{
+    var cats = Model.PromotionProducts.Select(p => new { FkCategory = p.FkCategory, CategoryName = p.CategoryName }).Distinct();
+}
+
+<div class="product_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="product_header">
+                    <div class="section_title s_title_style3">
+                        <h2>@Model.TitleSlider</h2>
+                    </div>
+                    <div class="product_tab_btn">
+                        <ul class="nav" role="tablist">
+                            @foreach (var cat in cats)
+                            {
+                                <li>
+                                    <a class="@(cat.FkCategory == cats.FirstOrDefault().FkCategory ? "active" : "" )" data-toggle="tab" href="#@(Model.TitleSlider.ReplaceDasht() + cat.FkCategory)" role="tab"
+                                       aria-controls="@cat.CategoryName.ReplaceDasht()" aria-selected="@(cat.FkCategory == cats.FirstOrDefault().FkCategory ? "true" : "false" )">
+                                        @cat.CategoryName
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+
+            @foreach (var cat in cats)
+            {
+                <div class="tab-pane fade  @(cat.FkCategory == cats.FirstOrDefault().FkCategory ? "show active" : "" )" id="@(Model.TitleSlider.ReplaceDasht() + cat.FkCategory)" role="tabpanel">
+                    <div class="product_carousel product_style product_column5 owl-carousel">
+                        @foreach (var pro in Model.PromotionProducts.Where(p => p.FkCategory == cat.FkCategory))
+                        {
+                            <article class="single_product">
+                                <figure>
+
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="@(Url.Action("AEntityClient","Product",new { nameForUrl=pro.ProductNameForUrl}))"><img src="@(pro.ProductImage.GetUrlListImgUI())" alt=""></a>
+                                        <a class="secondary_img" href="@(Url.Action("AEntityClient","Product",new {nameForUrl=pro.ProductNameForUrl}))"><img src="@(pro.ProductImage1.GetUrlListImgUI())" alt=""></a>
+                                        <div class="label_product">
+                                            <span class="label_sale">فروش</span>
+                                        </div>
+                                        <div class="action_links">
+                                            <ul>
+                                                <li class="wishlist"><a href="@Url.Action("AddWishlist", "Wishlist", new { productId=pro.FkProduct})" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
+                                                <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
+                                                <li class="quick_button"><a href="#" data-toggle="modal" onclick="TSrenderHtmlModal(@pro.FkProduct );" data-target="#modal_box" title="نمایش سریع"><i class="ion-ios-search-strong"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_content_inner">
+                                            <h4 class="product_name"><a id="@pro.PromotionId" href="@(Url.Action("AEntityClient","Product",new { nameForUrl=pro.ProductNameForUrl}))">@pro.ProductName</a></h4>
+                                            <div class="price_box">
+                                                @Html.Raw(pro.OldPrice())
+                                                <span class="current_price">@UIUtility.ResourceManager.GetString("Price") @(pro.Price.decimalToDigMony()) </span>
+                                            </div>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a href="@(Url.Action("AEntityClient","Product",new { nameForUrl=pro.ProductNameForUrl }))" title="مشاهده محصول و افزودن به سبد">مشاهده جزئیات  </a>
+                                        </div>
+
+                                    </div>
+                                </figure>
+                            </article>
+                        }
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES5"
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}
+
+//{
+//  "compilerOptions": {
+//    "noEmitOnError": true,
+//    "noImplicitAny": true,
+//    "sourceMap": true,
+//    "target": "ES5"
+//  },
+//  "files": [ "./Scripts/app.ts", "./Scripts/ExtentionMethods.ts" ],
+//  "compileOnSave": true,
+
+//}
+
+
+
+//{
+//  "compilerOptions": {
+//    "noImplicitAny": false,
+//    "noEmitOnError": true,
+//    "removeComments": false,
+//    "sourceMap": true,
+//    "target": "es5",
+//    "outDir": "wwwroot/js"
+//  },
+//  "include": [
+//    "scripts/**/*"
+//  ]
+//}

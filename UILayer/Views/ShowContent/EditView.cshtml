@@ -1,0 +1,69 @@
+﻿
+
+@using DataLayer.Contract
+@using System.Reflection
+@using UILayer
+@using DataLayer.EF
+@using UILayer.Views
+@using DataLayer.Enums
+
+
+@{
+   ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@model Content
+@{
+    UploadFileModel UFM;
+    }
+<link href=" @Url.Content("~/Content/CLeditor/jquery.cleditor.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.cleditor.min.js")" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#inputCleditor").cleditor({ width: 988, height: 500 });
+    });
+    function showContent(size) {
+
+        $('#showContent').html($('#inputCleditor').val());
+        switch (size) {
+            case "Small": $('#showContent').width("20%"); break;
+            case "Large": $('#showContent').width('60%'); break;
+            case "X_Large": $('#showContent').width("80%"); break;
+            case "FullWidth": $('#showContent').width("100%"); break;
+            default: break;
+
+        }
+    }
+</script>
+@{
+    using (Html.BeginForm("Edit", "ShowContent", null, FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+        @Html.Hidden("Id", Model.Id)
+        UFM = new UploadFileModel() { InputPropName = "Input" + "Image", langugeValue = "عکس ", propName = "Image", UploadActionName = "UploadFileAdminSite", Value = "" };
+    @Html.Partial(PartialType.UploadFile.ToString(), UFM);
+    <br />  
+        
+@Html.Label("عنوان")
+@Html.TextBox("Name", Model.Name, new { @id = "Name", @onblur = JavaScript.StringValidation("Name", 1, 50) })<br />
+
+@Html.Label("محتویات اصلی")
+<br />
+   
+<textarea id="inputCleditor" name="ShowValue"> @Model.ShowValue</textarea>
+<input type ="button" onclick ="showContent('Small')" value="ورود دادهای کوچک" />
+<input type ="button" onclick ="showContent('Large')" value="ورود دادهای بزرگ" />
+<input type ="button" onclick ="showContent('X_Large')"  value="ورود دادهای بزرگ" />
+<input type ="button" onclick ="showContent('FullWidth')" value="ورود دادهای کامل" />
+
+<div id="showContent" border="1">
+
+</div>
+    
+
+
+<input id='btnFormSubmit' type='submit' value='ذخیره' /><br />
+}
+}

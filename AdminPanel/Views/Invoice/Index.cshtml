@@ -1,0 +1,180 @@
+﻿@model IPagedList<Invoice>
+@{
+    ViewData["Title"] = "لیست فاکتورها";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var inv = new Invoice();
+}
+
+    <style>
+        .table td, .table th {
+            padding: 0.5rem 0.5rem !important;
+        }
+        .miniFont {
+            font-size: .75em;
+            width: 20em;
+        }
+    </style>
+    <fieldset class="border p-2">
+        <form class="form" method="get">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="invoiceId" class="col-sm-2 col-form-label">شناسه</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="invoiceId" value="@ViewData["invoiceId"]">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="userEmail" class="col-sm-2 col-form-label">کاربر</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="userEmail" value="@ViewData["userEmail"]">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label for="invoiceStatus" class="col-sm-2 col-form-label">وضعیت</label>
+                        <div class="col-sm-10">
+                            <select value class="custom-select mr-sm-2" name="invoiceStatus">
+                                <option value="-1" selected="@((int)ViewData["invoiceStatus"]==-1)">همه..</option>
+                                @foreach (var item in Enum.GetValues(typeof(InvoiceStatus)))
+                                {
+                                    var c = (InvoiceStatus)item;
+                                    var int_v = (int)c;
+                                    <option value="@int_v" selected="@((int)ViewData["invoiceStatus"]==int_v)">@c.GetDescription()</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-4"> <label for="invoiceStatus" class="col-form-label">مرتب سازی:</label></div>
+                        <div class="col-4"> <select name="orderByInvoice" class="form-control" asp-items="ViewBag.orderByInvoice"></select></div>
+                        <div class="col-4"><button type="submit" class="btn btn-primary">جستجو</button></div>
+                    </div>
+                   
+              
+                    
+                </div>
+
+            </div>
+        </form>
+    </fieldset>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.Id)
+                    </th>
+                    <th>
+                      نام 
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.DeliveryCityName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.DeliveryAddress)
+                    </th>
+                    <th>
+                        موبایل کاربر
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.TotalSumProductPrice)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.UpdateDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(a => inv.Status)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @(item.DeliveryName + " "+ item.DeliveryLastName )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeliveryCityName)
+                        </td>
+                        <td class="miniFont">
+                            @Html.DisplayFor(modelItem => item.DeliveryAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FkUserNavigation.Mobile)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PaymentToCountinue)
+                        </td>
+                        <td>
+                            @item.UpdateDate.ToPersianDateTime()
+                        </td>
+                        <td>
+                            @item.Status.GetDescription()
+                        </td>
+                        <td>
+                            <a asp-action="Item" asp-route-id="@item.Id" class="btn btn-primary">مشاهده</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+        
+        <nav aria-label="...">
+            <ul class="pagination">
+                @{
+                    var si = 1;
+                    var li = Model.TotalPages;
+
+                    if (Model.TotalPages > 5)
+                    {
+                        si = (Model.PageIndex - 3) + 1;
+                        if (si < 1)
+                        {
+                            si = 1;
+                        }
+
+                        li = si + 4;
+                        if (li > Model.TotalPages)
+                        {
+                            li = Model.TotalPages;
+                        }
+                    }
+
+                }
+                @for (int i = si; i <= li; i++)
+                {
+                    var cls = Model.PageIndex == i ? "page-item active" : "page-item";
+                    <li class="@cls">
+                        <a class="page-link"
+                           asp-route-pageIndex="@i"
+                           asp-route-invoiceId="@ViewData["invoiceId"]"
+                           asp-route-userEmail="@ViewData["userEmail"]"
+                           asp-route-invoiceStatus="@ViewData["invoiceStatus"]"
+                           asp-route-orderByInvoice="@ViewData["selectedOrderBy"]">
+
+                            @i
+                            @if (Model.PageIndex == i)
+                            {
+                                <span class="sr-only">(current)</span>
+                            }
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+

@@ -1,0 +1,27 @@
+﻿@using DataLayer.Models
+@using System.Linq
+@using System.Collections.Generic;
+@using UILayer.Miscellaneous
+@using Utility
+@model IQueryable<TopHomeCategoryModel> 
+
+<div class="categories_product_area mb-55">
+    <div class="container">
+        <div class="categories_product_inner">
+            @foreach (var cat in Model)
+            {
+                <div class="single_categories_product">
+
+                    <div class="categories_product_content">
+                        <h4><a href="shop.html"> @cat.CategoryName.GetLenghStr(16)</a></h4>
+                        <p>@cat.ProductCount محصول</p>
+                    </div>
+                    <div class="categories_product_thumb">
+                        <a href="shop.html"><img src="assets/img/s-product/category1.jpg" alt=""></a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

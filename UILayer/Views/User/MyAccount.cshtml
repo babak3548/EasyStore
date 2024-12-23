@@ -1,0 +1,198 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+@model User
+
+@{
+    var lastInvoice = Model.Invoice.OrderByDescending(o => o.Id).FirstOrDefault();
+}
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="@Url.Action("Index","Home")">خانه</a></li>
+                        <li>حساب کاربری</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!-- my account start  -->
+<div class="account_page_bg">
+    <div class="container">
+        <section class="main_content_area">
+            <div class="account_dashboard">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-lg-3">
+                        <!-- Nav tabs -->
+                        <div class="dashboard_tab_button">
+                            <ul role="tablist" class="nav flex-column dashboard-list">
+                                <li> <a href="#orders" data-toggle="tab" class="nav-link active">سفارشات</a></li>
+                                <li><a href="#downloads" data-toggle="tab" class="nav-link">تغییر کلمه عبور</a></li>
+                                <li><a href="#address" data-toggle="tab" class="nav-link">آدرس ها</a></li>
+                                <li><a href="#account-details" data-toggle="tab" class="nav-link">مشخصات حساب</a></li>
+                                <li><a href="@Url.Action("LogOut", "User")" class="nav-link">خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="border: 1px solid #ebebeb;" class="col-sm-12 col-md-9 col-lg-9">
+                        <!-- Tab panes -->
+                        <div class="tab-content dashboard_content">
+                            <div class="tab-pane fade show active" id="orders">
+                                <h3>سفارشات</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>کد سفارش</th>
+                                                <th>تاریخ بروزرسانی</th>
+                                                <th>وضعیت</th>
+                                                <th>جمع</th>
+                                                <th>اقدامات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var inv in Model.Invoice.OrderByDescending(o => o.UpdateDate))
+                                            {
+                                                <tr>
+                                                    <td>@inv.Id</td>
+                                                    <td>@inv.UpdateDate</td>
+                                                    <td><span class="success">@(inv.Status.GetDescription())</span></td>
+                                                    <td>@inv.PaymentToCountinue.decimalToDigMony()</td>
+                                                    @if (inv.Status < InvoiceStatus.payment)
+                                                    {
+                                                        <td>
+                                                            <a href="@Url.Action("GetCart","Invoice",new { invoiceId=inv.Id})">مشاهده سبد</a>
+                                                        </td>
+                                                    }
+                                                    else if (inv.Status == InvoiceStatus.Send && !string.IsNullOrWhiteSpace(inv.TracingShippingNumber))
+                                                    {
+                                                        <td>  ارسال شده با کد پی گیری @inv.TracingShippingNumber توسط @inv.ShippingCompany.GetDescription() </td>
+                                                    }
+                                                    else if (inv.Status == InvoiceStatus.Send && string.IsNullOrWhiteSpace(inv.TracingShippingNumber))
+                                                    {
+                                                        <td>  ارسال شده با @inv.ShippingCompany.GetDescription() </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>
+                                                            @inv.Status.GetDescription()
+                                                        </td>
+
+                                                    }
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="downloads">
+                                <h3>تغییر کلمه عبور</h3>
+                                <div class="login">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form action="@Url.Action("ChangePassword","User")">
+                                                <br>
+                                                <label>رمز عبور فعلی</label>
+                                                <input type="password" name="password">
+                                                <label>رمز عبور جدید</label>
+                                                <input type="Password" name="newPassword">
+
+                                                <div class="save_button primary_btn default_button">
+                                                    <button type="submit">ذخیره</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="address">
+                                @if (lastInvoice != null)
+                                {
+                                    <p>آدرس زیر به صورت پیش فرض در صفحه سفارش شما استفاده خواهند شد.</p>
+                                    <h4 class="billing-address">آخرین آدرس تحویل گیرنده</h4>
+                                    @*<a href="#" class="view">ویرایش</a>*@
+                                    <p><strong>@(lastInvoice.DeliveryName + " "+lastInvoice.DeliveryLastName)  </strong></p>
+                                    <br />
+                                    <span>
+                                        @lastInvoice.DeliveryAddress
+                                    </span> <br />
+                                    <span> @lastInvoice.DeliveryCompanyName</span> <br />
+                                    <span> @lastInvoice.DeliveryCityName</span> <br />
+                                    <span> @lastInvoice.DeliveryMobile</span> <br />
+                                    <span> @lastInvoice.DeliveryPostCode</span> <br />
+                                    <span> @lastInvoice.DeliveryTel</span> <br />
+                                }
+
+                            </div>
+                            <div class="tab-pane fade" id="account-details">
+                                <h3>مشخصات حساب </h3>
+                                <div class="login">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form action="@Url.Action("SaveInfoUser","User")">
+
+                                                <div class="input-radio">
+                                                    <span class="custom-radio">
+                                                        <label>
+                                                            <input type="radio" @(Model.Gender == Gender.Male ? "checked" : "") value="@Gender.Male" name="idGender"> آقا
+                                                        </label>
+                                                    </span>
+                                                    <span class="custom-radio">
+                                                        <label>
+                                                            <input type="radio" @(Model.Gender == Gender.Female ? "checked" : "") value="@Gender.Female" name="idGender"> خانم
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <br>
+                                                <label>نام</label>
+                                                <input type="text" name="firstName" value="@Model.Name">
+                                                <label>نام خانوادگی</label>
+                                                <input type="text" name="lastName" value="@Model.Family">
+                                                <label>ایمیل</label>
+                                                <input type="text" placeholder="لطفا ایمیل خودتان را وارد نمایید" name="emailName" value="@Model.Email">
+                                                <label>تاریخ تولد</label>
+                                                <input type="text" placeholder="YYYY/MM/DD" value="@Model.Birthday.ToPersianDate()" name="birthday">
+                                                <span class="example">
+                                                    (مثال: 1397/05/26)
+                                                </span>
+                                                <br>
+                                                <span class="custom_checkbox">
+                                                    <label>
+                                                        <input id="spicialOffer" type="checkbox" value="true" @(Model.SpicialOffer ? "checked" : "" ) name="spicialOffer">
+                                                        دریافت پیشنهادات ویژه
+                                                        <input type="hidden" value="false" name="spicialOffer" />
+                                                    </label>
+                                                </span>
+                                                <br>
+                                                <span class="custom_checkbox">
+                                                    <label><input id="newsletter" type="checkbox" value="true" @(Model.Newsletter ? "checked" : "" ) name="newsletter"> عضویت در خبرنامه ما<br><em>برای با خبر شدن از پرومشن های کالاهای مورد علاقه خود </em></label>
+                                                    <input type="hidden" value="false" name="newsletter" />
+                                                </span>
+                                                <div class="save_button primary_btn default_button">
+                                                    <button type="submit">ذخیره</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- my account end   -->

@@ -1,0 +1,41 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+@using Microsoft.AspNetCore.Http
+@using DataLayer.Models
+@using System
+@model string
+@{
+    SearchModel searchModel = new SearchModel();
+    if (ViewBag.searchModel != null) searchModel = ViewBag.searchModel;
+}
+
+<div class="search_container">
+    <form action="@Url.Action("Index", "Home", null, "https")" method="get">
+        <div class="hover_category">
+            <select class="select_option" name="category" id="@Model">
+                <option selected value="@DefualtValue.AllCategory">همه گروها</option>
+                @*@{
+            var catList = (Dictionary<string, string>)ViewBag.parentCategories; }
+        @foreach (var cat in catList)
+        {
+            if (cat.Key == searchModel.category)
+            {
+                <option selected value="@cat.Key">@cat.Value</option>
+            }
+            else
+            {
+                <option value="@cat.Key">@cat.Value</option>
+            }
+        }*@
+
+            </select>
+        </div>
+        <div class="search_box">
+            <input placeholder="جستجوی محصول ..." type="text" name="query">
+            <button type="submit">جستجو</button>
+        </div>
+    </form>
+</div>
+

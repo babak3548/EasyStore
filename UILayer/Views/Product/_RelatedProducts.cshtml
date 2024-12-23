@@ -1,0 +1,70 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@using Utility;
+@using System
+
+
+@{
+    var products = (List<Product>)ViewBag.RelatedProducts;
+    //    ViewBag.BestSellerProducts
+}
+
+
+
+<section class="product_area related_products">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="section_title">
+                <h2>محصولات مرتبط </h2>
+            </div>
+        </div>
+    </div>
+    <div class="product_carousel product_style product_column5 owl-carousel">
+        @foreach (var product in products)
+        {
+            <article class="single_product">
+                <figure>
+
+                    <div class="product_thumb">
+                        <a class="primary_img" href="@Url.Action("AEntityClient", "Product", new { nameForUrl=product.NameForUrll }, "https")"><img src="@product.Image.GetUrlListImgUI()" alt=""></a>
+                        <a class="secondary_img" href="@Url.Action("AEntityClient", "Product", new { nameForUrl=product.NameForUrll }, "https")"><img src="@product.Image1.GetUrlListImgUI()" alt=""></a>
+                        <div class="label_product">
+                            <span class="label_sale">فروش</span>
+                        </div>
+                        <div class="action_links">
+                            <ul>
+                                <li class="wishlist"><a href="@Url.Action("AddWishlist", "Wishlist", new { productId=product.Id})" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
+                                <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
+                                <li class="quick_button"><a href="#" data-toggle="modal" onclick="TSrenderHtmlModal(@product.Id );" data-target="#modal_box" title="نمایش سریع"><i class="ion-ios-search-strong"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_content">
+                        <div class="product_content_inner">
+                            <h4 class="product_name">
+                                <a href="@Url.Action("AEntityClient", "Product", new {nameForUrl=product.NameForUrll } , "https")"> @product.Name </a>
+                            </h4>
+                            <div class="price_box">
+                                @Html.Raw(product.OldPrice())
+                                <span class="current_price">@(product.Price.decimalToDigMony()) </span>
+                            </div>
+                        </div>
+                        <div class="add_to_cart">
+                            <a href="#"  data-toggle="modal" onclick="TSrenderHtmlModal(@product.Id );" data-target="#modal_box" title="افزودن به سبد">افزودن به سبد</a>
+                        </div>
+
+                    </div>
+                </figure>
+            </article>
+        }
+
+
+    </div>
+
+</section>

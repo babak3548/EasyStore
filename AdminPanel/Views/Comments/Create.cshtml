@@ -1,0 +1,89 @@
+﻿@model DataLayer.EF.Comment
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Comment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FkComment" class="control-label"></label>
+                <select asp-for="FkComment" class ="form-control" asp-items="ViewBag.FkComment"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="KeyWord" class="control-label"></label>
+                <input asp-for="KeyWord" class="form-control" />
+                <span asp-validation-for="KeyWord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailOrMobile" class="control-label"></label>
+                <input asp-for="EmailOrMobile" class="form-control" />
+                <span asp-validation-for="EmailOrMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextValue" class="control-label"></label>
+                <input asp-for="TextValue" class="form-control" />
+                <span asp-validation-for="TextValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotePositive" class="control-label"></label>
+                <input asp-for="VotePositive" class="form-control" />
+                <span asp-validation-for="VotePositive" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsPositiveComment" /> @Html.DisplayNameFor(model => model.IsPositiveComment)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="VoteCount" class="control-label"></label>
+                <input asp-for="VoteCount" class="form-control" />
+                <span asp-validation-for="VoteCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComputerIp" class="control-label"></label>
+                <input asp-for="ComputerIp" class="form-control" />
+                <span asp-validation-for="ComputerIp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Active" class="control-label"></label>
+                <input asp-for="Active" class="form-control" />
+                <span asp-validation-for="Active" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkProduct" class="control-label"></label>
+                <select asp-for="FkProduct" class ="form-control" asp-items="ViewBag.FkProduct"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentType" class="control-label"></label>
+                <input asp-for="CommentType" class="form-control" />
+                <span asp-validation-for="CommentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterDate" class="control-label"></label>
+                <input asp-for="RegisterDate" class="form-control" />
+                <span asp-validation-for="RegisterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

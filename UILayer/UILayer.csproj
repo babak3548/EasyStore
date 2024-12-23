@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>bdb903b4-9231-4d5f-ac10-7224ef43c9ca</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Hubs\**" />
+    <Compile Remove="ScriptsApp\**" />
+    <Compile Remove="Views\Shared\DisplayTemplates\**" />
+    <Compile Remove="Views\ViewsM\**" />
+    <Content Remove="Hubs\**" />
+    <Content Remove="ScriptsApp\**" />
+    <Content Remove="Views\Shared\DisplayTemplates\**" />
+    <Content Remove="Views\ViewsM\**" />
+    <EmbeddedResource Remove="Hubs\**" />
+    <EmbeddedResource Remove="ScriptsApp\**" />
+    <EmbeddedResource Remove="Views\Shared\DisplayTemplates\**" />
+    <EmbeddedResource Remove="Views\ViewsM\**" />
+    <None Remove="Hubs\**" />
+    <None Remove="ScriptsApp\**" />
+    <None Remove="Views\Shared\DisplayTemplates\**" />
+    <None Remove="Views\ViewsM\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BankGetWays\PasargadController.cs" />
+    <Compile Remove="Maper\MaperModel1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\Menu.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Areas\Adminstration\Views\Shared\EditGenretor.tt" />
+    <None Remove="Areas\Adminstration\Views\Shared\GridPEntity.tt" />
+    <None Remove="Areas\Adminstration\Views\Shared\SearchGenretor.tt" />
+    <None Remove="Controllers\ControlerModel.tt" />
+    <None Remove="Maper\MaperModel.tt" />
+    <None Remove="SimpleParameterTemplate.tt" />
+    <None Remove="SimpleParameterTemplate.txt" />
+    <None Remove="SimpleSample.tt" />
+    <None Remove="SimpleSample.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.6" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj" />
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Other\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Content\Privacy.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

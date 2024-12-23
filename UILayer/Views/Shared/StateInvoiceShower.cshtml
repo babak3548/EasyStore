@@ -1,0 +1,27 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+@model List<short>
+
+@{
+    <table class="FtrCtr" style="width: 100%;">
+        <tbody>
+            <tr>
+                @foreach (var state in Model)
+                {
+                    if (state.ToString()==ViewData["currentState"].ToString())
+                    {//rgb(165, 176, 202)
+                      <td class="CTd" style="width:@(100/Model.Count)%"> @(EnumUtility.EnumToLanguageValue<InvoiceStatus>(state) + " >>")</td>  
+                    }
+                    else
+                    {
+                      <td class="STd" style="width:@(100/Model.Count)%">@(EnumUtility.EnumToLanguageValue<InvoiceStatus>(state) + " >>")</td>
+                    }
+                     
+                }
+            </tr>
+        </tbody>
+
+    </table>
+  }

@@ -1,0 +1,12 @@
+﻿  @using DataLayer.Contract;
+  @using System.Reflection;
+  @using UILayer.Miscellaneous;
+  @model ModelPartial  
+  
+    @Html.Label(Model.langugeValue)
+    @{
+ <input id='@(Model.PropertyName )'  name='@(Model.PropertyName)' type="text" onblur=" ValidationNumber('@(Model.PropertyName)','@(UIUtility.ResourceManager.GetString("this_field_must_be_number"))')"
+      onchange= "AjaxReqestvalidate('@(Model.PropertyName)','@(Url.Action(Model.ActionNameAjax, Model.ControllerNameAjax))','@(UIUtility.ResourceManager.GetString("NoFindACase"))','@(UIUtility.ResourceManager.GetString("faild_Inquiry"))')" />                                                    
+    <br  />
+
+ }

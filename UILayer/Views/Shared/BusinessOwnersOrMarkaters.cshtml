@@ -1,0 +1,44 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@model ModelGrid
+@{
+    var List = ((IEnumerable<BusinessOwnerContract>)Model.Model).ToList();
+    int RowCount = List.Count;
+    AjaxOption ajaxOptionGrid = new AjaxOption { UpdateTargetId = "Grid", LoadingElementId = "Loding" };
+
+
+    <table class="TblPdc">
+        @foreach (var contract in List)
+        {
+            <tr class="trPdcLn">
+                <td class="tdPdcSh">
+                    <a title="@contract.Name" href="@Url.Action(Model.ActionNameForm, Model.ControlerName, new { Id = @contract.Id }, "https")">  @contract.Name</a>
+                    <br />
+                    <span>@UIUtility.ResourceManager.GetString("Province"):</span> @contract.Province
+                </td>
+                <td class="tdPdcLn">
+                    <span>@UIUtility.ResourceManager.GetString("TypeActivity"):</span> @contract.TypeActivity
+                </td>
+                <td class="tdPdcSh">
+                    "ggggggggggg"
+                </td>
+
+            </tr>
+
+        }
+    </table>
+
+    for (int i = 0; i < RowCount; i = i + ConstSetting.PageSize)
+    {
+        @Ajax.ActionLink(" " + i.ToString(), Url.Action(Model.PageNumberActionName, Model.ControlerName, new
+   {
+       BeginRow = i,
+       query = Model.DicFilterParam["SearchValue"].ToString()
+   }), ajaxOptionGrid)
+    }
+}

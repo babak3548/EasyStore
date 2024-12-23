@@ -1,0 +1,45 @@
+﻿@model IPagedList<DataLayer.EF.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>لیست گروه ها</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">ایجاد گروه</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>سرگروه</th>
+                <th>توضیحات</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkCategoryNavigation.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Discription)
+                    </td>
+
+                    <td>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">ویرایش</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.Partial("_Pagination", (IEntityPagination)Model)

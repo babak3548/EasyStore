@@ -1,0 +1,33 @@
+﻿@*//GetContractEmails*@
+<html>
+<head>
+
+@*    <script src="https://apis.google.com/js/client.js"></script>
+    <script src="@Url.Content("~/Scripts/Manager.js")" type="text/javascript"></script>*@
+
+</head>
+
+<body>
+    <div class="subD" id="stateP">
+        @Html.Partial("stateViewer")
+    </div>
+    <div class="subD">
+        <button type="button" title="دریافت ایمیل دوستان از جی میل" class="btnAE" onclick="gapi.auth.authorize(config, callBakAuthG)">دوستان جی میل</button>
+        <button type="button" title="ایمیل ها را به صورت دستی وارد می نمایم" class="btnAE" onclick="MaAdd()">ایمیل جدید</button>
+        <button type="button" title="مشاهد و ارسال ایمیل" class="btnAE" onclick="PosToSe()">گام بعدی</button>
+        <button type="button" title="مشاهد و ارسال ایمیل" class="btnAE" onclick="Reset()">پاک کردن لیست</button>
+    </div>
+    <div class="subD noD br" id="ManualAdd">
+      <label>ایمیل:</label>  <input  id="TEmail" type="text"/><button type="button" class="btnAE" onclick="AddEm()">اضافه کردن</button>
+    </div>
+    <div class="subD cntLi" id="contractList">
+        <div id="AD" class="AD">
+            <input class="inE" id="chkAl" type="checkbox" checked="checked" onclick="chkAll('chkAl')" />
+            <span class="FM">همه</span>
+        </div>
+       
+
+    </div>
+
+</body>
+</html>

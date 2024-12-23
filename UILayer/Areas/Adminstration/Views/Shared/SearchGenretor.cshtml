@@ -1,0 +1,1124 @@
+﻿ 
+
+
+
+
+
+
+
+
+
+    
+    ///  Access
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "AccessAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">DisplayMode:</td>
+    <td class="tdf2A"> @Html.TextBox("DisplayMode", "", new { @id = "DisplayMode" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Role:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Role", "", new { @id = "FK_Role" }) And </td>     
+    
+    <td class="tdf1A">FK_Filed:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Filed", "", new { @id = "FK_Filed" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Accounting
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "AccountingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Debtor:</td>
+    <td class="tdf2A"> @Html.TextBox("Debtor", "", new { @id = "Debtor" }) And </td>     
+    
+    <td class="tdf1A">Creditor:</td>
+    <td class="tdf2A"> @Html.TextBox("Creditor", "", new { @id = "Creditor" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", "", new { @id = "FK_User" }) And </td>     
+    
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", "", new { @id = "FK_Invoice" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", "", new { @id = "Date" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_BusinessOwner_Marketer
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "Bridge_BusinessOwner_MarketerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", "", new { @id = "FK_Marketer" }) And </td>     
+    
+    <td class="tdf1A">DiscriptionRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("DiscriptionRequest", "", new { @id = "DiscriptionRequest" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">AcceptRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("AcceptRequest", "", new { @id = "AcceptRequest" }) And </td>     
+    
+    <td class="tdf1A">RequestFromBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("RequestFromBusinessOwner", "", new { @id = "RequestFromBusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">RequestFromMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("RequestFromMarketer", "", new { @id = "RequestFromMarketer" }) And </td>     
+    
+    <td class="tdf1A">RejectRequest:</td>
+    <td class="tdf2A"> @Html.TextBox("RejectRequest", "", new { @id = "RejectRequest" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">date:</td>
+    <td class="tdf2A"> @Html.TextBox("date", "", new { @id = "date" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_Invoice_Product
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "Bridge_Invoice_ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Count:</td>
+    <td class="tdf2A"> @Html.TextBox("Count", "", new { @id = "Count" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Product:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Product", "", new { @id = "FK_Product" }) And </td>     
+    
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", "", new { @id = "FK_Invoice" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Bridge_Province_BusinessOwner
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "Bridge_Province_BusinessOwnerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", "", new { @id = "FK_Province" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>     
+    
+    <td class="tdf1A">AnyXKG:</td>
+    <td class="tdf2A"> @Html.TextBox("AnyXKG", "", new { @id = "AnyXKG" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">AnyXKGMony:</td>
+    <td class="tdf2A"> @Html.TextBox("AnyXKGMony", "", new { @id = "AnyXKGMony" }) And </td>     
+    
+    <td class="tdf1A">FreeGratherThanMony:</td>
+    <td class="tdf2A"> @Html.TextBox("FreeGratherThanMony", "", new { @id = "FreeGratherThanMony" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  BusinessOwner
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "BusinessOwnerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">TypeActivity:</td>
+    <td class="tdf2A"> @Html.TextBox("TypeActivity", "", new { @id = "TypeActivity" }) And </td>     
+    
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", "", new { @id = "WordKey" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Address:</td>
+    <td class="tdf2A"> @Html.TextBox("Address", "", new { @id = "Address" }) And </td>     
+    
+    <td class="tdf1A">NationalCode:</td>
+    <td class="tdf2A"> @Html.TextBox("NationalCode", "", new { @id = "NationalCode" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", "", new { @id = "FK_User" }) And </td>     
+    
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", "", new { @id = "FK_Province" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", "", new { @id = "FK_Marketer" }) And </td>     
+    
+    <td class="tdf1A">DocumentFile:</td>
+    <td class="tdf2A"> @Html.TextBox("DocumentFile", "", new { @id = "DocumentFile" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", "", new { @id = "Image" }) And </td>     
+    
+    <td class="tdf1A">WebSiteAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("WebSiteAddress", "", new { @id = "WebSiteAddress" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", "", new { @id = "Active" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Tel:</td>
+    <td class="tdf2A"> @Html.TextBox("Tel", "", new { @id = "Tel" }) And </td>     
+    
+    <td class="tdf1A">Yahoo:</td>
+    <td class="tdf2A"> @Html.TextBox("Yahoo", "", new { @id = "Yahoo" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Gmail:</td>
+    <td class="tdf2A"> @Html.TextBox("Gmail", "", new { @id = "Gmail" }) And </td>     
+    
+    <td class="tdf1A">Skype:</td>
+    <td class="tdf2A"> @Html.TextBox("Skype", "", new { @id = "Skype" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PaymentPorsantAmount:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentPorsantAmount", "", new { @id = "PaymentPorsantAmount" }) And </td>     
+    
+    <td class="tdf1A">TypeSell:</td>
+    <td class="tdf2A"> @Html.TextBox("TypeSell", "", new { @id = "TypeSell" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Category
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "CategoryAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">FK_Category:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Category", "", new { @id = "FK_Category" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  CategorySetting
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "CategorySettingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">GroupName:</td>
+    <td class="tdf2A"> @Html.TextBox("GroupName", "", new { @id = "GroupName" }) And </td>     
+    
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Comment
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "CommentAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">FK_Comment:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Comment", "", new { @id = "FK_Comment" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">KeyWord:</td>
+    <td class="tdf2A"> @Html.TextBox("KeyWord", "", new { @id = "KeyWord" }) And </td>     
+    
+    <td class="tdf1A">Comment1:</td>
+    <td class="tdf2A"> @Html.TextBox("Comment1", "", new { @id = "Comment1" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">VotePositive:</td>
+    <td class="tdf2A"> @Html.TextBox("VotePositive", "", new { @id = "VotePositive" }) And </td>     
+    
+    <td class="tdf1A">ComputerIp:</td>
+    <td class="tdf2A"> @Html.TextBox("ComputerIp", "", new { @id = "ComputerIp" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", "", new { @id = "Active" }) And </td>     
+    
+    <td class="tdf1A">FK_Product:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Product", "", new { @id = "FK_Product" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">CommentType:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentType", "", new { @id = "CommentType" }) And </td>     
+    
+    <td class="tdf1A">VoteNegative:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteNegative", "", new { @id = "VoteNegative" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Content
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "ContentAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">ShowValue:</td>
+    <td class="tdf2A"> @Html.TextBox("ShowValue", "", new { @id = "ShowValue" }) And </td>     
+    
+    <td class="tdf1A">PartialType:</td>
+    <td class="tdf2A"> @Html.TextBox("PartialType", "", new { @id = "PartialType" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Width:</td>
+    <td class="tdf2A"> @Html.TextBox("Width", "", new { @id = "Width" }) And </td>     
+    
+    <td class="tdf1A">Position:</td>
+    <td class="tdf2A"> @Html.TextBox("Position", "", new { @id = "Position" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">ContentType:</td>
+    <td class="tdf2A"> @Html.TextBox("ContentType", "", new { @id = "ContentType" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  DisputeResolution
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "DisputeResolutionAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">FK_Invoice:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Invoice", "", new { @id = "FK_Invoice" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", "", new { @id = "FK_User" }) And </td>     
+    
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", "", new { @id = "FK_Marketer" }) And </td>     
+    
+    <td class="tdf1A">writer:</td>
+    <td class="tdf2A"> @Html.TextBox("writer", "", new { @id = "writer" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">FileDocumentAdress:</td>
+    <td class="tdf2A"> @Html.TextBox("FileDocumentAdress", "", new { @id = "FileDocumentAdress" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", "", new { @id = "Date" }) And </td>     
+    
+    <td class="tdf1A">disputerwhoPerson:</td>
+    <td class="tdf2A"> @Html.TextBox("disputerwhoPerson", "", new { @id = "disputerwhoPerson" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Entity
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "EntityAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PersianName:</td>
+    <td class="tdf2A"> @Html.TextBox("PersianName", "", new { @id = "PersianName" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Filed
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "FiledAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PartialType:</td>
+    <td class="tdf2A"> @Html.TextBox("PartialType", "", new { @id = "PartialType" }) And </td>     
+    
+    <td class="tdf1A">OrderByValue:</td>
+    <td class="tdf2A"> @Html.TextBox("OrderByValue", "", new { @id = "OrderByValue" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Entity:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Entity", "", new { @id = "FK_Entity" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Invoice
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "InvoiceAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", "", new { @id = "Date" }) And </td>     
+    
+    <td class="tdf1A">State:</td>
+    <td class="tdf2A"> @Html.TextBox("State", "", new { @id = "State" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">DeliveryAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryAddress", "", new { @id = "DeliveryAddress" }) And </td>     
+    
+    <td class="tdf1A">MoneySum:</td>
+    <td class="tdf2A"> @Html.TextBox("MoneySum", "", new { @id = "MoneySum" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discount:</td>
+    <td class="tdf2A"> @Html.TextBox("Discount", "", new { @id = "Discount" }) And </td>     
+    
+    <td class="tdf1A">Shipping:</td>
+    <td class="tdf2A"> @Html.TextBox("Shipping", "", new { @id = "Shipping" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PaymentSum:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentSum", "", new { @id = "PaymentSum" }) And </td>     
+    
+    <td class="tdf1A">PaymentToCountinue:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentToCountinue", "", new { @id = "PaymentToCountinue" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", "", new { @id = "FK_User" }) And </td>     
+    
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">type:</td>
+    <td class="tdf2A"> @Html.TextBox("type", "", new { @id = "type" }) And </td>     
+    
+    <td class="tdf1A">DeliveryCode:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryCode", "", new { @id = "DeliveryCode" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">DeliveryCodedUnPerfect:</td>
+    <td class="tdf2A"> @Html.TextBox("DeliveryCodedUnPerfect", "", new { @id = "DeliveryCodedUnPerfect" }) And </td>     
+    
+    <td class="tdf1A">NoteForBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("NoteForBusinessOwner", "", new { @id = "NoteForBusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">NoteForUser:</td>
+    <td class="tdf2A"> @Html.TextBox("NoteForUser", "", new { @id = "NoteForUser" }) And </td>     
+    
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", "", new { @id = "FK_Marketer" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Province:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Province", "", new { @id = "FK_Province" }) And </td>     
+    
+    <td class="tdf1A">VoteBusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteBusinessOwner", "", new { @id = "VoteBusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">VoteMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("VoteMarketer", "", new { @id = "VoteMarketer" }) And </td>     
+    
+    <td class="tdf1A">Time:</td>
+    <td class="tdf2A"> @Html.TextBox("Time", "", new { @id = "Time" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PaymentBankCode:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentBankCode", "", new { @id = "PaymentBankCode" }) And </td>     
+    
+    <td class="tdf1A">TransctionRefrenceId:</td>
+    <td class="tdf2A"> @Html.TextBox("TransctionRefrenceId", "", new { @id = "TransctionRefrenceId" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">ShippingNumber:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingNumber", "", new { @id = "ShippingNumber" }) And </td>     
+    
+    <td class="tdf1A">ShippingCompany:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingCompany", "", new { @id = "ShippingCompany" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">CommentForBusinessman:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentForBusinessman", "", new { @id = "CommentForBusinessman" }) And </td>     
+    
+    <td class="tdf1A">CommentForMarketer:</td>
+    <td class="tdf2A"> @Html.TextBox("CommentForMarketer", "", new { @id = "CommentForMarketer" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Vat:</td>
+    <td class="tdf2A"> @Html.TextBox("Vat", "", new { @id = "Vat" }) And </td>     
+    
+    <td class="tdf1A">writer:</td>
+    <td class="tdf2A"> @Html.TextBox("writer", "", new { @id = "writer" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Languge
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "LangugeAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Value:</td>
+    <td class="tdf2A"> @Html.TextBox("Value", "", new { @id = "Value" }) And </td>     
+    
+    <td class="tdf1A">Title:</td>
+    <td class="tdf2A"> @Html.TextBox("Title", "", new { @id = "Title" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Filed:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Filed", "", new { @id = "FK_Filed" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Marketer
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "MarketerAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Specialty:</td>
+    <td class="tdf2A"> @Html.TextBox("Specialty", "", new { @id = "Specialty" }) And </td>     
+    
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", "", new { @id = "WordKey" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_User:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_User", "", new { @id = "FK_User" }) And </td>     
+    
+    <td class="tdf1A">FK_Marketer:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Marketer", "", new { @id = "FK_Marketer" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", "", new { @id = "Image" }) And </td>     
+    
+    <td class="tdf1A">WebSiteAddress:</td>
+    <td class="tdf2A"> @Html.TextBox("WebSiteAddress", "", new { @id = "WebSiteAddress" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Tel:</td>
+    <td class="tdf2A"> @Html.TextBox("Tel", "", new { @id = "Tel" }) And </td>     
+    
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", "", new { @id = "Active" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Yahoo:</td>
+    <td class="tdf2A"> @Html.TextBox("Yahoo", "", new { @id = "Yahoo" }) And </td>     
+    
+    <td class="tdf1A">Gmail:</td>
+    <td class="tdf2A"> @Html.TextBox("Gmail", "", new { @id = "Gmail" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Skype:</td>
+    <td class="tdf2A"> @Html.TextBox("Skype", "", new { @id = "Skype" }) And </td>     
+    
+    <td class="tdf1A">PaymentPorsantAmount:</td>
+    <td class="tdf2A"> @Html.TextBox("PaymentPorsantAmount", "", new { @id = "PaymentPorsantAmount" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Message
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "MessageAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">FK_UseSender:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_UseSender", "", new { @id = "FK_UseSender" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_UserReceiver:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_UserReceiver", "", new { @id = "FK_UserReceiver" }) And </td>     
+    
+    <td class="tdf1A">Date:</td>
+    <td class="tdf2A"> @Html.TextBox("Date", "", new { @id = "Date" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Readed:</td>
+    <td class="tdf2A"> @Html.TextBox("Readed", "", new { @id = "Readed" }) And </td>     
+    
+    <td class="tdf1A">Text:</td>
+    <td class="tdf2A"> @Html.TextBox("Text", "", new { @id = "Text" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">type:</td>
+    <td class="tdf2A"> @Html.TextBox("type", "", new { @id = "type" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Product
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "ProductAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Brand:</td>
+    <td class="tdf2A"> @Html.TextBox("Brand", "", new { @id = "Brand" }) And </td>     
+    
+    <td class="tdf1A">Image:</td>
+    <td class="tdf2A"> @Html.TextBox("Image", "", new { @id = "Image" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Image1:</td>
+    <td class="tdf2A"> @Html.TextBox("Image1", "", new { @id = "Image1" }) And </td>     
+    
+    <td class="tdf1A">Image2:</td>
+    <td class="tdf2A"> @Html.TextBox("Image2", "", new { @id = "Image2" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Price:</td>
+    <td class="tdf2A"> @Html.TextBox("Price", "", new { @id = "Price" }) And </td>     
+    
+    <td class="tdf1A">RegisterDate:</td>
+    <td class="tdf2A"> @Html.TextBox("RegisterDate", "", new { @id = "RegisterDate" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">FK_BusinessOwner:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_BusinessOwner", "", new { @id = "FK_BusinessOwner" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">MadeInCountry:</td>
+    <td class="tdf2A"> @Html.TextBox("MadeInCountry", "", new { @id = "MadeInCountry" }) And </td>     
+    
+    <td class="tdf1A">CountPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("CountPrice", "", new { @id = "CountPrice" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">MinCountForPrice:</td>
+    <td class="tdf2A"> @Html.TextBox("MinCountForPrice", "", new { @id = "MinCountForPrice" }) And </td>     
+    
+    <td class="tdf1A">available:</td>
+    <td class="tdf2A"> @Html.TextBox("available", "", new { @id = "available" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">PersentMarkater:</td>
+    <td class="tdf2A"> @Html.TextBox("PersentMarkater", "", new { @id = "PersentMarkater" }) And </td>     
+    
+    <td class="tdf1A">AcceptReturnDay:</td>
+    <td class="tdf2A"> @Html.TextBox("AcceptReturnDay", "", new { @id = "AcceptReturnDay" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">ShippingDiscription:</td>
+    <td class="tdf2A"> @Html.TextBox("ShippingDiscription", "", new { @id = "ShippingDiscription" }) And </td>     
+    
+    <td class="tdf1A">WordKey:</td>
+    <td class="tdf2A"> @Html.TextBox("WordKey", "", new { @id = "WordKey" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">SellOrBuy:</td>
+    <td class="tdf2A"> @Html.TextBox("SellOrBuy", "", new { @id = "SellOrBuy" }) And </td>     
+    
+    <td class="tdf1A">UnitBuy:</td>
+    <td class="tdf2A"> @Html.TextBox("UnitBuy", "", new { @id = "UnitBuy" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">wightUnitBuyWithKG:</td>
+    <td class="tdf2A"> @Html.TextBox("wightUnitBuyWithKG", "", new { @id = "wightUnitBuyWithKG" }) And </td>     
+    
+    <td class="tdf1A">Active:</td>
+    <td class="tdf2A"> @Html.TextBox("Active", "", new { @id = "Active" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Category:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Category", "", new { @id = "FK_Category" }) And </td>     
+    
+    <td class="tdf1A">RankShow:</td>
+    <td class="tdf2A"> @Html.TextBox("RankShow", "", new { @id = "RankShow" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_Content:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Content", "", new { @id = "FK_Content" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Province
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "ProvinceAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Country:</td>
+    <td class="tdf2A"> @Html.TextBox("Country", "", new { @id = "Country" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Role
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "RoleAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Discription:</td>
+    <td class="tdf2A"> @Html.TextBox("Discription", "", new { @id = "Discription" }) And </td>     
+    
+    <td class="tdf1A">Type:</td>
+    <td class="tdf2A"> @Html.TextBox("Type", "", new { @id = "Type" }) And </td>  
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  Setting
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "SettingAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Value:</td>
+    <td class="tdf2A"> @Html.TextBox("Value", "", new { @id = "Value" }) And </td>     
+    
+    <td class="tdf1A">Value2:</td>
+    <td class="tdf2A"> @Html.TextBox("Value2", "", new { @id = "Value2" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">FK_CategorySetting:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_CategorySetting", "", new { @id = "FK_CategorySetting" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+    ///  User
+        @using DataLayer.EF
+        @using Utility
+    
+    @{
+        using (Html.BeginForm("Search", "UserAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+    <tr class="tr1A">
+    <td class="tdf1A">Id:</td>
+    <td class="tdf2A"> @Html.TextBox("Id", "", new { @id = "Id" }) And </td>     
+    
+    <td class="tdf1A">Name:</td>
+    <td class="tdf2A"> @Html.TextBox("Name", "", new { @id = "Name" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">Email:</td>
+    <td class="tdf2A"> @Html.TextBox("Email", "", new { @id = "Email" }) And </td>     
+    
+    <td class="tdf1A">Mobile:</td>
+    <td class="tdf2A"> @Html.TextBox("Mobile", "", new { @id = "Mobile" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">RegisterDate:</td>
+    <td class="tdf2A"> @Html.TextBox("RegisterDate", "", new { @id = "RegisterDate" }) And </td>     
+    
+    <td class="tdf1A">FK_Role:</td>
+    <td class="tdf2A"> @Html.TextBox("FK_Role", "", new { @id = "FK_Role" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">CurrentInvoice:</td>
+    <td class="tdf2A"> @Html.TextBox("CurrentInvoice", "", new { @id = "CurrentInvoice" }) And </td>     
+    
+    <td class="tdf1A">Ative:</td>
+    <td class="tdf2A"> @Html.TextBox("Ative", "", new { @id = "Ative" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">AtivationCode:</td>
+    <td class="tdf2A"> @Html.TextBox("AtivationCode", "", new { @id = "AtivationCode" }) And </td>     
+    
+    <td class="tdf1A">Password:</td>
+    <td class="tdf2A"> @Html.TextBox("Password", "", new { @id = "Password" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">TempPassword:</td>
+    <td class="tdf2A"> @Html.TextBox("TempPassword", "", new { @id = "TempPassword" }) And </td>     
+    
+    <td class="tdf1A">IpComputerCreator:</td>
+    <td class="tdf2A"> @Html.TextBox("IpComputerCreator", "", new { @id = "IpComputerCreator" }) And </td>  
+    </tr>
+    <tr class="tr1A">
+    <td class="tdf1A">IpComputerLast:</td>
+    <td class="tdf2A"> @Html.TextBox("IpComputerLast", "", new { @id = "IpComputerLast" }) And </td>     
+    
+    </tr>
+            
+        </table>           
+        <input type="submit" value="جستجو" />    
+        }
+    } 
+    
+     
+    
+    
+    
+
+
+
+

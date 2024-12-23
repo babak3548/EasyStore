@@ -1,0 +1,35 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+
+@{
+
+    using (Html.BeginForm("SendEmailsOneToOne", "Email", null, FormMethod.Post,false, new { @id = "EditorRowForm" }))
+    {
+        @Html.Label("آدی شو کانتنت")
+        @Html.TextBox("ShowContentId", null, new { @id = "ShowContentId" })
+        <br />
+
+        @Html.Label("موضوع ایمیل")
+        @Html.TextBox("subject", null, new { @id = "subject" })
+        <br />
+
+        @Html.Label("لیست ایمیل")
+        <br />
+        @Html.TextArea("ListEmails", new { @id = "ListEmails" })
+        <br />
+
+        <input type="submit" value="ارسال ایمیل"/>
+        <br />
+
+    }
+
+}

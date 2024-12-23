@@ -1,0 +1,28 @@
+﻿@using DataLayer.Enums
+@using DataLayer.Models
+
+@model List<DataLayer.EF.PromotionProduct>
+@{
+    var prom1 = Model.FirstOrDefault(f => f.PromotionType == PromotionTypes.HomeImgSecondRow1_2);
+    var prom2 = Model.FirstOrDefault(f => f.PromotionType == PromotionTypes.HomeImgSecondRow2_2);
+}
+<div class="banner_area banner_three_bottom mb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <figure class="single_banner">
+                    <div class="banner_thumb">
+                        <a href="@(Url.Action("Index", "Home",new SearchModel {PromotionType=PromotionTypes.HomeImgSecondRow1_2_M }))"><img src="@(prom1==null?"":prom1.Image.GetOtherFilePath())" alt="فروشگاه ایزی"></a>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <figure class="single_banner">
+                    <div class="banner_thumb">
+                        <a href="@(Url.Action("Index", "Home",new SearchModel {PromotionType=PromotionTypes.HomeImgSecondRow2_2_M }))"><img src="@(prom2==null?"":prom2.Image.GetOtherFilePath())" alt="فروشگاه ایزی"></a>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>

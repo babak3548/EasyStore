@@ -1,0 +1,31 @@
+﻿
+    @using DataLayer.EF
+    
+    @model Category
+    
+    @{
+        using (Html.BeginForm("Register", "CategoryAdmin", new { area = "Adminstration" }, FormMethod.Post,false, new { id = "EditorRowForm" }))
+        {
+        <table>
+        
+    <tr class="tr1">
+    <td class="tdf1">Id:</td>
+    <td class="tdf2"> @Html.TextBox("Id", Model.Id, new { @id = "Id" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Name:</td>
+    <td class="tdf2"> @Html.TextBox("Name", Model.Name, new { @id = "Name" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">Discription:</td>
+    <td class="tdf2"> @Html.TextBox("Discription", Model.Discription, new { @id = "Discription" })</td>     
+    </tr>
+                 <tr class="tr1">
+    <td class="tdf1">FK_Category:</td>
+    <td class="tdf2"> @Html.TextBox("FK_Category", Model.FkCategory, new { @id = "FK_Category" })</td>     
+    </tr>
+                         
+        </table>           
+        <input type="submit" value="ذخیره " />    
+        }
+    } 

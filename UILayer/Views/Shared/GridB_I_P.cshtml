@@ -1,0 +1,54 @@
+﻿@using DataLayer.EF
+@using DataLayer
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using Utility
+@using System.IO
+@model IEnumerable<BridgeInvoiceProduct>
+
+@{
+    int iRow = 1;
+    var ModelInList = Model.ToList();
+    decimal? price = 0;
+    AppSetting appSetting = new AppSetting();
+}
+<table class="TableCss">
+
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+        <th>عکس محصول</th>
+        <th>  نام محصول</th>
+        <th>  قیمت</th>
+        <th>  قیمت عمده</th>
+        <th>  تعداد</th>
+        <th>  مبلغ</th>
+
+
+    </tr>
+    @foreach (var B_I_P in ModelInList)
+    {
+        string srcImg = "";
+
+        if (B_I_P.FkProductNavigation.Image != null & B_I_P.FkProductNavigation.Image != "")
+        {
+            var fileInfo = new FileInfo(B_I_P.FkProductNavigation.Image);
+            if (fileInfo.Extension != "")
+            {
+                srcImg = B_I_P.FkProductNavigation.Image.Replace(fileInfo.Extension, "") + "1" + fileInfo.Extension;
+                srcImg = (File.Exists(appSetting.BaseServerPath + srcImg.Replace("/", "\\")) ? srcImg : Paths.DefaultProductPic);
+            }
+        }
+        //اگر فروش عمده باشد قیمت عمده در محاسبه قرار می گیرد
+        if (B_I_P.Count >= B_I_P.FkProductNavigation.MinCountForPrice) { price = B_I_P.FkProductNavigation.CountPrice; }
+        else { price = B_I_P.FkProductNavigation.Price; }
+        <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td align="center"><img id="@B_I_P.FkProductNavigation.Name" class="imgMini" alt="@B_I_P.FkProductNavigation.Name" src='@srcImg' /></td>
+            <td align="center">@B_I_P.FkProductNavigation.Name  </td>
+            <td align="center">  @B_I_P.FkProductNavigation.Price.decimalToDigMony()  </td>
+            <td align="center">  @B_I_P.FkProductNavigation.CountPrice.decimalToDigMony()  </td>
+            <td align="center">  @B_I_P.Count  </td>
+            <td align="center">  @((B_I_P.Count*price).decimalToDigMony())  </td>
+        </tr>
+        iRow++;
+    }
+</table>

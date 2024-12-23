@@ -1,0 +1,144 @@
+﻿@using DataLayer.EF
+@model IPagedList<PromotionProduct>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var p = new PromotionProduct();
+
+    PromotionProduct so = (PromotionProduct)ViewBag.searchObj;
+}
+
+<style>
+    .table td, .table th {
+        padding: 3px 3px;
+            }
+</style>
+
+@Html.Partial("_Search" , new PromotionProduct())
+
+
+<p>
+    <a asp-action="Create">ایجاد پروموشن جدید</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(a => p.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Image)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.PromotionType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.FkProduct)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Order)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.ExpireDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Product)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(a => p.Category)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        <img src="@((int)item.PromotionType>100 ? item.Image.GetOtherFilePath() : item.Product.Image.GetUrlListImgUI())"
+                             style="width:100px; height:100px;" />
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PromotionType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkProduct)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExpireDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Name)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Image)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Name)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id" asp-route-PromotionType="@so.PromotionType"
+                           asp-route-ExpireDateTime="@so.ExpireDateTime" asp-route-FkCategory="@so.FkCategory">حذف</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">مشاهده</a> |
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<nav aria-label="...">
+    <ul class="pagination">
+        @{
+            var si = 1;
+            var li = Model.TotalPages;
+
+            if (Model.TotalPages > 5)
+            {
+                si = (Model.PageIndex - 3) + 1;
+                if (si < 1)
+                {
+                    si = 1;
+                }
+
+                li = si + 4;
+                if (li > Model.TotalPages)
+                {
+                    li = Model.TotalPages;
+                }
+            }
+
+
+
+        }
+        @for (int i = si; i <= li; i++)
+        {
+            var cls = Model.PageIndex == i ? "page-item active" : "page-item";
+            <li class="@cls">
+                <a class="page-link" asp-route-pageIndex="@i" asp-route-Id="@(so.Id)" asp-route-FkCategory="@(so.FkCategory)"
+                   asp-route-FkProduct="@(so.FkProduct)" asp-route-ExpireDateTime="@(so.ExpireDateTime)"
+                   asp-route-Order="@(so.Order)" asp-route-PromotionType="@(so.PromotionType)">
+                    @i
+                    @if (Model.PageIndex == i)
+                    {
+                        <span class="sr-only">(current)</span>
+                    }
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

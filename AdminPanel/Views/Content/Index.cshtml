@@ -1,0 +1,64 @@
+﻿@using Utility
+@model IPagedList<Content>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var appSetting = new DataLayer.AppSetting();
+}
+<p>
+    <a asp-action="Item" class="btn btn-primary">پست جدید </a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    عنوان
+                </th>
+                <th>عکس</th>
+                <th>نوع</th>
+                <th>نویسنده</th>
+                <th>الویت نمایش</th>
+                <th>
+                    لینک در سایت
+                </th>
+                <th> تاریخ ویرایش</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.BanerImageAdress
+                    </td>
+                    <td>
+                        @item.ContentType.GetDescription()
+                    </td>
+                    <td>
+                        @item.Writer
+                    </td>
+                    <td>
+                        @item.Position
+                    </td>
+                    <td>
+                        <a href="@Url.Action("ShowContent","Content",new { contentId=item.Id},"https" , appSetting.ClientDomainName)"> مشاهده در سایت</a>
+                    </td>
+                    <td>
+                        @item.UpdateDate.ToPersianDateWithMonthName()
+                    </td>
+                    <td>
+                        <a asp-action="Item" asp-route-id="@item.Id" class="btn btn-primary">ویرایش</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@Html.Partial("_Pagination", (IEntityPagination)Model)

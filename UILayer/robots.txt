@@ -1,0 +1,14 @@
+﻿user-agent: *
+disallow: /card
+disallow: /shipping
+disallow: /payment
+
+disallow: /Accounting/*
+disallow: /Base0/*
+disallow: /user/*
+disallow: /Error/*
+disallow: /Invoice/*
+disallow: /Message/*
+disallow: /Wishlist/*
+
+Sitemap: https://storepersian.com/sitemap.xml

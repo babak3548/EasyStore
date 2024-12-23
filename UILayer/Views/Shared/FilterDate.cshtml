@@ -1,0 +1,19 @@
+﻿ @using UILayer.Miscellaneous;
+ @Html.Label(ViewData["langugeValue"].ToString())
+<input id= '@(ViewData["PropertyName"].ToString())'  name= '@(ViewData["PropertyName"].ToString())'/>
+@(UIUtility.ResourceManager.GetString("To"))
+<input id= '@(ViewData["PropertyName"].ToString())LessThan'  name= '@(ViewData["PropertyName"].ToString())LessThan'/>
+
+
+<script type="text/javascript">
+
+    $('#FilterForm #@(ViewData["PropertyName"].ToString())').click(function () { $('#FilterForm #@(ViewData["PropertyName"].ToString())').focus(); });
+    $('#FilterForm #@(ViewData["PropertyName"].ToString())').calendarsPicker({ calendar: $.calendars.instance('@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeName"))'
+    , '@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeCode"))'), dateFormat: 'yyyy/mm/dd' });
+
+    $('#FilterForm #@(ViewData["PropertyName"].ToString())LessThan').click(function () { $('#FilterForm #@(ViewData["PropertyName"].ToString())LessThan').focus(); });
+    $('#FilterForm #@(ViewData["PropertyName"].ToString())LessThan').calendarsPicker({ calendar: $.calendars.instance('@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeName"))'
+    , '@(UILayer.Miscellaneous.UIUtility.ResourceManager.GetString("langugeCode"))'), dateFormat: 'yyyy/mm/dd' });
+
+
+</script>

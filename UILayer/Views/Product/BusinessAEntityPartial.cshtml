@@ -1,0 +1,41 @@
+﻿@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@using DataLayer
+@using Utility
+@using System.IO
+
+
+@model BusinessOwner
+
+@{
+
+
+    string srcImg = Paths.DefaultPicBussinessOwner;
+    AppSetting appSetting = new AppSetting();
+if (Model.Image != null & Model.Image != "")
+    {
+        var fileInfo = new FileInfo(Model.Image);
+        if (fileInfo.Extension != "")
+        {
+            srcImg = Model.Image.Replace(fileInfo.Extension, "") + "2" + fileInfo.Extension;
+            srcImg = (File.Exists(appSetting.BaseServerPath+ srcImg.Replace("/", "\\")) ? srcImg : Paths.DefaultPicBussinessOwner);
+        }
+    }
+
+}
+@{
+    <div class="divBr">
+        <div id="imgViw">
+            <img class="MduImg" alt="@Model.Name" src="@srcImg" />
+        </div>
+        @Html.Partial("~/Views/BusinessOwner/Tabs.cshtml", Model)
+
+    </div>
+
+    <br />
+}
+

@@ -1,0 +1,172 @@
+﻿@model IPagedList<Product>
+
+@{
+    ViewData["Title"] = "به روز رسانی محصول";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var p = ViewBag.SearchValue == null ? new Product() : (Product)ViewBag.SearchValue;
+
+}
+<style>
+    .table td, .table th {
+        padding: 0.5rem 0.5rem !important;
+    }
+</style>
+
+<p>
+    <a asp-action="Item" class="btn btn-primary">تعریف محصول جدید</a>
+    <a asp-action="CalcStarProduct" title="محاسبه ستارهای محصول با انتصاب ستاره آدمین و ستاره های کامنت ها" class="btn btn-primary">محاسبه ستارهای محصولات</a>
+</p>
+<form enctype="multipart/form-data" method="post" asp-action="Showallproduct">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-md-2">
+                <label asp-for="@p.Id" class="control-label"></label>
+                <input name="Id" value="@p.Id" class="form-control" />
+
+            </div>
+            <div class="col-md-2">
+                <label asp-for="@p.Name" class="control-label"></label>
+                <input name="Name" value="@p.Name" class="form-control" />
+
+            </div>
+            <div class="col-md-3">
+                <label asp-for="@p.FkCategory" class="control-label"></label>
+                <select name="FkCategory" value="@p.FkCategory" class="form-control" asp-items="ViewBag.FkCategory"></select>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="@p.Active" class="control-label"></label>
+                <select name="productActivationStatus" class="form-control" asp-items="ViewBag.productActivationStatus"></select>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label asp-for="@p.AddDate" class="control-label">بعد از این تاریخ</label>
+                <input name="addDateStr" value="@p.AddDate.ToPersianDate()" placeholder="1399/10/20" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">تخفیف بزرگتر</label>
+                <input placeholder="ریال" title="تخفیف های بزرگتر مساوی عدد وارد شده را می اره " name="BeforDiscountPrice" value="@p.BeforDiscountPrice" class="form-control" />
+            </div>
+            <div class="col-md-1">
+                <input style="margin-top:1.8em" type="submit" value="جستجو" class="btn btn-primary" />
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post" action="@Url.Action("UpdetAllProduct","Product")">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(a => p.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Image)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.FkCategory)
+                </th>
+                @*<th>
+            @Html.DisplayNameFor(a => p.Brand)
+        </th>*@
+
+                <th>
+                    @Html.DisplayNameFor(a => p.BeforDiscountPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Active)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Available)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(a => p.Price)
+                </th>
+                <th title="قیمت فروش">قیمت</th>
+                <th title="الویت نمایش از بزرگتر به کوچکتر">الویت</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                item.Image.SaveImgListUI();
+                item.Image.SaveImgList();
+                item.Image.SaveImgDetails();
+                item.Image1.SaveImgListUI();
+                item.Image1.SaveImgList();
+                item.Image1.SaveImgDetails();
+                // item.Image.SaveImgDetails();
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    <img style="width: 300px;height:300px" src="@item.Image.GetUrlListImgUI()" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FkCategoryNavigation.Name)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>*@
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BeforDiscountPrice)
+                </td>
+                <td>
+                    @(item.Active ?"فعال":"غیر فعال")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Available)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <input type="hidden" name="productIds" value="@item.Id" />
+                    <input type="text" style="width:70px" name="prices" value="@item.Price" />
+                </td>
+                <td>
+                    <input type="text" style="width:50px" name="rankShows" value="@item.RankShow" />
+                </td>
+                <td>
+                    <a href="@Url.Action("Item",new { id=item.Id , pageIndex = Model.PageIndex})" class="btn btn-primary">ویرایش</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_PaginationProductEdit", (IEntityPagination)Model)
+
+    <h4>بروز رسانی کل تغییرات</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <input name="pageIndex" value="@Model.PageIndex" type="hidden" />
+            <input name="Id" value="@p.Id" type="hidden" />
+            <input name="Name" value="@p.Name" type="hidden" />
+            <input name="FkCategory" value="@p.FkCategory" type="hidden" />
+            <input name="BeforDiscountPrice" value="@p.BeforDiscountPrice" type="hidden" />
+            <input name="Active" value="@p.Active" type="hidden" />
+            <input name="addDateStr" value="@p.AddDate.ToPersianDate()" type="hidden" />
+            <input name="productActivationStatus" value="@ViewBag.productActivationStatusSelected" type="hidden" />
+            <div class="form-group">
+                <input type="submit" value="به روز رسانی" class="btn btn-primary" />
+            </div>
+
+        </div>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+﻿
+@using DataLayer.Contract
+@using DataLayer.EF
+@using DataLayer.Enums;
+@using UILayer.Miscellaneous
+@model Invoice ;
+@*این ویو نهایتن باید در فولدر شییر قرار گیرد تا بتوان از
+    تمام کنترولر های مشتق شده قابل دسترس باشد*@
+@{
+    ViewBag.Title = "Invoice";
+    Layout = "_Layout.cshtml";
+}
+<div id="Inv">
+    <h2>Invoice</h2>
+    @{
+        if (Model != null)
+        {
+            @Html.ActionLink("GetRow", "Invoice", new { Id = @Model.Id })
+            @Html.ActionLink("GridFK", "Bridge_Invoice_Product", new { Id = @Model.Id, PropName = "FK_Invoice" })
+        }
+        else
+        {
+            <span> @UIUtility.ResourceManager.GetString("youNotInvoiceActive") </span>
+        }
+
+    }
+</div>

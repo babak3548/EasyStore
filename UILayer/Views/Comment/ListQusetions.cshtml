@@ -1,0 +1,54 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@{
+    ViewBag.Title = ViewData["title"].ToString();
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@model IEnumerable<Comment>
+
+@{
+    var comment = new Comment();
+    if (ViewData["commentType"] != null) { comment.CommentType = (short)ViewData["commentType"]; }
+}
+@{
+
+    foreach (Comment item in Model)
+    {
+        <div class="LinHrd">
+            @item.TextValue<br />
+            @Html.ActionLink("پاسخ  و مشاهده سایر پاسخ ها", "Answers", "Comment", new { Id = item.Id }, null)
+        </div>
+
+    }
+
+    using (Html.BeginForm("Register", "Comment", null, FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+        @Html.Hidden("CommentType", comment.CommentType)
+
+        <table class="tb">
+            <tr class="tr1">
+                <td class="td1">ایمیل:</td>
+                <td class="td2">
+                    @Html.TextBox("KeyWord", comment.KeyWord, new { @id = "KeyWord", @title = "پر کردن این فیلد اختیاری می باشد " })
+            </td>
+        </tr>
+
+        <tr class="tr2">
+            <td class="td1">@("متن " + ViewData["title"].ToString())*:</td>
+            <td class="td2"> @Html.TextArea("Comment1", comment.TextValue, new { @id = "TextValue", @onblur = JavaScript.StringValidation("Comment1", 1, 600) })</td>
+        </tr>
+
+        <tr class="tr1">
+            <td class="td1"></td>
+            <td class="td2">
+                <input type="submit" value=' @("ارسال    "+ ViewData["title"].ToString()) '    />
+            </td>
+        </tr>
+
+    </table>
+}
+
+}

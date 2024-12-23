@@ -1,0 +1,63 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@using DataLayer.EF
+
+@model UILayer.Models.SearchResultModel
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+
+@{
+    int pageNoCalc = 1;
+    if (Model.StoreName == "")
+    {
+        @Html.Partial("Search2", Model)
+        @Html.Partial("Header2") }
+    else
+    {
+        @Html.Partial("BusinessAEntityPartial", (ViewData["businessOwner"] as BusinessOwner))
+        <br style="clear: both" />
+
+        <div class="hd1">
+            <span>محصولات</span>
+
+            <br />
+        </div>}
+
+    <table class="TblPdc">
+        @if (Model.Model.Count() > 0)
+        {
+            foreach (var contract in Model.Model)
+            {
+                @Html.Partial("", contract)
+
+            }
+        }
+        else
+        {
+            <tr>
+                <td><span>این فروشنده کالای اضافه نکرده است</span></td>
+            </tr>
+        }
+    </table>
+
+    for (int i = 1; i <= Model.RowCount; i = i + ConstSetting.PageSize)
+    {
+        pageNoCalc = (int)Math.Ceiling((double)i / ConstSetting.PageSize);
+        @Html.ActionLink(" " + pageNoCalc.ToString(), "", "", new
+   {
+       PageNo = pageNoCalc
+        ,
+       searchValue = Model.SearchModel.query,
+       category = Model.SearchModel.category
+
+   }, new { @class = (Model.SearchModel.PageNo == pageNoCalc ? "pageNumCu floatr" : "pageNum floatr") })
+    }
+}

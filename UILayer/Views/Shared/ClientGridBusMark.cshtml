@@ -1,0 +1,11 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+@model ModelGrid
+
+<h2>@ViewBag.Title</h2>
+
+@Html.Partial("search", Model)
+@Html.Partial("BusinessOwnersOrMarkaters", Model)
+

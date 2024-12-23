@@ -1,0 +1,28 @@
+﻿@using DataLayer.Contract
+@using ServiceLayer
+@using System.ComponentModel.DataAnnotations
+@using DataLayer.Enums
+
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using Utility
+
+@model object
+@{
+    long ShippingCopanies = (Model).ToLong(0);
+    List<long> ListShippingCopanies = new List<long>();
+    Utility.MultiValueAnalizor.AnalizeAccessEnums(ShippingCopanies, ListShippingCopanies);
+}
+@{
+    foreach (var item in ListShippingCopanies)
+    {
+        if (item == ListShippingCopanies[0] |item==ViewData["ShippingCompany"].ToInteger(0))
+        {
+    <input  checked="checked" type="radio" name="ShippingCompany"  class="rdSell"  value="@item"><span>@UIUtility.ResourceManager.GetString(EnumUtility.EnumShortValueToStringValue<ShippingCompanies>(item.ToByte(0)))</span>  <br> 
+        }
+        else
+        { 
+    <input  type="radio" name="ShippingCompany"  class="rdSell"  value="@item"><span>@UIUtility.ResourceManager.GetString(EnumUtility.EnumShortValueToStringValue<ShippingCompanies>(item.ToByte(0)))</span>  <br> 
+        }
+    }
+}

@@ -1,0 +1,40 @@
+﻿@model DataLayer.EF.Province
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>حذف استان یا شهر</h4>
+
+<h6>آیا مطمئن هستید که می خواهید این رکورد رو حذف کنید؟</h6>
+<div>
+    <h4>Province</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FkProvinceNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FkProvinceNavigation.Id)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">برگشت به لیست</a>
+    </form>
+</div>

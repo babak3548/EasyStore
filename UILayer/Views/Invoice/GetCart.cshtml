@@ -1,0 +1,134 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+
+@model DataLayer.EF.Invoice
+ <!--shopping cart area start -->
+<div class="cart_page_bg">
+    <div class="container">
+        <div class="shopping_cart_area">
+            @if(!string.IsNullOrWhiteSpace(ViewBag.cartMsg)){
+                <div class="row">
+                    <span style=" color: red; margin: auto;">@ViewBag.cartMsg</span>
+                </div>
+            }
+            <div class="row">
+                <div class="col-12">
+                    <form enctype="multipart/form-data" method="post" asp-action="UpdateCountProduct">
+                        <input type="hidden" name="invoiceId" value="@Model.Id" />
+                        <div class="table_desc">
+
+                            <div class="cart_page table-responsive">
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="product_remove">حذف</th>
+                                            <th class="product_thumb">تصویر</th>
+                                            <th class="product_name">محصول</th>
+                                            <th class="product-price">قیمت</th>
+                                            <th class="product-color">رنگ</th>
+                                            <th class="product_quantity">تعداد</th>
+                                            <th class="product_total">جمع</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model.BridgeInvoiceProduct)
+                                        {
+                                            <tr>
+                                                <td class="product_remove"><a href="@Url.Action("DeleteItemInvoice",new { bipId=item.Id})"><i class="fa fa-trash-o"></i></a></td>
+                                                <td class="product_thumb"><a href="@Url.Action("AEntityClient", "Product", new { nameForUrl=item.FkProductNavigation.NameForUrll }, "https")"><img style="width: 100px;height:100px" src="@item.Image.GetUrlListImg()" /></a></td>
+                                                <td class="product_name"><a href="#">@item.FkProductNavigation.Name</a></td>
+                                                <td class="product-price">@item.Price.decimalToDigMony()</td>
+                                                <td class="product-price"><div style="padding:20px; background:@item.Colore"></div></td>
+                                                <td class="product_quantity">
+                                                    <label>تعداد</label>
+                                                    <input id="hd@(item.Id)" name="bipc" type="hidden" value="@(item.Id +","+ item.Count)" />
+                                                    <input id="cn@(item.Id)" disabled min="1" max="@item.FkProductNavigation.Available" onchange="setBIPC(@item.Id)" value="@item.Count" type="number">
+                                                </td>
+                                                <td class="product_total">@((item.Price * item.Count).decimalToDigMony() ) </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                            @*<div class="cart_submit">
+                            <button type="submit">به روز رسانی سبد</button>
+                        </div>*@
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--coupon code area start-->
+            <div class="coupon_area">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code left">
+                            <h3>کد تخفیف</h3>
+                            <form enctype="multipart/form-data" method="post" asp-action="GoToPayment">
+                                <input type="hidden" name="invoiceId" value="@Model.Id" />
+                                <div class="coupon_inner">
+                                    <p>کد تخفیف خود را در صورت وجود وارد نمایید</p>
+                                    <input name="coupon" placeholder="کد تخفیف" type="text">
+                                    <button type="submit">اعمال کد تخفیف</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code right">
+                            <h3>مجموع سبد</h3>
+                            <div class="coupon_inner">
+                                <div class="cart_subtotal">
+                                    <p>جمع جزء</p>
+                                    <p class="cart_amount">@Model.TotalSumProductPrice.decimalToDigMony() </p>
+                                </div>
+
+                                @if (Model.ShippingCost > 0)
+                                {
+                                    <div class="cart_subtotal">
+                                        <p style="margin-bottom: 0px !important; padding-bottom: 0px !important;">هزینه ارسال</p>
+                                        <p style="margin-bottom: 0px !important; padding-bottom: 0px !important;" class="cart_amount">@Model.ShippingCost.decimalToDigMony()</p>
+                                    </div>
+                                    <div class="cart_subtotal">
+                                        <p style="font-size: 10px;"> @((DefualtValue.LimitationForFreeShipping- Model.PaymentToCountinue ).decimalToDigMony()) تا ارسال رایگان</p>
+                                        <p style="font-size: 10px;" class="cart_amount">@(DefualtValue.LimitationForFreeShipping.decimalToDigMony())</p>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="cart_subtotal">
+                                        <p> ارسال</p>
+                                        <p class="cart_amount">نحوه ارسال با مشتری هماهنگ می شود</p>
+                                    </div>
+
+                                }
+
+
+
+
+                                <div class="cart_subtotal has-border">
+                                    <p>جمع</p>
+                                    <p class="cart_amount">@Model.PaymentToCountinue.decimalToDigMony()</p>
+                                </div>
+                                <div class="checkout_btn">
+                                    <a href="@Url.Action("GetPaymentView", new {invoiceId=Model.Id })">تکمیل خرید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--coupon code area end-->
+
+        </div>
+    </div>
+</div>
+<!--shopping cart area end -->

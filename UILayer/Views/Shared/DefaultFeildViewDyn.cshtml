@@ -1,0 +1,21 @@
+﻿  @using DataLayer.Contract;
+  @using System.Reflection;
+  @using UILayer.Views
+  @using UILayer.Miscellaneous
+
+  @model BasePartialModel
+  @{
+      //مقدار پیش فرض
+      if (string.IsNullOrWhiteSpace(Model.ValidateMethod)){ Model.ValidateMethod ="StringValidation(\"" + Model.PropertyName + "\",1,50,\"" +
+                                                   UIUtility.ResourceManager.GetString("this_fieled_cannot_null") + "\",\"" +
+                                                   UIUtility.ResourceManager.GetString("min_value_this_field") +"\",\"" + 
+                                                   UIUtility.ResourceManager.GetString("max_value_this_field") + "\")" ;}
+      if (string.IsNullOrWhiteSpace(Model.langugeValue)) { Model.langugeValue = Model.PropertyName; }              
+      }
+    @Html.Label(Model.langugeValue,Model.TitleValue, new { title=Model.TitleValue})
+    @{
+        <br  />
+ <input id='@(Model.PropertyName )' name='@(Model.PropertyName)'  type="text"   value='@(Model.value)'  onblur= '@( Model.ValidateMethod)' />                                                    
+    
+
+ }

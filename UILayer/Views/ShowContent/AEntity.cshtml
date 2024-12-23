@@ -1,0 +1,58 @@
+﻿@using System.Net
+@model DataLayer.EF.Content
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+<script type="text/javascript">
+
+    $(document).ready(function () {
+    
+          //  $('#cntnt a').live('click',
+        $('body').on('click', '#cntnt a',  function (e) {
+            debugger;
+            var hrefa = $(this).attr("href");
+            if (hrefa.indexOf("AEntityInString") > -1) {
+                var idel = this;
+                var hreflen = hrefa.length;
+                var hrefaid = "ida" + hrefa.substr(hreflen - 10, 10);
+                hrefaid = hrefaid.replace("/", "");
+
+                if ($("#" + hrefaid).length == 0) {
+                    $(idel).after('<img id="imgloadwait" style="margin-top: 15px;" width="40" height="40" src="/Images/ajaxLoader.gif" />');
+                    $.ajax({
+                        url: hrefa,
+                        dataType: "html",
+                        type: "post",
+                        success: function (result) {
+                            $("#imgloadwait").remove();
+                            $(idel).after('<div id=' + hrefaid + ' style="border:1px solid rgb(162, 162, 162);margin-right: 3px;">' + result + '</div>');
+                        },
+                        error: function (xhr, status) {
+                            $("#imgloadwait").remove();
+                         }
+                    });
+                }
+                else {
+                    $('#' + hrefaid).toggle();
+
+                }
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+
+    });
+
+</script>
+<div class="fntMdm"  style="border: 2px solid #F0F0F0;">
+    <div class="hd1">
+        <h2>@Model.Name</h2>
+        <a href="javascript:goBack();" style="  margin-left: 5px;float: left;">برگشت به صفحه قبل</a>
+    </div>
+
+    <div id="cntnt" style="width: 99.6%; text-align: center;">
+        @Html.Raw(WebUtility.HtmlDecode(Model.ShowValue))
+    </div>
+</div>
+<br />

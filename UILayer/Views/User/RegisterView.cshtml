@@ -1,0 +1,103 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+<script type="text/javascript">
+    //   function chaCaptha() {
+    //   var valSrc = $('#' + ElmIdSrc).attr("src");
+    //   var valDes = $('#' + ElmIdDes).attr("src");
+    // debugger;
+    //$('#capImg').attr("src", "http://localhost:8484/User/Captha/1");
+
+    //   $('#' + ElmIdSrc).attr("src", valDes)
+    // }
+</script>
+
+@model User
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+
+@{ //Local variable difine
+    UILayer.Views.BasePartialModel varBasePartialModel;
+    var ajaxOption = new AjaxOption { UpdateTargetId = "EditorRowForm #divCapImg", HttpMethod = "Post" };
+}
+@{
+   
+    using (Html.BeginForm("RegisterUser", "User", null, FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+        <br />
+   if(ViewData["message"]!=null){ <span Id="ErrSp"> @ViewData["message"].ToString()</span><br />}
+    <table class="tb">
+
+        <tr class="tr1">
+
+            <td class="td1">نام*:</td>
+            <td class="td2">@Html.TextBox("Name", Model.Name, new { @id = "Name", @onblur = JavaScript.StringValidation("Name", 1, 50) })
+            </td>
+        </tr>
+
+        @*<tr class="tr2">
+            <td class="td1">@UIUtility.ResourceManager.GetString("Email")*:</td>
+            <td class="td2">@Html.TextBox("Email", Model.Email, new
+   {
+       @id = "Email",
+       @title = "نام ایمیل در سایت نمی تواند تکراری باشد",
+       @onblur = JavaScript.emailValidate("Email"),
+       @onchange = JavaScript.AjaxValidateEmailStr("Email", Url.Action("ValidateRepeatEmail", "User"), "ایمیل مورد نظر قبلا ثبت شده است")
+   })
+            </td>
+        </tr>*@
+
+        <tr class="tr1">
+            <td class="td1">موبایل*:</td>
+            <td class="td2">@Html.TextBox("Mobile", Model.Mobile, new { @id = "Mobile", @onblur = JavaScript.ValidationNumberLength("Mobile", 11, 14), 
+                          @onchange = JavaScript.AjaxValidateMobilStr("Mobile", Url.Action("ValidateRepeatMobile", "User"), "این شماره قبلا ثبت شده است لطفا از بازیابی پسورد اقدام نمایید ")
+                       })</td>
+        </tr>
+
+        <tr class="tr2">
+            <td class="td1">کلمه عبور*:</td>
+            <td class="td2">@Html.Password("Password", Model.Password, new { @id = "Password", @onblur = JavaScript.StringValidation("Password", 1, 29) })</td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1">تکرار کلمه عبور*:</td>
+            <td class="td2">@Html.Password("RePassword", "", new { @id = "RePassword", @onblur = JavaScript.ValidationRepeatField("Password", "RePassword") })</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td1">توافق نامه*:
+                <br />
+            </td>
+            <td class="td2">
+                <div style="overflow: scroll; width: 99%; height: 200px; border: 2px solid #F0F0F0;">
+                    @Html.Partial("AEntityPartial",(DataLayer.EF.Content) ViewBag.agreement )
+                </div>
+            </td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1">@UIUtility.ResourceManager.GetString("IstudyAndAgreement")*:</td>
+            <td class="td2">@Html.CheckBox("IstudyAndAgreement", new { @id = "IstudyAndAgreement", @onblur = "ValidationCheckBox('IstudyAndAgreement','" + UIUtility.ResourceManager.GetString("this_fieled_cannot_null") + "')" })</td>
+        </tr>
+        @*<tr class="tr2">
+            <td class="td1">@Ajax.ActionLink("لود مجدد عکس", Url.Action("CapthaImgTagAjax", "User"), ajaxOption)</td>
+            <td class="td2">
+                <div id="divCapImg">
+                    <img id="capImg" style="width:200px; height:50px;"  alt ="Captha" src="@Url.Action("Captha", "User")"/>
+                </div>
+            </td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1">کارکتر های عکس بالا*:</td>
+            <td class="td2">@Html.TextBox("captcha", "", new { @id = "captcha", @onblur = JavaScript.StringValidation("captcha", 4, 4) })</td>
+        </tr>*@
+        <tr class="tr2">
+            <td class="td1"></td>
+            <td class="td2">
+                <input type="submit" value="ثبت نام" />
+            </td>
+        </tr>
+    </table>
+    }
+    
+}

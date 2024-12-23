@@ -1,0 +1,84 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.Enums
+@model IEnumerable<Invoice>
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+}
+@{
+    
+    int iRow = 1;
+    var ModelInList = Model.ToList();
+
+}
+<div class="csrtl">
+    <span>ترتیب مراحل یک سفارش به صورت زیر می باشد و با توجه به روش خرید ممکن است یک یا چند مرحله نیاز به اجرا نداشته باشند </span>
+    </div>
+<div class="csrtl">
+    @Html.Partial("InvoiceStateLinks", (List<short>)ViewData["currentStateList"])
+    <table id="fltrInv" style="width: 100%;">
+        <tr>
+            <td>
+                <li><a href="@Url.Action("Invoices", "User", null, "https")" title="همه سفارشات">همه سفارشات</a></li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <li><a href="@Url.Action("canceled", "User", null, "https")" title="سفارشاتی که توسط فروشنده یا خریدار لغو شده اند">@UIUtility.ResourceManager.GetString("canceledState")</a></li>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+<table class="TableCss">
+
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+        <th>جزئیات فاکتور </th>
+        <th>شماره سفارش </th>
+        <th>مرحله سفارش</th>
+
+    </tr>
+    @foreach (var contract in ModelInList)
+    {
+        <tr class= "@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td>@Html.ActionLink("مشاهده سفارش", EnumUtility.EnumShortValueToStringValue<InvoiceStatus>((byte)contract.Status) + "View", "User", new { Id = contract.Id }, null)</td>
+            <td align="center">@(contract.Id)</td>
+            <td align="center">@(EnumUtility.EnumToLanguageValue<InvoiceStatus>((byte)contract.Status))</td>
+
+
+        </tr>
+        iRow++;
+    }
+</table>
+@if (ModelInList.Count() == 0)
+{
+    {<div class="csrtl"><span>@UIUtility.ResourceManager.GetString("noRecord")</span></div>}
+}
+
+@{
+    using (Html.BeginForm("AInvoiceView", "User", "https", FormMethod.Post,false, new { id = "EditorRowForm" }))
+    {
+        <br />
+    <table class="tb" >
+        <tr class="tr1">
+            <td class="td1">کد سفارش:</td>
+            <td class="td2"> @Html.TextBox("Id", "", new { @id = "Id", @onblur = JavaScript.ValidationNumberLength("Id", 1, 10) })
+                 <input type="submit" value="مشاهده سفارش"/>
+            </td>
+
+           
+        </tr>
+
+
+    </table>
+   
+   
+    }
+        
+}

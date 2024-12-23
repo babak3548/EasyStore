@@ -1,0 +1,84 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using DataLayer.EF
+@using Microsoft.AspNetCore.Http
+@using  DataLayer.Models
+@using System
+@{
+    var currentUseContract = (ViewBag.HttpContext as HttpContext).Session.GetObjectFromJson<UserContract>("User");
+    var CurrentUser = ((UserContract)ViewData["User"]);
+    var CurrentMarketer = (ViewBag.HttpContext as HttpContext).Session.GetObjectFromJson<MarketerContract>("MarketerContract");
+    var businessOwner = (ViewBag.HttpContext as HttpContext).Session.GetObjectFromJson<BusinessOwnerContract>("BusinessOwnerContract");
+
+}
+
+<div class="off_canvars_overlay"></div>
+<div class="Offcanvas_menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="canvas_open">
+                    <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                </div>
+                <div class="Offcanvas_menu_wrapper">
+                    <div class="canvas_close">
+                        <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                    </div>
+                    <div class="antomi_message">
+                        <p>ارسال رایگان - ضمانت بازگشت وجه 24 ساعته</p>
+                    </div>
+                    <div class="header_top_settings text-right">
+                        <ul>
+                            <li><a href="@Url.Action("ShowContent","Content", new {contentId=8 , title="تماس با ما".Replace(' ','_')} )">آدرس‌های فروشگاه</a></li>
+                            <li><a href="@Url.Action("MyAccount","User" )">پیگیری سفارش</a></li>
+                            <li>تلفن تماس: <a class="ltr-text" href="tel:@ExtentionMethodsImage.AppSetting.PhoneNumber">@ExtentionMethodsImage.AppSetting.PhoneNumberForShow </a></li>
+                            <li>ضمانت اصالت کالا</li>
+                        </ul>
+                    </div>
+                    <div class="header_configure_area">
+                        <div class="header_wishlist">
+                            <a rel="nofollow" href="@Url.Action("Index","Wishlist")">
+                                <i class="ion-android-favorite-outline"></i>
+                                <span class="wishlist_count">@(currentUseContract==null?0: currentUseContract.CountWishes)</span>
+                            </a>
+                        </div>
+                        @Html.Partial("_MiniCart")
+                    </div>
+                    @Html.Partial("_Search", "categori1")
+                    <div id="menu" class="text-left ">
+                        <ul class="offcanvas_main_menu">
+
+                            <li class="menu-item-has-children active">
+                                <a href="@Url.Action("Index","Home", new {PromotionType=PromotionTypes.TopHomeSlider1_3_M} )">تخفیف‌ها و پیشنهادها</a>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("AllContent","Content" )">بلاگ</a>
+                                <ul class="sub-menu">
+                                    <li><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=14 , title="نحوه ثبت سفارش".Replace(' ','_')} )">نحوه ثبت سفارش</a></li>
+                                    <li><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=12 , title="روش های ارسال کالا".Replace(' ','_')} )>روش های ارسال کالا</a></li>
+                                    <li><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=9 , title="پرسش‌های متداول".Replace(' ','_')} )">سوالات متداول</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=11 , title="همکاری با ما".Replace(' ','_')} )">همکاری با ما</a></li>
+                            <li class="menu-item-has-children"><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=7 , title="درباره ببین‌و‌بخر".Replace(' ','_')} )">درباره ما</a></li>
+                            <li class="menu-item-has-children"><a rel="nofollow" href="@Url.Action("ShowContent","Content", new {contentId=8 , title="تماس با ما".Replace(' ','_')} )"> تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    <div class="Offcanvas_footer">
+                        <span><a href="#"><i class="fa fa-envelope-o"></i> info@EasyStore.com</a></span>
+                        <ul>
+                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

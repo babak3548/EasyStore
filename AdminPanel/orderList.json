@@ -1,0 +1,4064 @@
+﻿{
+  "status": "ok",
+  "data": {
+    "sort_data": {
+      "sort_column": "order_item_id",
+      "sort_order": "asc"
+    },
+    "pager": {
+      "page": 1,
+      "item_per_page": 50,
+      "total_page": 1,
+      "total_rows": 42
+    },
+    "form_data": [],
+    "items": [
+      {
+        "order_item_id": 325410126,
+        "order_id": 111687291,
+        "variant": {
+          "id": 17632161,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 552,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497585792,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-23 19:30:08",
+        "cart_closed_at": "2021-06-23 19:30:07",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-26 00:00:00"
+      },
+      {
+        "order_item_id": 326451285,
+        "order_id": 111936560,
+        "variant": {
+          "id": 17632418,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u06af\u0648\u0634 \u0622\u0646\u062c\u0644 \u0645\u062f\u0644 R32 \u0627\u0631\u062a\u0641\u0627\u0639 35 \u0633\u0627\u0646\u062a\u06cc\u0645\u062a\u0631 | \u0622\u0628\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 4075260,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u06af\u0648\u0634 \u0622\u0646\u062c\u0644 \u0645\u062f\u0644 R32 \u0627\u0631\u062a\u0641\u0627\u0639 35 \u0633\u0627\u0646\u062a\u06cc\u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 199,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497595804,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-25 18:56:32",
+        "cart_closed_at": "2021-06-25 18:56:32",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-27 00:00:00"
+      },
+      {
+        "order_item_id": 326605436,
+        "order_id": 111970247,
+        "variant": {
+          "id": 15370765,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 2,
+            "in_seller_warehouse": 178,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 4
+            }
+          },
+          "price": {
+            "id": 497579786,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-26 00:10:53",
+        "cart_closed_at": "2021-06-26 00:10:53",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 327122592,
+        "order_id": 112099875,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-26 23:19:34",
+        "cart_closed_at": "2021-06-26 23:19:34",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-28 00:00:00"
+      },
+      {
+        "order_item_id": 327209747,
+        "order_id": 112119331,
+        "variant": {
+          "id": 10776882,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 173,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579907,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-27 02:17:40",
+        "cart_closed_at": "2021-06-27 02:17:40",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-28 00:00:00"
+      },
+      {
+        "order_item_id": 327529844,
+        "order_id": 112204608,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-27 18:49:31",
+        "cart_closed_at": "2021-06-27 18:49:31",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327559998,
+        "order_id": 112212632,
+        "variant": {
+          "id": 15974085,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f \u0686\u0631\u0645\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 194,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579658,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-27 19:58:18",
+        "cart_closed_at": "2021-06-27 19:58:18",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327583840,
+        "order_id": 112218752,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-27 20:52:17",
+        "cart_closed_at": "2021-06-27 20:52:17",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327631879,
+        "order_id": 112231583,
+        "variant": {
+          "id": 15419626,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062f\u062e\u062a\u0631 \u0631\u0648\u0633\u06cc \u0645\u062f\u0644\u00a0\u067e\u0631\u0633\u062a\u0627\u0631 \u0627\u0631\u062a\u0641\u0627\u0639 30 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3803050,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062f\u062e\u062a\u0631 \u0631\u0648\u0633\u06cc \u0645\u062f\u0644\u00a0\u067e\u0631\u0633\u062a\u0627\u0631 \u0627\u0631\u062a\u0641\u0627\u0639 30 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 657,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497625685,
+            "selling_price": 800000,
+            "rrp_price": 800000,
+            "discount": 0,
+            "order_limit": 6,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 800000,
+        "created_at": "2021-06-27 22:31:21",
+        "cart_closed_at": "2021-06-27 22:31:21",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327632280,
+        "order_id": 112231679,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-27 22:31:57",
+        "cart_closed_at": "2021-06-27 22:31:57",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327663857,
+        "order_id": 112239415,
+        "variant": {
+          "id": 17205046,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u0645\u062f\u0644 \u062a\u06a9 \u0634\u0627\u062e \u0627\u0631\u062a\u0641\u0627\u0639 \u06f3\u06f0 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u06a9\u0627\u0644\u0628\u0627\u0633\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2526399,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u0645\u062f\u0644 \u062a\u06a9 \u0634\u0627\u062e \u0627\u0631\u062a\u0641\u0627\u0639 \u06f3\u06f0 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 2,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 96,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 470481047,
+            "selling_price": 680000,
+            "rrp_price": 680000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 680000,
+        "created_at": "2021-06-27 23:27:16",
+        "cart_closed_at": "2021-06-27 23:27:16",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 327673766,
+        "order_id": 112241787,
+        "variant": {
+          "id": 15419503,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u067e\u06a9 \u0647\u062f\u06cc\u0647 \u0648 \u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u062e\u0631\u0633\u06cc \u0645\u062f\u0644 07-love | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 923812,
+            "category_id": 6042,
+            "title": "\u067e\u06a9 \u0647\u062f\u06cc\u0647 \u0648 \u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u062e\u0631\u0633\u06cc \u0645\u062f\u0644 07-love",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 214,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 409116973,
+            "selling_price": 400000,
+            "rrp_price": 400000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 400000,
+        "created_at": "2021-06-27 23:44:30",
+        "cart_closed_at": "2021-06-27 23:44:30",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327709515,
+        "order_id": 112249895,
+        "variant": {
+          "id": 15974085,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f \u0686\u0631\u0645\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 194,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579658,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 2,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 2300000,
+        "created_at": "2021-06-28 00:48:32",
+        "cart_closed_at": "2021-06-28 00:48:32",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327790152,
+        "order_id": 112267986,
+        "variant": {
+          "id": 15370765,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 2,
+            "in_seller_warehouse": 178,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 4
+            }
+          },
+          "price": {
+            "id": 497579786,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-28 09:05:29",
+        "cart_closed_at": "2021-06-28 09:05:28",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 327901081,
+        "order_id": 112298859,
+        "variant": {
+          "id": 7701902,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062f\u062e\u062a\u0631 \u0631\u0648\u0645\u06cc \u0627\u0631\u062a\u0641\u0627\u0639 45 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2184122,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062f\u062e\u062a\u0631 \u0631\u0648\u0645\u06cc \u0627\u0631\u062a\u0641\u0627\u0639 45 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 746,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 496778765,
+            "selling_price": 470000,
+            "rrp_price": 470000,
+            "discount": 0,
+            "order_limit": 10,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse_processing",
+        "selling_price": 391649,
+        "created_at": "2021-06-28 13:13:24",
+        "cart_closed_at": "2021-06-28 13:13:24",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327927756,
+        "order_id": 112305873,
+        "variant": {
+          "id": 17632472,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u06af\u0648\u0634 \u0622\u0646\u062c\u0644 \u0645\u062f\u0644 R32 \u0627\u0631\u062a\u0641\u0627\u0639 35 \u0633\u0627\u0646\u062a\u06cc\u0645\u062a\u0631 | \u06a9\u0631\u0645 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 4075260,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u06af\u0648\u0634 \u0622\u0646\u062c\u0644 \u0645\u062f\u0644 R32 \u0627\u0631\u062a\u0641\u0627\u0639 35 \u0633\u0627\u0646\u062a\u06cc\u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 552,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497596355,
+            "selling_price": 1038100,
+            "rrp_price": 1038100,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse_processing",
+        "selling_price": 1038100,
+        "created_at": "2021-06-28 14:00:34",
+        "cart_closed_at": "2021-06-28 14:00:34",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327947438,
+        "order_id": 112310943,
+        "variant": {
+          "id": 15974085,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f \u0686\u0631\u0645\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 194,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579658,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-28 14:36:10",
+        "cart_closed_at": "2021-06-28 14:36:10",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-29 00:00:00"
+      },
+      {
+        "order_item_id": 327997394,
+        "order_id": 112323748,
+        "variant": {
+          "id": 7565736,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u0627\u067e \u062a\u0648\u06cc\u0632 \u0645\u062f\u0644 \u0641\u06cc\u0644 \u0628\u0627\u0644\u0634\u062a\u06cc \u0627\u0631\u062a\u0641\u0627\u0639 50 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0637\u0648\u0633\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 801235,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u0627\u067e \u062a\u0648\u06cc\u0632 \u0645\u062f\u0644 \u0641\u06cc\u0644 \u0628\u0627\u0644\u0634\u062a\u06cc \u0627\u0631\u062a\u0641\u0627\u0639 50 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 729,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 417130351,
+            "selling_price": 1750000,
+            "rrp_price": 1750000,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1750000,
+        "created_at": "2021-06-28 16:08:05",
+        "cart_closed_at": "2021-06-28 16:08:05",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328103198,
+        "order_id": 112351284,
+        "variant": {
+          "id": 17632581,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062c\u0644\u06cc \u06a9\u062a \u0637\u0631\u062d\u00a0\u062e\u0631\u06af\u0648\u0634  \u0645\u062f\u0644 306-11 \u0627\u0631\u062a\u0641\u0627\u0639 40 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u06cc\u0627\u0633\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3595060,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u062c\u0644\u06cc \u06a9\u062a \u0637\u0631\u062d\u00a0\u062e\u0631\u06af\u0648\u0634  \u0645\u062f\u0644 306-11 \u0627\u0631\u062a\u0641\u0627\u0639 40 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 5554,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497601338,
+            "selling_price": 1000000,
+            "rrp_price": 1000000,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1000000,
+        "created_at": "2021-06-28 19:53:44",
+        "cart_closed_at": "2021-06-28 19:53:44",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328117846,
+        "order_id": 112355077,
+        "variant": {
+          "id": 15419487,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u0645\u062f\u0644 \u062a\u06a9 \u0634\u0627\u062e \u0627\u0631\u062a\u0641\u0627\u0639 \u06f3\u06f0 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0628\u0632 \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2526399,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u0645\u062f\u0644 \u062a\u06a9 \u0634\u0627\u062e \u0627\u0631\u062a\u0641\u0627\u0639 \u06f3\u06f0 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 438,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 409116208,
+            "selling_price": 680000,
+            "rrp_price": 680000,
+            "discount": 0,
+            "order_limit": 4,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 680000,
+        "created_at": "2021-06-28 20:26:48",
+        "cart_closed_at": "2021-06-28 20:26:48",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328176883,
+        "order_id": 112370547,
+        "variant": {
+          "id": 17632194,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u06af\u0644 \u0628\u0647\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 1538,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 2
+            }
+          },
+          "price": {
+            "id": 497586229,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 15,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-28 22:31:56",
+        "cart_closed_at": "2021-06-28 22:31:56",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328210685,
+        "order_id": 112378950,
+        "variant": {
+          "id": 15419511,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u067e\u06a9 \u0647\u062f\u06cc\u0647 \u0648 \u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u062e\u0631\u0633\u06cc \u0645\u062f\u0644 07-love | \u0645\u0634\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 923812,
+            "category_id": 6042,
+            "title": "\u067e\u06a9 \u0647\u062f\u06cc\u0647 \u0648 \u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u062e\u0631\u0633\u06cc \u0645\u062f\u0644 07-love",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 1087,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 409121498,
+            "selling_price": 390000,
+            "rrp_price": 390000,
+            "discount": 0,
+            "order_limit": 11,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 390000,
+        "created_at": "2021-06-28 23:31:04",
+        "cart_closed_at": "2021-06-28 23:31:04",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328214175,
+        "order_id": 112379751,
+        "variant": {
+          "id": 17632728,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f 02 | \u0642\u0631\u0645\u0632 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 4216041,
+            "category_id": 6042,
+            "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f 02",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 549,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497610281,
+            "selling_price": 353200,
+            "rrp_price": 353200,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 353200,
+        "created_at": "2021-06-28 23:36:43",
+        "cart_closed_at": "2021-06-28 23:36:43",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328257248,
+        "order_id": 112389554,
+        "variant": {
+          "id": 17632194,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u06af\u0644 \u0628\u0647\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 1538,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 2
+            }
+          },
+          "price": {
+            "id": 497586229,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 15,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-29 00:52:07",
+        "cart_closed_at": "2021-06-29 00:52:07",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328379464,
+        "order_id": 112420334,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 11:18:03",
+        "cart_closed_at": "2021-06-29 11:18:03",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328381764,
+        "order_id": 112421003,
+        "variant": {
+          "id": 10776882,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 173,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579907,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1050000,
+        "created_at": "2021-06-29 11:22:17",
+        "cart_closed_at": "2021-06-29 11:22:17",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328390610,
+        "order_id": 112423670,
+        "variant": {
+          "id": 17632733,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f 02 | \u0628\u0646\u0641\u0634 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 4216041,
+            "category_id": 6042,
+            "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f 02",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 0,
+            "in_seller_warehouse": 555,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497610455,
+            "selling_price": 353200,
+            "rrp_price": 353200,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 353200,
+        "created_at": "2021-06-29 11:38:42",
+        "cart_closed_at": "2021-06-29 11:38:42",
+        "shipment_status": "pending",
+        "commitment_date": "2021-06-30 00:00:00"
+      },
+      {
+        "order_item_id": 328506055,
+        "order_id": 112454971,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 15:25:09",
+        "cart_closed_at": "2021-06-29 15:25:09",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328543337,
+        "order_id": 112464478,
+        "variant": {
+          "id": 10776882,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 173,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579907,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 16:40:03",
+        "cart_closed_at": "2021-06-29 16:40:03",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328543340,
+        "order_id": 112464478,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 16:40:03",
+        "cart_closed_at": "2021-06-29 16:40:03",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328606536,
+        "order_id": 112482072,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 19:02:35",
+        "cart_closed_at": "2021-06-29 19:02:35",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328609485,
+        "order_id": 112482904,
+        "variant": {
+          "id": 15370765,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 2,
+            "in_seller_warehouse": 178,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 4
+            }
+          },
+          "price": {
+            "id": 497579786,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 19:09:23",
+        "cart_closed_at": "2021-06-29 19:09:23",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328635879,
+        "order_id": 112489929,
+        "variant": {
+          "id": 15370756,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 293,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 9
+            }
+          },
+          "price": {
+            "id": 497579850,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 3,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 20:09:09",
+        "cart_closed_at": "2021-06-29 20:09:09",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-06 00:00:00"
+      },
+      {
+        "order_item_id": 328666111,
+        "order_id": 112219051,
+        "variant": {
+          "id": 17632176,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 0,
+            "in_seller_warehouse": 455,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 497585952,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 5,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-29 21:17:37",
+        "cart_closed_at": "2021-06-27 20:54:35",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328700089,
+        "order_id": 112506681,
+        "variant": {
+          "id": 17632102,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0622\u0628\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 0,
+            "in_seller_warehouse": 220,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 3
+            }
+          },
+          "price": {
+            "id": 497585078,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-29 22:30:36",
+        "cart_closed_at": "2021-06-29 22:30:36",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328705935,
+        "order_id": 112508219,
+        "variant": {
+          "id": 15974085,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f \u0686\u0631\u0645\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 4,
+            "in_seller_warehouse": 194,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579658,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-29 22:42:09",
+        "cart_closed_at": "2021-06-29 22:42:09",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328717216,
+        "order_id": 112511138,
+        "variant": {
+          "id": 17632102,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0622\u0628\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 0,
+            "in_seller_warehouse": 220,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 3
+            }
+          },
+          "price": {
+            "id": 497585078,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-29 23:03:48",
+        "cart_closed_at": "2021-06-29 23:03:48",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328807578,
+        "order_id": 112531324,
+        "variant": {
+          "id": 14844617,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f A-GH2 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2239585,
+            "category_id": 6042,
+            "title": "\u0633\u062a \u0647\u062f\u06cc\u0647 \u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u062e\u0631\u0633 \u06a9\u062f A-GH2",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 43,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 1
+            }
+          },
+          "price": {
+            "id": 390850760,
+            "selling_price": 640000,
+            "rrp_price": 640000,
+            "discount": 0,
+            "order_limit": 4,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 640000,
+        "created_at": "2021-06-30 02:13:33",
+        "cart_closed_at": "2021-06-30 02:13:33",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328807870,
+        "order_id": 112531382,
+        "variant": {
+          "id": 17632102,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0622\u0628\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 3818328,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u062e\u062a\u0627\u067e\u0648\u0633 \u0627\u0631\u062a\u0641\u0627\u0639 20 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 0,
+            "in_seller_warehouse": 220,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 3
+            }
+          },
+          "price": {
+            "id": 497585078,
+            "selling_price": 450000,
+            "rrp_price": 450000,
+            "discount": 0,
+            "order_limit": 22,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 450000,
+        "created_at": "2021-06-30 02:14:35",
+        "cart_closed_at": "2021-06-30 02:14:35",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328853678,
+        "order_id": 112542449,
+        "variant": {
+          "id": 15370765,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 2,
+            "in_seller_warehouse": 178,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 4
+            }
+          },
+          "price": {
+            "id": 497579786,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-30 09:19:36",
+        "cart_closed_at": "2021-06-30 09:19:36",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328858525,
+        "order_id": 112543940,
+        "variant": {
+          "id": 10776882,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 173,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579907,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-30 09:37:22",
+        "cart_closed_at": "2021-06-30 09:37:22",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      },
+      {
+        "order_item_id": 328891750,
+        "order_id": 112553601,
+        "variant": {
+          "id": 10776882,
+          "seller_id": 205878,
+          "site": "digikala",
+          "is_active": true,
+          "is_archived": false,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0641\u06cc\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+          "product": {
+            "id": 2932701,
+            "category_id": 6042,
+            "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+            "shipping_nature_id": 1
+          },
+          "shipping_type": "digikala",
+          "supplier_code": null,
+          "dk_lead_time": 1,
+          "sbs_lead_time": 0,
+          "stock": {
+            "in_the_way": 0,
+            "in_digikala_warehouse": 1,
+            "in_seller_warehouse": 173,
+            "reserved_stocks": {
+              "seller": 0,
+              "digikala": 5
+            }
+          },
+          "price": {
+            "id": 497579907,
+            "selling_price": 1150000,
+            "rrp_price": 1150000,
+            "discount": 0,
+            "order_limit": 2,
+            "is_promotion_price": false,
+            "tags": []
+          }
+        },
+        "quantity": 1,
+        "shipping_type": "digikala",
+        "order_status": "warehouse",
+        "selling_price": 1150000,
+        "created_at": "2021-06-30 11:08:02",
+        "cart_closed_at": "2021-06-30 11:08:02",
+        "shipment_status": "pending",
+        "commitment_date": "2021-07-01 00:00:00"
+      }
+    ],
+    "meta_data": []
+  }
+}
+////======================== "https://seller.digikala.com/api/v1/orders/326605436/"
+
+{
+  "status": "ok",
+  "data": {
+    "order_item_id": 326605436,
+    "order_id": 111970247,
+    "variant": {
+      "id": 15370765,
+      "seller_id": 205878,
+      "site": "digikala",
+      "is_active": true,
+      "is_archived": false,
+      "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+      "product": {
+        "id": 2932701,
+        "category_id": 6042,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0637\u0631\u062d \u0627\u0633\u0628 \u062a\u06a9 \u0634\u0627\u062e \u06cc\u0648\u0646\u06cc\u06a9\u0648\u0631\u0646 \u0627\u06cc\u0633\u062a\u0627\u062f\u0647 \u0627\u0631\u062a\u0641\u0627\u0639 48 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+        "shipping_nature_id": 1
+      },
+      "shipping_type": "digikala",
+      "supplier_code": null,
+      "dk_lead_time": 1,
+      "sbs_lead_time": 0,
+      "stock": {
+        "in_the_way": 0,
+        "in_digikala_warehouse": 2,
+        "in_seller_warehouse": 178,
+        "reserved_stocks": {
+          "seller": 0,
+          "digikala": 4
+        }
+      },
+      "price": {
+        "id": 497579786,
+        "selling_price": 1150000,
+        "rrp_price": 1150000,
+        "discount": 0,
+        "order_limit": 2,
+        "is_promotion_price": false,
+        "tags": []
+      }
+    },
+    "quantity": 1,
+    "shipping_type": "digikala",
+    "order_status": "warehouse",
+    "selling_price": 1150000,
+    "created_at": "2021-06-26 00:10:53",
+    "cart_closed_at": "2021-06-26 00:10:53",
+    "shipment_status": "pending",
+    "commitment_date": "2021-07-01 00:00:00"
+  }
+}
+
+//============================https://seller.digikala.com/api/v1/variants/?page=1&size=50&order=asc&sort=product_id
+{
+  "status": "ok",
+  "data": {
+    "sort_data": {
+      "sort_column": "product_id",
+      "sort_order": "asc"
+    },
+    "pager": {
+      "page": 1,
+      "item_per_page": 50,
+      "total_page": 22,
+      "total_rows": 1052
+    },
+    "form_data": [],
+    "items": [
+      {
+        "id": 7843903,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u062f\u0627\u0631\u062a \u0645\u063a\u0646\u0627\u0637\u06cc\u0633\u06cc Magnet Dartboard \u0633\u0627\u06cc\u0632 12 \u0627\u06cc\u0646\u0686 | \u0645\u0634\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 52673,
+          "category_id": 6122,
+          "title": "\u062f\u0627\u0631\u062a \u0645\u063a\u0646\u0627\u0637\u06cc\u0633\u06cc Magnet Dartboard \u0633\u0627\u06cc\u0632 12 \u0627\u06cc\u0646\u0686",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/188982.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u062f\u0627\u0631\u062a",
+          "category_name_en": "\u062f\u0627\u0631\u062a",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 196773699,
+          "selling_price": 1340000,
+          "rrp_price": 1340000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 106262
+      },
+      {
+        "id": 7779517,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77993,
+          "category_id": 6452,
+          "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/658562.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 206276750,
+          "selling_price": 1250000,
+          "rrp_price": 1250000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 212500
+      },
+      {
+        "id": 7779515,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77993,
+          "category_id": 6452,
+          "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/658562.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351243,
+          "selling_price": 1250000,
+          "rrp_price": 1250000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 212500
+      },
+      {
+        "id": 7779516,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u062e\u0627\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77993,
+          "category_id": 6452,
+          "title": "\u062a\u0627\u0633 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/658562.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 206276699,
+          "selling_price": 1250000,
+          "rrp_price": 1250000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 212500
+      },
+      {
+        "id": 7779387,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77996,
+          "category_id": 6452,
+          "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/334257.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 196270207,
+          "selling_price": 940000,
+          "rrp_price": 940000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 169200
+      },
+      {
+        "id": 7779388,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2 | \u062e\u0627\u06a9\u0633\u062a\u0631\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77996,
+          "category_id": 6452,
+          "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/334257.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 196270198,
+          "selling_price": 930000,
+          "rrp_price": 930000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 167400
+      },
+      {
+        "id": 7779386,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 77996,
+          "category_id": 6452,
+          "title": "\u06af\u0648\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0646\u0648\u0639 2",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/334257.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 196270209,
+          "selling_price": 930000,
+          "rrp_price": 930000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 167400
+      },
+      {
+        "id": 7779498,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78004,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/448436.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351275,
+          "selling_price": 1950000,
+          "rrp_price": 1950000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 331500
+      },
+      {
+        "id": 7779499,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78004,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/448436.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351268,
+          "selling_price": 1950000,
+          "rrp_price": 1950000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 331500
+      },
+      {
+        "id": 7779500,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78004,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u06a9\u0646\u062f\u0648 \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/448436.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351254,
+          "selling_price": 1950000,
+          "rrp_price": 1950000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 331500
+      },
+      {
+        "id": 7779373,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0633\u0647 \u062f\u0633\u062a\u0647 | \u0642\u0647\u0648\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78040,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0633\u0647 \u062f\u0633\u062a\u0647",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/567283.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194697652,
+          "selling_price": 820000,
+          "rrp_price": 820000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 147600
+      },
+      {
+        "id": 7779372,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0633\u0647 \u062f\u0633\u062a\u0647 | \u062e\u0627\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78040,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0633\u0647 \u062f\u0633\u062a\u0647",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/567283.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 750,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 750
+        },
+        "price": {
+          "id": 194697584,
+          "selling_price": 820000,
+          "rrp_price": 820000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 147600
+      },
+      {
+        "id": 7779441,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78086,
+          "category_id": 6452,
+          "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/505881.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698814,
+          "selling_price": 1030000,
+          "rrp_price": 1030000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 175100
+      },
+      {
+        "id": 7779442,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78086,
+          "category_id": 6452,
+          "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/505881.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698822,
+          "selling_price": 1030000,
+          "rrp_price": 1030000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 175100
+      },
+      {
+        "id": 7779440,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78086,
+          "category_id": 6452,
+          "title": "\u0628\u0634\u0642\u0627\u0628 \u0622\u0648\u06cc\u0632 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0646\u06cc\u0634\u0627\u0628\u0648\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/505881.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 748,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 748
+        },
+        "price": {
+          "id": 194698801,
+          "selling_price": 1030000,
+          "rrp_price": 1030000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 175100
+      },
+      {
+        "id": 7779491,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78115,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/470685.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 749,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 749
+        },
+        "price": {
+          "id": 195351330,
+          "selling_price": 538000,
+          "rrp_price": 538000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 96840
+      },
+      {
+        "id": 7779492,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u062e\u0627\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78115,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/470685.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351325,
+          "selling_price": 538000,
+          "rrp_price": 538000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 96840
+      },
+      {
+        "id": 7779493,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78115,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 \u0645\u062f\u0644 \u0628\u0631\u062c \u0633\u0627\u06cc\u0632 \u06a9\u0648\u0686\u06a9",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/470685.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 195351283,
+          "selling_price": 538000,
+          "rrp_price": 538000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 96840
+      },
+      {
+        "id": 7779427,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0642\u0647\u0648\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78134,
+          "category_id": 6452,
+          "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/235184.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698708,
+          "selling_price": 370000,
+          "rrp_price": 370000,
+          "discount": 0,
+          "order_limit": 6,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 70300
+      },
+      {
+        "id": 7779425,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78134,
+          "category_id": 6452,
+          "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/235184.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 747,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 747
+        },
+        "price": {
+          "id": 194698649,
+          "selling_price": 370000,
+          "rrp_price": 370000,
+          "discount": 0,
+          "order_limit": 6,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 70300
+      },
+      {
+        "id": 7779426,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78134,
+          "category_id": 6452,
+          "title": "\u0645\u0627\u06af \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/235184.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698679,
+          "selling_price": 370000,
+          "rrp_price": 370000,
+          "discount": 0,
+          "order_limit": 6,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 70300
+      },
+      {
+        "id": 7779408,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0646\u0633\u06a9\u0627\u0641\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78154,
+          "category_id": 6452,
+          "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/7edb02d5db88f6be5dc56c91aa702528364e78fe_1594111361.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698037,
+          "selling_price": 500000,
+          "rrp_price": 500000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 95000
+      },
+      {
+        "id": 7779409,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0628\u0698 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78154,
+          "category_id": 6452,
+          "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/7edb02d5db88f6be5dc56c91aa702528364e78fe_1594111361.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698103,
+          "selling_price": 500000,
+          "rrp_price": 500000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 95000
+      },
+      {
+        "id": 7779410,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646 | \u0642\u0647\u0648\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 78154,
+          "category_id": 6452,
+          "title": "\u0635\u0631\u0627\u062d\u06cc \u0633\u0641\u0627\u0644\u06cc \u06a9\u0627\u0631\u06af\u0627\u0647 \u0645\u0647\u0631 \u0628\u0627\u0633\u062a\u0627\u0646",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/7edb02d5db88f6be5dc56c91aa702528364e78fe_1594111361.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 194698571,
+          "selling_price": 500000,
+          "rrp_price": 500000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 95000
+      },
+      {
+        "id": 6869078,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0644\u0627\u0648\u0644\u06cc \u0628\u06cc\u0628\u06cc \u0645\u062f\u0644 Diverting Baby \u0633\u0627\u06cc\u0632 \u0628\u0632\u0631\u06af | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 117273,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0644\u0627\u0648\u0644\u06cc \u0628\u06cc\u0628\u06cc \u0645\u062f\u0644 Diverting Baby \u0633\u0627\u06cc\u0632 \u0628\u0632\u0631\u06af",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/992592.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 176937995,
+          "selling_price": 2750000,
+          "rrp_price": 2750000,
+          "discount": 0,
+          "order_limit": 20,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 328075
+      },
+      {
+        "id": 7843792,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u067e\u0632\u0634\u06a9\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u0645\u062f\u0644 MP-B750 | \u0645\u0634\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 158693,
+          "category_id": 6044,
+          "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u067e\u0632\u0634\u06a9\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u0645\u062f\u0644 MP-B750",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1282134.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0622\u0634\u0646\u0627\u06cc\u06cc \u0628\u0627 \u0641\u0646\u0648\u0646",
+          "category_name_en": "\u0622\u0634\u0646\u0627\u06cc\u06cc \u0628\u0627 \u0641\u0646\u0648\u0646",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 0,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 0
+        },
+        "price": {
+          "id": 208049607,
+          "selling_price": 1900000,
+          "rrp_price": 1900000,
+          "discount": 0,
+          "order_limit": 7,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 226670
+      },
+      {
+        "id": 7843793,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u067e\u0632\u0634\u06a9\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u0645\u062f\u0644 MP-B750 | \u0646\u0642\u0631\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 158693,
+          "category_id": 6044,
+          "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u067e\u0632\u0634\u06a9\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u0645\u062f\u0644 MP-B750",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1282134.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0622\u0634\u0646\u0627\u06cc\u06cc \u0628\u0627 \u0641\u0646\u0648\u0646",
+          "category_name_en": "\u0622\u0634\u0646\u0627\u06cc\u06cc \u0628\u0627 \u0641\u0646\u0648\u0646",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 204066424,
+          "selling_price": 2020000,
+          "rrp_price": 2020000,
+          "discount": 0,
+          "order_limit": 7,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 240986
+      },
+      {
+        "id": 11023468,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0641\u0631\u0648\u0632\u0646 \u0645\u062f\u0644 Young Elsa \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637 | \u0633\u0631\u0645\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 159157,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0641\u0631\u0648\u0632\u0646 \u0645\u062f\u0644 Young Elsa \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/423433.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 0,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 0
+        },
+        "price": {
+          "id": 331098626,
+          "selling_price": 1400000,
+          "rrp_price": 1400000,
+          "discount": 0,
+          "order_limit": 2,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 167020
+      },
+      {
+        "id": 11023471,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0641\u0631\u0648\u0632\u0646 \u0645\u062f\u0644 Young Elsa \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 159157,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0641\u0631\u0648\u0632\u0646 \u0645\u062f\u0644 Young Elsa \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/423433.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 221,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 221
+        },
+        "price": {
+          "id": 306102266,
+          "selling_price": 1450000,
+          "rrp_price": 1450000,
+          "discount": 0,
+          "order_limit": 2,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 172985
+      },
+      {
+        "id": 8414835,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062f\u06cc\u0632\u0646\u06cc \u0645\u062f\u0644 Pooh \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637 | \u0632\u0631\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 163302,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062f\u06cc\u0632\u0646\u06cc \u0645\u062f\u0644 Pooh \u0633\u0627\u06cc\u0632 \u0645\u062a\u0648\u0633\u0637",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1068087.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 211111242,
+          "selling_price": 1345000,
+          "rrp_price": 1345000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 160459
+      },
+      {
+        "id": 7701035,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0642\u0647\u0648\u0647 \u0627\u06cc \u062a\u06cc\u0631\u0647 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 202396,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1279850.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 192868311,
+          "selling_price": 945000,
+          "rrp_price": 945000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 119070
+      },
+      {
+        "id": 7701034,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0642\u0647\u0648\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 202396,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1279850.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 192868314,
+          "selling_price": 945000,
+          "rrp_price": 945000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 119070
+      },
+      {
+        "id": 7701036,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0642\u0647\u0648\u0647 \u0627\u06cc \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 202396,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u0648\u0644\u0632\u0644\u06cc \u0645\u062f\u0644 Teddy Bear \u0627\u0631\u062a\u0641\u0627\u0639 27 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1279850.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 192868307,
+          "selling_price": 945000,
+          "rrp_price": 945000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 119070
+      },
+      {
+        "id": 7844227,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0631\u0627\u0645\u06cc\u06a9\u06cc \u06af\u0627\u0644\u0631\u06cc \u062a\u0648\u062d\u06cc\u062f\u06cc \u0637\u0631\u062d \u067e\u06cc\u0627\u0632\u06cc | \u0633\u0628\u0632 \u0622\u0628\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 207522,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0631\u0627\u0645\u06cc\u06a9\u06cc \u06af\u0627\u0644\u0631\u06cc \u062a\u0648\u062d\u06cc\u062f\u06cc \u0637\u0631\u062d \u067e\u06cc\u0627\u0632\u06cc",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1657085.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 203209271,
+          "selling_price": 1000000,
+          "rrp_price": 1000000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 180000
+      },
+      {
+        "id": 7844228,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0631\u0627\u0645\u06cc\u06a9\u06cc \u06af\u0627\u0644\u0631\u06cc \u062a\u0648\u062d\u06cc\u062f\u06cc \u0637\u0631\u062d \u067e\u06cc\u0627\u0632\u06cc | \u0622\u0628\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 207522,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0631\u0627\u0645\u06cc\u06a9\u06cc \u06af\u0627\u0644\u0631\u06cc \u062a\u0648\u062d\u06cc\u062f\u06cc \u0637\u0631\u062d \u067e\u06cc\u0627\u0632\u06cc",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1657085.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 203209397,
+          "selling_price": 1000000,
+          "rrp_price": 1000000,
+          "discount": 0,
+          "order_limit": 5,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 180000
+      },
+      {
+        "id": 8285510,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0635\u0648\u0631\u062a\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260507,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/701750.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208223410,
+          "selling_price": 1195000,
+          "rrp_price": 1195000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 142564
+      },
+      {
+        "id": 8285504,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0632\u0631\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260507,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/701750.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208223329,
+          "selling_price": 1195000,
+          "rrp_price": 1195000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 142564
+      },
+      {
+        "id": 8285495,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0628\u0632 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260507,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/701750.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208223249,
+          "selling_price": 1195000,
+          "rrp_price": 1195000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 142564
+      },
+      {
+        "id": 8285513,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0628\u0646\u0641\u0634 \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260507,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 41.5 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/701750.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208223571,
+          "selling_price": 1195000,
+          "rrp_price": 1195000,
+          "discount": 0,
+          "order_limit": 11,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 142564
+      },
+      {
+        "id": 8285439,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0632\u0631\u062f | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260744,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/678208.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208222237,
+          "selling_price": 830000,
+          "rrp_price": 830000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 104580
+      },
+      {
+        "id": 8285456,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0628\u0646\u0641\u0634 \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260744,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/678208.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208222616,
+          "selling_price": 830000,
+          "rrp_price": 830000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 104580
+      },
+      {
+        "id": 8285447,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u0633\u0628\u0632 \u0631\u0648\u0634\u0646 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260744,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/678208.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208222398,
+          "selling_price": 830000,
+          "rrp_price": 830000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 104580
+      },
+      {
+        "id": 8285453,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631 | \u06cc\u0627\u0633\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 260744,
+          "category_id": 6042,
+          "title": "\u0639\u0631\u0648\u0633\u06a9 \u062a\u06cc\u0646\u06cc \u0648\u06cc\u0646\u06cc \u0645\u062f\u0644 Giraffe \u0627\u0631\u062a\u0641\u0627\u0639 25 \u0633\u0627\u0646\u062a\u06cc \u0645\u062a\u0631",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/678208.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0639\u0631\u0648\u0633\u06a9",
+          "category_name_en": "\u0639\u0631\u0648\u0633\u06a9",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 100,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 100
+        },
+        "price": {
+          "id": 208222516,
+          "selling_price": 830000,
+          "rrp_price": 830000,
+          "discount": 0,
+          "order_limit": 10,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 104580
+      },
+      {
+        "id": 6942037,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644   MPZ-C1200 Zoom | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 262837,
+          "category_id": 6030,
+          "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644   MPZ-C1200 Zoom",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/822247.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "category_name_en": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 1,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 1,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 1
+        },
+        "price": {
+          "id": 243899092,
+          "selling_price": 3480000,
+          "rrp_price": 3480000,
+          "discount": 0,
+          "order_limit": 30,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 415164
+      },
+      {
+        "id": 6941998,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644 Mp-B900 | \u0645\u0634\u06a9\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 262892,
+          "category_id": 6030,
+          "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644 Mp-B900",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/2737583.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "category_name_en": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 50,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 50
+        },
+        "price": {
+          "id": 164885371,
+          "selling_price": 2220000,
+          "rrp_price": 2220000,
+          "discount": 0,
+          "order_limit": 30,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 264846
+      },
+      {
+        "id": 6942008,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644 Mp-B900 | \u0646\u0642\u0631\u0647 \u0627\u06cc | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 262892,
+          "category_id": 6030,
+          "title": "\u0645\u06cc\u06a9\u0631\u0648\u0633\u06a9\u0648\u067e \u0645\u062f\u06cc\u06a9 \u0645\u062f\u0644 Mp-B900",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/2737583.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "category_name_en": "\u0628\u0627\u0632\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 50,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 50
+        },
+        "price": {
+          "id": 164885313,
+          "selling_price": 2220000,
+          "rrp_price": 2220000,
+          "discount": 0,
+          "order_limit": 30,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 264846
+      },
+      {
+        "id": 8371600,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06af\u0627\u0644\u0631\u06cc \u0635\u0644\u0635\u0627\u0644 \u0637\u0631\u062d \u0645\u06cc\u0646\u0627\u06a9\u0627\u0631\u06cc \u06a9\u062f 205 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 280956,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06af\u0627\u0644\u0631\u06cc \u0635\u0644\u0635\u0627\u0644 \u0637\u0631\u062d \u0645\u06cc\u0646\u0627\u06a9\u0627\u0631\u06cc \u06a9\u062f 205",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1873452.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 44,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 44
+        },
+        "price": {
+          "id": 210012748,
+          "selling_price": 2985000,
+          "rrp_price": 2985000,
+          "discount": 0,
+          "order_limit": 4,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 507450
+      },
+      {
+        "id": 8371502,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06af\u0627\u0644\u0631\u06cc \u0635\u0644\u0635\u0627\u0644 \u0637\u0631\u062d \u0645\u06cc\u0646\u0627\u06a9\u0627\u0631\u06cc \u06a9\u062f 224 | \u0686\u0646\u062f \u0631\u0646\u06af | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 290812,
+          "category_id": 6452,
+          "title": "\u06af\u0644\u062f\u0627\u0646 \u0633\u0641\u0627\u0644\u06cc \u06af\u0627\u0644\u0631\u06cc \u0635\u0644\u0635\u0627\u0644 \u0637\u0631\u062d \u0645\u06cc\u0646\u0627\u06a9\u0627\u0631\u06cc \u06a9\u062f 224",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/2139574.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "category_name_en": "\u0633\u0641\u0627\u0644\u060c \u0633\u0631\u0627\u0645\u06cc\u06a9 \u0648 \u0686\u06cc\u0646\u06cc",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": null,
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 44,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 44
+        },
+        "price": {
+          "id": 210010951,
+          "selling_price": 2980000,
+          "rrp_price": 2980000,
+          "discount": 0,
+          "order_limit": 4,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 506600
+      },
+      {
+        "id": 6785935,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0642\u0647\u0648\u0647 \u0639\u0644\u06cc \u06a9\u0627\u0641\u0647 \u0645\u062f\u0644 Sugar Free 4 in 1 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 317817,
+          "category_id": 8913,
+          "title": "\u0642\u0647\u0648\u0647 \u0639\u0644\u06cc \u06a9\u0627\u0641\u0647 \u0645\u062f\u0644 Sugar Free 4 in 1",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/644054.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0642\u0647\u0648\u0647 \u0641\u0648\u0631\u06cc \u0648 \u0647\u0627\u062a \u0686\u0627\u06a9\u0644\u062a",
+          "category_name_en": "Instant Coffee \u0026 Hot Chocolate",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": "5011",
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 156970519,
+          "selling_price": 1118000,
+          "rrp_price": 1118000,
+          "discount": 0,
+          "order_limit": 30,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 34882
+      },
+      {
+        "id": 6785907,
+        "seller_id": 205878,
+        "site": "digikala",
+        "is_active": false,
+        "is_archived": false,
+        "title": "\u0642\u0647\u0648\u0647 \u0639\u0644\u06cc \u06a9\u0627\u0641\u0647 \u0645\u062f\u0644 Gold 5 in 1 | \u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+        "product": {
+          "id": 317832,
+          "category_id": 8913,
+          "title": "\u0642\u0647\u0648\u0647 \u0639\u0644\u06cc \u06a9\u0627\u0641\u0647 \u0645\u062f\u0644 Gold 5 in 1",
+          "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/800668.jpg?x-oss-process=image\/resize,m_lfit,h_240,w_240\/quality,q_80",
+          "category_name_fa": "\u0642\u0647\u0648\u0647 \u0641\u0648\u0631\u06cc \u0648 \u0647\u0627\u062a \u0686\u0627\u06a9\u0644\u062a",
+          "category_name_en": "Instant Coffee \u0026 Hot Chocolate",
+          "moderation_status": "approved"
+        },
+        "shipping_type": "digikala",
+        "supplier_code": "5010",
+        "dk_lead_time": 2,
+        "sbs_lead_time": 0,
+        "stock": {
+          "seller_stock": 751,
+          "dk_stock": 0,
+          "seller_reserved_stock": 0,
+          "dk_reserved_stock": 0,
+          "selling_stock": 751
+        },
+        "price": {
+          "id": 156970467,
+          "selling_price": 698000,
+          "rrp_price": 698000,
+          "discount": 0,
+          "order_limit": 30,
+          "is_promotion_price": false,
+          "tags": []
+        },
+        "consignment_cap": null,
+        "fulfilment_and_delivery_cost": 26803
+      }
+    ],
+    "meta_data": []
+  }
+}
+
+//=========================================
+
+
+

@@ -1,0 +1,91 @@
+﻿@using  DataLayer
+@using  DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+
+@model User
+@{
+    ViewBag.Title = "";
+
+}
+
+@{
+    //UILayer.Views.BasePartialModel varBasePartialModel;
+    string message = ViewData["message"].ToString();
+}
+<script>
+     callbackActiveUser =( e) => {
+
+    }
+</script>
+    <div class="login_page_bg">
+        <div class="container">
+            <div class="customer_login">
+                <div class="row">
+                    <!--login area start-->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="account_form login">
+                            <h2>ورود</h2>
+                            <form enctype="multipart/form-data" id="userLoginFormId" method="post" asp-action="Login">
+                             @if (ViewBag.redirectUrl != null)
+                             {
+                                 <input name="redirectUrl" value="@ViewBag.redirectUrl" type="hidden" />
+                             }
+                                @if (message != null)
+                                {
+                                    <p>
+                                        <span style="color: red;" Id="ErrSp"> @message</span>
+                                    </p>
+                                }
+
+                                <p>
+                                    <label>شماره موبایل <span>*</span></label>
+                                    <input type="text" id="loginMobileId" dir="ltr" placeholder="0912XXXXXXX" name="mobile">
+                                </p>
+                                <p>
+                                    <label>رمز عبور <span>*</span></label>
+                                    <input type="password" dir="ltr" name="password">
+                                </p>
+                                <div class="login_submit">
+                                    <a asp-action="ForgetPasswordView">بازیابی کلمه عبور</a>
+                                    <label for="remember">
+                                        <input id="remember" type="checkbox">
+                                        به خاطر سپاری
+                                    </label>
+                                    <button  onclick="TSCheckMobileNum('loginMobileId','userLoginFormId')" type="button" >ورود</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--login area start-->
+                    <!--register area start-->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="account_form register">
+                            <h2>ثبت نام</h2>
+                            <form enctype="multipart/form-data" id="userRegisterFormId" method="post" asp-action="RegisterUser">
+                                @if (ViewBag.redirectUrl != null)
+                                {
+                                    <input name="redirectUrl" value="@ViewBag.redirectUrl" type="hidden" />
+                                }
+                                <p>
+                                    <label>شماره موبایل <span>*</span></label>
+                                    <input type="text" id="registerMobileId" dir="ltr" placeholder="0912XXXXXXX" name="mobile">
+                                </p>
+                                <p>
+                                    <label>رمز عبور <span>*</span></label>
+                                    <input type="password" dir="ltr" name="password">
+                                </p>
+                                <div class="login_submit">
+                                    @*To do بدون تایید<a asp-action="SendActivationCodeView">کد فعال سازی حساب کاربری را دریافت نکرده اید؟</a>*@
+                                    <button onclick="TSCheckMobileNum('registerMobileId','userRegisterFormId')"  type="button">ثبت نام</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--register area end-->
+                </div>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,149 @@
+﻿@using DataLayer
+@using DataLayer.EF
+
+@using Utility
+
+@using System
+
+@model Product
+@{
+    ViewBag.Title = Model.Name +  " قیمت "+ Model.Price.decimalToDigMony() + " | " +"فروشگاه ایزی";
+    Model.MetaDescription = Model.MetaDescription;
+    ViewBag.canonical = Url.Action("AEntityClient", "Product", new { nameForUrl= Model.NameForUrll }, "https");
+    ViewBag.MetaKeywords = Model.MetaDescription;
+    ViewBag.MetaImage =AppSetting.DomainName+ Model.Image.GetUrlListImgUI();
+    //  ViewBag.KeywordMeta = Model.WordKey;
+
+    //"";
+
+    AppSetting appSetting = new AppSetting();
+}
+@{
+    var informationProduct = Model.Discription.Split('\n');
+}
+
+@section Scripts {
+    <script type="text/javascript">
+
+            $(document).ready(function () {
+                var yektanetProduct=@Html.Raw(ViewBag.yektanetProduct);
+              var poms=@Html.Raw(ViewBag.allPromotionProductModels);
+                setArrPromotionProductModels(poms);
+                yektanet("product", "detail", yektanetProduct);
+        });
+    </script>
+}
+
+@try
+{
+    <div class="product_page_bg">
+        <div class="container">
+            <div class="product_details_wrapper mb-55">
+                <!--product details start-->
+                <div class="product_details">
+                    <div class="row">
+                        @Html.Partial("_SliderImageProduct", Model)
+                        <div class="col-lg-7 col-md-6">
+                            <div class="product_d_right">
+                                @Html.Partial("_AddItemsToCart", Model)
+                                <div class="priduct_social">
+                                    <ul>
+                                        <li><a class="whatsapp" href="https://web.whatsapp.com/send?text=@(Url.Action("AEntityClient", "Product", new { nameForUrl=Model.NameForUrll }, "https"))" target="_blank" title="whatsapp"><i class="fa fa-whatsapp"></i> اشتراک گذاری</a></li>
+                                        <li><a class="facebook" href="http://www.facebook.com/sharer.php?u=@(Url.Action("AEntityClient", "Product", new { nameForUrl=Model.NameForUrll}, "https"))" title="facebook"><i class="fa fa-facebook"></i> لایک</a></li>
+                                        <li><a class="twitter" href="https://twitter.com/intent/tweet?url=@(Url.Action("AEntityClient", "Product", new { nameForUrl=Model.NameForUrll}, "https"))" title="twitter"><i class="fa fa-twitter"></i> توییت</a></li>
+                                        <li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url=@(Url.Action("AEntityClient", "Product", new { nameForUrl=Model.NameForUrll , description=Model.ShippingDiscription}, "https"))" title="pinterest"><i class="fa fa-pinterest"></i> ذخیره</a></li>
+                                        <li><a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=@(Url.Action("AEntityClient", "Product", new { nameForUrl=Model.NameForUrll ,title=Model.Name, summary=Model.ShippingDiscription}, "https"))" title="linkedin"><i class="fa fa-linkedin"></i> لینکدین</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--product details end-->
+                <!--product info start-->
+                <div class="product_d_info">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="product_d_inner">
+                                <div class="product_info_button">
+                                    <ul class="nav" role="tablist">
+                                        <li>
+                                            <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">نقد و برررسی</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">مشخصات فنی</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">نظرات و سوالات (@Model.Comment.Count(c=>c.Active==true))</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+
+                                    <div class="tab-pane fade show active" id="info" role="tabpanel">
+                                        <div class="product_info_content">
+                                            @foreach (var desc in Model.Discription.Split("\n"))
+                                            {
+                                                <p>@desc</p>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="sheet" role="tabpanel">
+                                        <div class="product_d_table">
+                                            <form action="#">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="first_child">وزن کالا </td>
+                                                            <td>@Model.WightUnitBuyWithKg  گرم</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="first_child">ابعاد کالا (طول*عرض*ارتفاع) </td>
+                                                            <td>@Model.Dimansion  سانتی متر</td>
+                                                        </tr>
+                                                        @foreach (var bpc in Model.BrigeProductCategories.Where(b => !string.IsNullOrEmpty(b.value)))
+                                                        {
+                                                            <tr>
+                                                                <td class="first_child">@bpc.CategoryProperty.Name</td>
+                                                                <td>@bpc.value</td>
+                                                            </tr>
+                                                        }
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </div>
+                                        <div class="product_info_content">
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    @Html.Partial("_Comment", Model)
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--product info end-->
+                </div>
+            </div>
+            <!--product area start-->
+            @Html.Partial("_RelatedProducts")
+            <!--product area end-->
+            <!--product area start-->
+            @Html.Partial("_BestSellers")
+            <!--product area end-->
+        </div>
+    </div>
+}
+catch (Exception ex)
+{
+
+    throw;
+}
+
+

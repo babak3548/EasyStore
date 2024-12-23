@@ -1,0 +1,19 @@
+﻿@using UILayer.Views
+@using DataLayer.EF
+
+@model IEnumerable<Category>
+
+@{
+    var catMain = Model.Select(p => new SelectListItem { Text = p.Name, Value = p.Id.ToString() });
+}
+@{
+    @*  @Html.Label("گروه فرعی")*@
+    @(Html.DropDownList("FK_Category", catMain, "لطفا یکی از گزینه های زیر را انتخاب نمایید", new
+      {
+          id = "FK_Category",
+          onblur = JavaScript.drdValidation("FK_Category"),
+
+      }))
+    <br />
+
+}

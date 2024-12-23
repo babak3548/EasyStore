@@ -1,0 +1,124 @@
+﻿@using DataLayer.EF
+@using DataLayer.Models
+@using DataLayer.Enums
+@using System.Linq
+@using System.Collections.Generic;
+@using UILayer.Miscellaneous
+@using Utility
+@model Content
+@{
+    var list = (List<Content>)ViewBag.contents;
+    ViewBag.Title= Model.Name;
+}
+@*<p>توسط  <a href="@Url.Action("ListByContentType","Content", new { contentType = item.ContentType })">@item.Writer</a> در تاریخ
+    <a href="#">@item.UpdateDate.ToPersianDateWithMonthName()*@</a></p>
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li>جزئیات مطلب بلاگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--blog body area start-->
+<div class="blog_bg_area">
+    <div class="container">
+        <div class="blog_page_section">
+            <div class="row">
+                <div class="col-lg-9 col-md-12">
+                    <!--blog grid area start-->
+                    @Html.Raw(Model.ShowValue)
+
+                    <!--blog grid area start-->
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="blog_sidebar_widget">
+                        <div class="widget_list widget_search">
+                            <div class="widget_title">
+                                <h3>جستجو</h3>
+                            </div>
+                            <form asp-action="SearchContent">
+                                <input name="searchValue" placeholder="جستجو ..." type="text">
+                                <button type="submit">جستجو</button>
+                            </form>
+                        </div>
+                        <div class="widget_list comments">
+                            <div class="widget_title">
+                                <h3>دیدگاه‌های جدید</h3>
+                            </div>
+                            @foreach (var item in list.OrderByDescending(o => o.RegisterDate).Take(4))
+                            {
+                                <div class="post_wrapper">
+                                    <div class="post_thumb">
+                                        <a href="blog-details.html"><img src="@item.BanerImageAdress.GetOtherFilePath()" alt=""></a>
+                                    </div>
+                                    <div class="post_info">
+                                        <span> <a href="#">@item.Writer</a> می‌گوید:</span>
+                                        <a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })">@item.Name</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="widget_list widget_post">
+                            <div class="widget_title">
+                                <h3>مطالب اخیر</h3>
+                            </div>
+                            @foreach (var item in list.OrderByDescending(o => o.ContentType == ContentTypes.Multimedia).Take(4))
+                            {
+
+                                <div class="post_wrapper">
+                                    <div class="post_thumb">
+                                        <a href="blog-details.html"><img src="@item.BanerImageAdress.GetOtherFilePath()" alt=""></a>
+                                    </div>
+                                    <div class="post_info">
+                                        <h4><a href="@Url.Action("Showcontent",new {contentId=item.Id, title=item.Name.Replace(' ','-') })"> @item.Name</a></h4>
+                                        <span>@item.UpdateDate.ToPersianDateWithMonthName() </span>
+                                    </div>
+                                </div>
+                            }
+
+
+                        </div>
+                        <div class="widget_list widget_categories">
+                            <div class="widget_title">
+                                <h3>دسته ها</h3>
+                            </div>
+                            <ul>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.Sismoni })">سیسمونی</a></li>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.DollPolish })">عروسکی</a></li>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.News })">خبرها</a></li>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.Multimedia })">صوتی تصویری</a></li>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.BottomHomePage })">مطالب صفحه اول</a></li>
+                                <li><a href="@Url.Action("ListByContentType","Content", new { contentType =(int)ContentTypes.Other })">سایر</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget_list widget_tag">
+                            <div class="widget_title">
+                                <h3>برچسب های محصولات</h3>
+                            </div>
+                            <div class="tag_widget">
+                                <ul>
+                                    <li><a href="@Url.Action("SearchContent","Content", new { searchValue ="عروسک پولیشی" })">عروسک</a></li>
+                                    <li><a href="@Url.Action("SearchContent","Content", new { searchValue ="بازگشت کالا" })"> بازگشت کالا</a></li>
+                                    <li><a href="@Url.Action("SearchContent","Content", new { searchValue ="نحوه ثبت سفارش" })">روش ارسال</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--blog section area end-->

@@ -1,0 +1,28 @@
+﻿@using DataLayer.Contract;
+@using DataLayer.Enums;
+@using UILayer.Miscellaneous;
+@using DataLayer.EF
+@model UILayer.Miscellaneous.ModelRow
+@*این ویو نهایتن باید در فولدر شییر قرار گیرد تا بتوان از
+    تمام کنترولر های مشتق شده قابل دسترس باشد*@
+@{
+    ViewBag.Title = ViewData["ControlerName"];
+    Layout = "_Layout.cshtml";
+}
+<div id='@(ScenarioOrViewName.AdminView)'>
+
+    <h2>@ViewBag.Title</h2>
+    @{
+        // UIUtility.ViewName = ScenarioOrViewName.AdminView;
+        if (Model.PartialViewName == "ShowContent")
+        { @Html.Partial("Propaganda", ((IEnumerable<ContentContract>)ViewData["ShowContent"]).ToList())}
+    else if (Model.PartialViewName == "Products")
+    { @Html.Partial("Products", Model)}
+else if (Model.PartialViewName == "AProduct")
+{ @Html.Partial("AProduct", Model)}
+else
+{ @Html.Partial("Grid", Model)}
+    }
+
+</div>
+

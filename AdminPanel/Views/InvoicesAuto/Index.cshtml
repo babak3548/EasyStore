@@ -1,0 +1,231 @@
+﻿@model IEnumerable<DataLayer.EF.Invoice>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegisterDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SendingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProcessingDays)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalSumProductPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentToCountinue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingCost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Discount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RejectedCost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoteForBusinessOwner)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoteForUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeBankPayInfo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentBankCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TransctionRefrenceId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TracingShippingNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingCompany)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommentForBusinessman)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HistoryStateAndDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryCityName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryPostCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryTel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryMobile)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryCompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkBusinessOwnerNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkMarketerNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkProvinceNavigation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FkUserNavigation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UpdateDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SendingDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProcessingDays)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalSumProductPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentToCountinue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippingCost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Discount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RejectedCost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoteForBusinessOwner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoteForUser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeBankPayInfo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentBankCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TransctionRefrenceId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TracingShippingNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippingCompany)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CommentForBusinessman)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HistoryStateAndDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryCityName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryLastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryPostCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryTel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryMobile)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryCompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkBusinessOwnerNavigation.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkMarketerNavigation.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkProvinceNavigation.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FkUserNavigation.Mobile)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

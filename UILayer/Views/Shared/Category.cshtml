@@ -1,0 +1,58 @@
+﻿@using UILayer.Controllers
+@using ServiceLayer
+@using UILayer.Miscellaneous
+@using DataLayer.Enums
+@using UILayer.Models
+@using DataLayer.EF
+@{
+
+   // CategoryService categoryService = new CategoryService(ViewBag.OnlineShopping);
+}
+
+<div class="categories_menu categories_three">
+    <div class="categories_title">
+        <h2 class="categori_toggle">دسته بندی ها</h2>
+    </div>
+    <div class="categories_menu_toggle">
+        <ul>
+            @{foreach (var category in CategoryService.categoryList.Where(c => c.FK_Category == 2))
+                {
+                    var subCategory = CategoryService.categoryList.Where(s => s.FK_Category == category.Id);
+                    if (subCategory.Count() > 0 && category.Id != 2)
+
+                    {
+                        <li class="menu_item_children">
+                            <a href="@Url.Action("Index", "Home", new
+                                {
+                                    category = category.Discription,
+                                 }, "https")"> @category.Name  <i class="fa fa-angle-left"></i></a>
+                                <ul class="categories_mega_menu">
+                                    @foreach (var subCat in subCategory)
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("Index", "Home", new
+                                                    {
+                                                        category = category.Discription,
+                                                      
+                                                    }, "https")">@subCat.Name </a>
+                                                </li>
+                                            }
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="@Url.Action("Index", "Home", new
+                                        {
+                                             category = category.Discription
+                                            
+                                        }, "https")"> @category.Name</a>
+                                    </li>
+                                }
+                            }
+            }
+
+        </ul>
+    </div>
+</div>

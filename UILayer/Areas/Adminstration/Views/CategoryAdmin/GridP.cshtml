@@ -1,0 +1,35 @@
+﻿@using DataLayer.EF
+@using DataLayer.EF
+@using Utility
+@using UILayer.Views
+
+@model IEnumerable<Category>
+@{
+    int iRow = 1;
+    var ajaxOption = new AjaxOption { LoadingElementId = "capImg", UpdateTargetId = "Row" };
+}
+<table class="TableCss">
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+        <th> ویرایش </th>
+        <th>  حذف</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Discription</th>
+        <th>FK_Category</th>
+        <th>Ids_Parent</th>
+    </tr>
+    @foreach (var entity in Model)
+    {
+        <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td>@Ajax.ActionLink("ویرایش",Url.Action( "EditView", "CategoryAdmin", new { area = "Adminstration", Id = entity.Id }), ajaxOption, null)</td>
+            <td>@Html.ActionLink("حذف", "Delete", "CategoryAdmin", new { area = "Adminstration", Id = entity.Id }, null)         </td>
+            <td align="center">  @entity.Id  </td>
+            <td align="center">  @entity.Name  </td>
+            <td align="center">  @entity.Discription  </td>
+            <td align="center">  @entity.FkCategory  </td>
+            <td align="center">  @entity.IdsParent  </td>
+        </tr>
+        iRow++;
+    }
+</table>
+@Ajax.ActionLink("اضافه کردن",Url.Action( "RegisterView", "CategoryAdmin", new { area = "Adminstration" }), ajaxOption, null)

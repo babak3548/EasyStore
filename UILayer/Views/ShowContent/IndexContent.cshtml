@@ -1,0 +1,26 @@
+﻿@using DataLayer.Contract
+@using DataLayer.Enums
+@using UILayer.Miscellaneous 
+@model ModelShowContent
+@*این ویو نهایتن باید در فولدر شییر قرار گیرد تا بتوان از
+تمام کنترولر های مشتق شده قابل دسترس باشد*@
+@{
+    ViewBag.Title = ViewData["ControlerName"];
+    Layout = "~/Areas/Adminstration/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div id="UserView">
+    <div id="DivCategory">
+            <p>
+                @Html.Partial("Propaganda", Model.CategoryContent)
+            </p>
+    </div>
+    <div id="DivContent" dir="rtl">
+      @Html.Partial("Header2")
+            <p>
+                @Html.Partial("Propaganda", Model.CenterContent)
+            </p>
+
+    </div>
+
+</div>

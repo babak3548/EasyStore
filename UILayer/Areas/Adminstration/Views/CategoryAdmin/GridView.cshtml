@@ -1,0 +1,23 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@model IEnumerable< Category>
+@{
+    ViewBag.Title = "GridView";
+    Layout = "~/Areas/Adminstration/Views/Shared/_Layout.cshtml";
+}
+    @{
+    int iRow = 1;
+   
+    
+}
+
+
+<div id="Search" class="divSearch">
+@Html.Partial("search")
+</div>
+<div id="Grid"  class="divGrid">
+@Html.Partial("GridP",Model)
+</div>
+<div id="Row"  class="divRow"></div>

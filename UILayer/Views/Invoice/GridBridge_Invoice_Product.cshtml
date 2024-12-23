@@ -1,0 +1,38 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using DataLayer.EF
+@model IEnumerable<BridgeInvoiceProduct>
+
+@{
+    int iRow = 1;
+    var ModelInList = Model.ToList();
+
+}
+<table class="TableCss">
+
+    <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+
+        <th>  ویرایش </th>
+        <th>  حذف</th>
+        <th>  نام محصول</th>
+        <th>  قیمت</th>
+        <th>  تعداد برحسب واحد فروش</th>
+        <th>  مبلغ</th>
+
+
+    </tr>
+    @foreach (var contract in ModelInList)
+    {
+        <tr class="@(UILayer.Miscellaneous.UIUtility.CssFardRow(iRow))">
+            <td>@Html.ActionLink("ویرایش", "EditView", "Bridge_Invoice_Product", new { Id = contract.Id }, null)</td>
+            <td>  @Html.ActionLink("حذف", "Delete", "Bridge_Invoice_Product", new { Id = contract.Id }, null)</td>
+            <td align="center">@contract.FkProductNavigation.Name  </td>
+            <td align="center">  @contract.FkProductNavigation.Price  </td>
+            <td align="center">  @contract.Count  </td>
+            <td align="center">  @(contract.FkProductNavigation.Price * contract.Count)  </td>
+        </tr>
+        iRow++;
+    }
+</table>

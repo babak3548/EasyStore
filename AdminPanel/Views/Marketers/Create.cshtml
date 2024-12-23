@@ -1,0 +1,89 @@
+﻿@model DataLayer.EF.Marketer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4>ایجاد بازاریاب</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Specialty" class="control-label"></label>
+                <input asp-for="Specialty" class="form-control" />
+                <span asp-validation-for="Specialty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WordKey" class="control-label"></label>
+                <input asp-for="WordKey" class="form-control" />
+                <span asp-validation-for="WordKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkUser" class="control-label"></label>
+                <select asp-for="FkUser" class ="form-control" asp-items="ViewBag.FkUser"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkMarketer" class="control-label"></label>
+                <select asp-for="FkMarketer" class ="form-control" asp-items="ViewBag.FkMarketer"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebSiteAddress" class="control-label"></label>
+                <input asp-for="WebSiteAddress" class="form-control" />
+                <span asp-validation-for="WebSiteAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tel" class="control-label"></label>
+                <input asp-for="Tel" class="form-control" />
+                <span asp-validation-for="Tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Active" class="control-label"></label>
+                <input asp-for="Active" class="form-control" />
+                <span asp-validation-for="Active" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yahoo" class="control-label"></label>
+                <input asp-for="Yahoo" class="form-control" />
+                <span asp-validation-for="Yahoo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gmail" class="control-label"></label>
+                <input asp-for="Gmail" class="form-control" />
+                <span asp-validation-for="Gmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Skype" class="control-label"></label>
+                <input asp-for="Skype" class="form-control" />
+                <span asp-validation-for="Skype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentPorsantAmount" class="control-label"></label>
+                <input asp-for="PaymentPorsantAmount" class="form-control" />
+                <span asp-validation-for="PaymentPorsantAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ذخیره" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">نمایش لیست بازاریاب ها</a>
+</div>
+

@@ -1,0 +1,47 @@
+﻿<style>
+    #hed3 {
+        border: solid 1px #E7E0E0;
+        float: right;
+        width: 100%;
+        background-color: white;
+    }
+
+    .H3divE {
+        border-top: solid 1px #808080;
+        border-bottom: solid 1px #808080;
+        height: 200px;
+        float: right;
+    }
+
+    .H3div1 {
+        width: 150px;
+    }
+
+    .H3div2 {
+        width: 69.5%;
+    }
+</style>
+@{if(ViewData["Head3Date"] != null){
+<div id="hed3">
+    <div id="logo" class="H3divE H3div1">
+        <a href="@Url.Action("ClientGrid", "Product", null, "https")" style="margin-top:20px; float:right;">
+            <img alt="فروشگاه ایزی" src="~/Images/logoHieght.png" style="width: 150px; margin-top: 25px;" />
+        </a>
+    </div>
+    <div id="slidDv" class="H3divE H3div2">
+        @Html.Partial("sliderHead")
+    </div>
+    <div id="namad" class="H3divE H3div1">
+        @if (DataLayer.AppSetting.EnamadLink == "shobe")
+        {
+            <a rel="origin" target="_blank" href="https://trustseal.enamad.ir/?id=26854&amp;Code=Gw3DZp2oNYG9KlrXXCJX"><img src="https://Trustseal.eNamad.ir/logo.aspx?id=26854&amp;Code=Gw3DZp2oNYG9KlrXXCJX" alt="" style="cursor:pointer" id="Gw3DZp2oNYG9KlrXXCJX"></a>
+        }
+        else
+        {
+           <a></a>
+        }
+
+    </div>
+</div>
+}
+}

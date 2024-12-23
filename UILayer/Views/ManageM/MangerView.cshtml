@@ -1,0 +1,20 @@
+﻿@using DataLayer.EF
+@using DataLayer.Enums
+@using UILayer.Miscellaneous
+@using UILayer.Views
+@using UILayer.Models
+@using DataLayer.EF
+@model MangerModel
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutUser2.cshtml";
+
+}
+<link href=" @Url.Content("~/Content/style/Manager.css")" rel="stylesheet" type="text/css" />
+<script src="https://apis.google.com/js/client.js"></script>
+<script src="@Url.Content("~/Scripts/Manager.js")" type="text/javascript"></script>
+<link href=" @Url.Content("~/Content/CLeditor/jquery.cleditor.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.cleditor.min.js")" type="text/javascript"></script>
+<div id="hedMng"></div>
+<div id="rghMng">@Html.Partial(Model.MenuPartialName)</div>
+<div id="bdyMng">@Html.Partial(Model.BodyPartialName)</div>

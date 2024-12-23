@@ -1,0 +1,42 @@
+﻿
+ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin-right: 0;
+}
+#nav li
+{
+    float: right;
+    position: relative;
+    z-index: 15;
+    width:20%;
+}
+#nav  li li, #nav li ul
+{
+width:100%;
+}
+
+#nav ul
+{
+    display: none;
+    position:absolute;
+}
+#nav a
+{
+    background: #B0BFB7;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #999;
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+    
+}
+#nav *
+{
+    
+
+}

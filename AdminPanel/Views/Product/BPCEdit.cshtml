@@ -1,0 +1,24 @@
+﻿@model DataLayer.EF.BrigeProductCategoryProperty
+<hr />
+<form asp-action="EditBPC">
+    <div class="row">
+        <input type="hidden" asp-for="FkCategoryProperty" class="form-control" />
+        <input type="hidden" asp-for="FkProduct" class="form-control" />
+        <input name="pageIndex" value="@ViewBag.pageIndex" type="hidden" class="form-control" />
+        <div class="col-3">
+            <label class="control-label">@Model.CategoryProperty.Name</label>
+        </div>
+        <div class="col-3">
+            <input readonly class="form-control" value="@Model.value" />
+        </div>
+        <div class="col-3">
+            <input asp-for="value" class="form-control" />
+        </div>
+        <div class="col-3">
+            <input type="submit" value="ذخیره" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+
+
+

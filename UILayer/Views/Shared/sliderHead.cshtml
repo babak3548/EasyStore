@@ -1,0 +1,133 @@
+﻿<script type="text/javascript">
+    var flagHoverMouse = false;
+    $(document).ready(function () {
+        $('.sp').first().addClass('activeSl');
+        $('.sp').hide();
+        $('.activeSl').show();
+
+        $("#button-next").hide();
+        $("#button-previous").hide();
+
+        $('#button-next').click(function () {
+            NextSl();
+        });
+
+        $('#button-previous').click(function () {
+            PrevSl();
+        });
+
+        $('#slider,.btnSl').hover(function () {
+            flagHoverMouse = true;
+            $("#button-next").show();
+            $("#button-previous").show();
+        }, function () {
+            flagHoverMouse = false;
+            $("#button-next").hide();
+            $("#button-previous").hide();
+        });
+    });
+
+    setInterval('NextSlIf()', 10000);
+    function NextSlIf() {
+        if (flagHoverMouse == false) {
+            NextSl();
+        }
+    }
+    function NextSl() {
+        $('.activeSl').removeClass('activeSl').addClass('oldactiveSl');
+        if ($('.oldactiveSl').is(':last-child')) {
+            $('.sp').first().addClass('activeSl');
+        }
+        else {
+            $('.oldactiveSl').next().addClass('activeSl');
+        }
+        $('.oldactiveSl').removeClass('oldactiveSl');
+        $('.sp').fadeOut("slow");
+        $('.activeSl').fadeIn("slow");
+    }
+
+    function PrevSl() {
+        $('.activeSl').removeClass('activeSl').addClass('oldactiveSl');
+        if ($('.oldactiveSl').is(':first-child')) {
+            $('.sp').last().addClass('activeSl');
+        }
+        else {
+            $('.oldactiveSl').prev().addClass('activeSl');
+        }
+        $('.oldactiveSl').removeClass('oldactiveSl');
+        $('.sp').fadeOut("slow");
+        $('.activeSl').fadeIn("slow");
+    }
+</script>
+
+<style type="text/css">
+    #slider {
+        height: 200px;
+        position: relative;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .sp {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+    }
+
+    #navSl {
+        margin-top: 2px;
+        width: 100%;
+    }
+
+    #button-previous {
+        float: left;
+        background-position: -270px -192px;
+    }
+
+    #button-next {
+        float: right;
+        background-position: -320px -192px;
+    }
+
+    .btnSl {
+        margin-top: -130px;
+        position: relative;
+        margin-right: 37px;
+        margin-left: 37px;
+    }
+
+    .iconbig {
+        padding: 5px;
+        padding-left: 45px;
+        padding-bottom: 44px;
+        background-image: url('../../Images/icons24.png');
+        background-repeat: no-repeat;
+    }
+
+    .imgSl {
+        width: 100%;
+        max-height: 200px;
+    }
+</style>
+<div id="slider">
+    <div class="sp">
+        <a href="/ShowContent/AEntity/35?shopping=شعبه-فروش-حمایت-از-خریداران">
+            <img class="imgSl" alt="فروشگاه ایزی حمایت از خریداران" src="~/Images/slider1.jpg" />
+        </a>
+    </div>
+    <div class="sp">
+        <a href="/ShowContent/AEntity/100?shopping=ایجاد-فروشگاه-آنلاین-و-انواع-روشهای-فروش-و-پرداخت">
+            <img class="imgSl" alt="انواع روشهای فروش و پرداخت" src="~/Images/slider2.jpg" />
+        </a>
+    </div>
+    <div class="sp">
+       <a href="/ShowContent/AEntity/98?shopping=ایجاد-فروشگاه-اینترنتی-رایگان">
+            <img class="imgSl" alt="ایجاد فروشگاه اینترنتی رایگان" src="~/Images/slider3.jpg" />
+        </a>
+    </div>
+</div>
+
+
+<div id="navSl"></div>
+<div id="button-previous" class="btnSl iconbig"></div>
+<div id="button-next" class="btnSl iconbig"></div>

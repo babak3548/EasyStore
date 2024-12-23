@@ -1,0 +1,377 @@
+﻿@model DataLayer.EF.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var multiColorVal = Model.AvailableColors != null && Model.AvailableColors.Contains("#mmm") ? true :  false;
+    Model.AvailableColors = Model.AvailableColors != null ? Model.AvailableColors.Replace(",#mmm",""):"";
+
+  List<string> imgs=! string.IsNullOrWhiteSpace(Model.Image2)? Model.Image2.Split(",").ToList() : new List<string>();
+}
+<h3>@(Model.Id <= 0 ? "ثبت محصول جدید" : "ویرایش محصول")</h3>
+<hr />
+
+<form enctype="multipart/form-data" method="post" asp-action="Item">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="hidden" asp-for="Id" />
+            <input asp-for="Image" type="hidden" class="form-control" />
+            <input asp-for="Image1" type="hidden" class="form-control" />
+            <input asp-for="Image2" type="hidden" class="form-control" />
+            <input asp-for="Image3" type="hidden" class="form-control" />
+            <input asp-for="Image4" type="hidden" class="form-control" />
+            <input asp-for="UpdateDate" type="hidden" class="form-control" />
+            <input asp-for="AddDate" type="hidden" class="form-control" />
+
+            <input name="pageIndex" value="@ViewBag.pageIndex" type="hidden" class="form-control" />
+
+            <div class="form-group">
+                <label asp-for="NameForUrll" class="control-label"></label>
+                 <input name="NameForUrll" @(Model.Id <= 0 ? "" : "disabled")   value="@Model.NameForUrll" class="form-control" />
+                <span asp-validation-for="NameForUrll" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="Available" class="control-label"></label>
+                <input asp-for="Available" class="form-control" />
+                <span asp-validation-for="Available" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> چند رنگ</label>
+                <input name="multiColore" type="checkbox" checked="@multiColorVal" value="1" class="form-check" />
+            </div>
+            <div class="form-group">
+                <label asp-for="AvailableColors" class="control-label"></label>
+                <input type="hidden" asp-for="AvailableColors" class="form-control" />
+                <span asp-validation-for="AvailableColors" class="text-danger"></span>
+                <div id="availableColorContainer">
+
+                </div>
+                <fieldset>
+                    <div class="input-group">
+                        <input type="color" class="form-control" id="selectedColorInput">
+                        <div class="input-group-append" id="button-addon2">
+                            <button class="btn btn-primary" type="button" onclick='(() =>addColor($("#selectedColorInput").val()))( )'>اضافه کردن</button>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AcceptReturnDay" class="control-label"></label>
+                <input asp-for="AcceptReturnDay" class="form-control" />
+                <span asp-validation-for="AcceptReturnDay" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="WightUnitBuyWithKg" class="control-label"></label>
+                <input asp-for="WightUnitBuyWithKg" class="form-control" />
+                <span asp-validation-for="WightUnitBuyWithKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dimansion" class="control-label"></label>
+                <input asp-for="Dimansion" class="form-control" />
+                <span asp-validation-for="Dimansion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxShippingDay" class="control-label"></label>
+                <input asp-for="MaxShippingDay" class="form-control" />
+                <span asp-validation-for="MaxShippingDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinShippingDay" class="control-label"></label>
+                <input asp-for="MinShippingDay" class="form-control" />
+                <span asp-validation-for="MinShippingDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShippingDiscription" class="control-label"></label>
+                <textarea asp-for="ShippingDiscription" class="form-control"></textarea>
+                <span asp-validation-for="ShippingDiscription" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WordKey" class="control-label"></label>
+                <textarea name="WordKey" class="form-control" rows="5">@Model.WordKey</textarea>
+                <span asp-validation-for="WordKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserStar" class="control-label"></label>
+                <input asp-for="UserStar" class="form-control" />
+                <span asp-validation-for="UserStar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedStar" class="control-label"></label>
+                <input readonly asp-for="CalculatedStar" class="form-control" />
+                <span asp-validation-for="CalculatedStar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterDate" class="control-label"></label>
+                <input readonly asp-for="RegisterDate" class="form-control" />
+                <span asp-validation-for="RegisterDate" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <br />
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="BuyPrice" class="control-label"></label>
+                <input asp-for="BuyPrice" class="form-control" />
+                <span asp-validation-for="BuyPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeforDiscountPrice" class="control-label"></label>
+                <input asp-for="BeforDiscountPrice" class="form-control" />
+                <span asp-validation-for="BeforDiscountPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountPrice" class="control-label"></label>
+                <input asp-for="CountPrice" class="form-control" />
+                <span asp-validation-for="CountPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinCountForPrice" class="control-label"></label>
+                <input asp-for="MinCountForPrice" class="form-control" />
+                <span asp-validation-for="MinCountForPrice" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaDescription" class="control-label"></label>
+                <textarea name="MetaDescription" class="form-control" rows="5">@Model.MetaDescription</textarea>
+                <span asp-validation-for="MetaDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VideoUrl" class="control-label"></label>
+                <input asp-for="VideoUrl" class="form-control" />
+                <span asp-validation-for="VideoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkCategory" class="control-label"></label>
+                <select asp-for="FkCategory" class="form-control" asp-items="ViewBag.FkCategory"></select>
+                <span asp-validation-for="FkCategory" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MadeInCountry" class="control-label"></label>
+                <input asp-for="MadeInCountry" class="form-control" />
+                <span asp-validation-for="MadeInCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FkBusinessOwner" class="control-label"></label>
+                <select asp-for="FkBusinessOwner" class="form-control" asp-items="ViewBag.FkBusinessOwner"></select>
+                <span asp-validation-for="FkBusinessOwner" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RankShow" class="control-label"></label>
+                <input asp-for="RankShow" class="form-control" />
+                <span asp-validation-for="RankShow" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="UnitBuy" class="control-label"></label>
+                <input asp-for="UnitBuy" class="form-control" />
+                <span asp-validation-for="UnitBuy" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FkContent" class="control-label"></label>
+                <select asp-for="FkContent" class="form-control" asp-items="ViewBag.FkContent"></select>
+                <span asp-validation-for="FkContent" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RankSelling" class="control-label"></label>
+                <input @(Model.Id > 0 ? "readonly" : "" ) asp-for="RankSelling" class="form-control" />
+                <span asp-validation-for="RankSelling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersentMarkater" class="control-label"></label>
+                <input readonly asp-for="PersentMarkater" class="form-control" />
+                <span asp-validation-for="PersentMarkater" class="text-danger"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="form-group col-12">
+            <label asp-for="Discription" class="control-label"></label>
+            <textarea name="Discription" class="form-control" rows="8">@Model.Discription</textarea>
+            <span asp-validation-for="Discription" class="text-danger"></span>
+        </div>
+    </div>
+    <div id="imgArea" class="row">
+        <input type="submit" value="ذخیره" class="btn btn-primary" />
+        <a href="@Url.Action("Index",new {  pageIndex = ViewBag.pageIndex})" class="btn btn-info mx-3">مشاهده لیست</a>
+    </div>
+</form>
+
+@if (Model.Id > 0)
+{
+    <div id="propCat">
+        <br />
+        <h3>ویژگی های کالا</h3>
+
+        @foreach (var item in (List<BrigeProductCategoryProperty>)ViewBag.BPCList)
+        {
+            @Html.Partial("BPCEdit", (BrigeProductCategoryProperty)item)
+        }
+    </div>
+}
+
+
+
+@if (Model.Id > 0)
+{
+    <br />
+    <h3>عکس های کالا</h3>
+    <div>طول و عرض عکس باید یکسان باشد و حداقل حجم 100 کیلو و حداکثر 300 مگا بایت باشد در غیر این صورت عکس ذخیره نمی شود</div>
+    <hr />
+
+    <div class="row">
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/Product/UploadFile">
+                <img style="width: 100px;height:100px" src="@Model.Image.GetUrlListImg()" />
+                <label asp-for="Image" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="Image" />
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/Product/UploadFile">
+                <img style="width: 100px;height:100px" src="@Model.Image1.GetUrlListImg()" />
+                <label asp-for="Image1" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="Image1" />
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <form method="post" enctype="multipart/form-data" action="/Product/UploadFile">
+                @foreach (var item in imgs)
+                {
+                    if (!string.IsNullOrWhiteSpace(item))
+                    {
+                        <img style="width: 100px;height:100px" src="@item.GetUrlListImg()" />
+                        <a asp-action="DeleteImage" asp-route-id="@item" asp-route-productId="@Model.Id" class="btn btn-primary"> حذف</a> 
+                    }
+                }
+
+                <label asp-for="Image2" class="control-label"></label>
+                <input type="file" name="files" multiple />
+                <input type="hidden" name="inputFileName" value="Image2" />
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <input type="submit" value="ارسال فایل" class="btn btn-primary" />
+            </form>
+        </div>
+
+
+    </div>
+
+}
+
+
+
+
+@section Script{
+    <script>
+        $(document).ready(function () {
+            prepareColors();
+        });
+
+        function prepareColors() {
+            $("#availableColorContainer").append('<i class="noColorSelectedInfoText">رنگی انتخاب نشده است.</i>');
+            var colors = $('#AvailableColors').val().split(',');
+            colors.forEach(a => {
+                addTemplate(a);
+            })
+        }
+        function removeColor(e, color) {
+            var colors = $('#AvailableColors').val().split(',');
+            const index = colors.indexOf(color);
+            if (index > -1) {
+
+                colors.splice(index, 1);
+                $('#AvailableColors').val(colors.join(','))
+                $(e).closest('.chip').remove();
+
+                if (colors.length == 0) {
+                    $("#availableColorContainer").append('<i class="noColorSelectedInfoText">رنگی انتخاب نشده است.</i>');
+                }
+            }
+
+
+        }
+        function addColor(color) {
+
+            if (color) {
+                var colors = $('#AvailableColors').val().split(',');
+                colors = colors.filter(a => a != "");
+                if (colors.indexOf(color) > -1) {
+                    alert("رنگ قبلا انتخاب شده است.");
+                    return;
+                }
+                colors.push(color);
+                $('#AvailableColors').val(colors.join(','))
+                addTemplate(color);
+            }
+        }
+        function addTemplate(color) {
+            if (color) {
+
+                if ($('.noColorSelectedInfoText')) {
+                    $('.noColorSelectedInfoText').remove();
+                }
+                var str = `<div class="chip mr-1" style="background-color:${color}">
+                                                                                                        <div class="chip-body">
+                                                                                                        <span class="chip-text"></span>
+                                                                                                        <div class="chip-closeable">
+                                                                                                        <i class="bx bx-x" onclick='removeColor(this,"${color}")'></i>
+                                                                                                        </div></div>`;
+                $("#availableColorContainer").append(str);
+            }
+        }
+    </script>
+}
+
+
+
