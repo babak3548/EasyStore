@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = XUnitTestEasyStore
-build_property.ProjectDir = C:\Codes\ParsianStore\XUnitTestBebinoBekhar\
+build_property.ProjectDir = C:\Codes\EasyStore\XUnitTestBebinoBekhar\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

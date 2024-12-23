@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uGRmHehlV4o=",
+  "dgSpecHash": "EHCCPLhi5g0=",
   "success": true,
-  "projectFilePath": "C:\\Codes\\ParsianStore\\DataLayer\\DataLayer.csproj",
+  "projectFilePath": "C:\\Codes\\EasyStore\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Babak\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Babak\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -140,14 +140,10 @@
   ],
   "logs": [
     {
-      "code": "NU1904",
+      "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "libraryId": "System.Drawing.Common",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
     }
   ]
 }

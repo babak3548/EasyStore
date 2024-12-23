@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = DataLayer
-build_property.ProjectDir = C:\Codes\ParsianStore\DataLayer\
+build_property.ProjectDir = C:\Codes\EasyStore\DataLayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

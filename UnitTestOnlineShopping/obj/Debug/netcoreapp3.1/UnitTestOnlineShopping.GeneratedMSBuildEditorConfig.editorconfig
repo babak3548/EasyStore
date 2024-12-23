@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = UnitTestOnlineShopping
-build_property.ProjectDir = C:\Codes\ParsianStore\UnitTestOnlineShopping\
+build_property.ProjectDir = C:\Codes\EasyStore\UnitTestOnlineShopping\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

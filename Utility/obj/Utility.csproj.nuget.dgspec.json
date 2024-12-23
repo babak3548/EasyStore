@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj": {}
+    "C:\\Codes\\EasyStore\\Utility\\Utility.csproj": {}
   },
   "projects": {
-    "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj": {
+    "C:\\Codes\\EasyStore\\Utility\\Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj",
+        "projectUniqueName": "C:\\Codes\\EasyStore\\Utility\\Utility.csproj",
         "projectName": "Utility",
-        "projectPath": "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj",
+        "projectPath": "C:\\Codes\\EasyStore\\Utility\\Utility.csproj",
         "packagesPath": "C:\\Users\\Babak\\.nuget\\packages\\",
-        "outputPath": "C:\\Codes\\ParsianStore\\Utility\\obj\\",
+        "outputPath": "C:\\Codes\\EasyStore\\Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

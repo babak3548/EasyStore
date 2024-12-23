@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = UILayer
-build_property.ProjectDir = C:\Codes\ParsianStore\UILayer\
+build_property.ProjectDir = C:\Codes\EasyStore\UILayer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

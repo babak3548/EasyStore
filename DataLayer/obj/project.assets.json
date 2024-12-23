@@ -7538,11 +7538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Codes\\ParsianStore\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Codes\\EasyStore\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Codes\\ParsianStore\\DataLayer\\DataLayer.csproj",
+      "projectPath": "C:\\Codes\\EasyStore\\DataLayer\\DataLayer.csproj",
       "packagesPath": "C:\\Users\\Babak\\.nuget\\packages\\",
-      "outputPath": "C:\\Codes\\ParsianStore\\DataLayer\\obj\\",
+      "outputPath": "C:\\Codes\\EasyStore\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7563,8 +7563,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj": {
-              "projectPath": "C:\\Codes\\ParsianStore\\Utility\\Utility.csproj"
+            "C:\\Codes\\EasyStore\\Utility\\Utility.csproj": {
+              "projectPath": "C:\\Codes\\EasyStore\\Utility\\Utility.csproj"
             }
           }
         }
@@ -7644,14 +7644,10 @@
   },
   "logs": [
     {
-      "code": "NU1904",
+      "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "libraryId": "System.Drawing.Common",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
     }
   ]
 }
